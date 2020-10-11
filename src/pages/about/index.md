@@ -14,7 +14,12 @@ hero:
     title: ""
 leftText:
   body: >
-    HDIR nam daje veću mogućnost suradnje sa srodnim nacionalnim udrugama za istraživanje raka u drugim zemljama u Europi i svijetu (BACR, ASEICA, MOT, AACR i slično). Osim toga, želja nam je pojačati povezanost među članovima EACR u Hrvatskoj, ali prvenstveno povezati istraživače i steći prepoznatljivost djelatnosti istraživanja raka te veću dostupnost Društva za mlađe istraživače.
+    HDIR nam daje veću mogućnost suradnje sa srodnim nacionalnim udrugama za
+    istraživanje raka u drugim zemljama u Europi i svijetu (BACR, ASEICA, MOT,
+    AACR i slično). Osim toga, želja nam je pojačati povezanost među članovima
+    EACR u Hrvatskoj, ali prvenstveno povezati istraživače i steći
+    prepoznatljivost djelatnosti istraživanja raka te veću dostupnost Društva za
+    mlađe istraživače.
   isBig: true
   link:
     page: ""
@@ -25,17 +30,18 @@ membership:
   link:
     page: /membership
     title: Želim postati član
-  subtitle: Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za godišnju članarinu
+  subtitle: Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za
+    godišnju članarinu
   title: Kako se učlaniti
 rightText:
   body: >
-    Društvo djeluje kao nacionalno društvo u sklopu Europskog društva za 
-    istraživanje raka (European Association for Cancer Research, EACR). 
-    EACR djeluje preko 50 godina i najjača je europska neprofitna stručna 
-    organizacija koja pokriva kliničke i bazične aspekte istraživanja raka. 
-    Danas ima oko 10.000 članova iz preko 90 zemalja iz cijelog svijeta. 
-    Članstvo EACR-a čine individualni članovi i nacionalna društva. Iz 
-    Hrvatske je u tom Društvu registrirano preko 200 članova.
+    Društvo djeluje kao nacionalno društvo u sklopu Europskog društva
+    za  istraživanje raka (European Association for Cancer Research,
+    EACR).  EACR djeluje preko 50 godina i najjača je europska neprofitna
+    stručna  organizacija koja pokriva kliničke i bazične aspekte istraživanja
+    raka.  Danas ima oko 10.000 članova iz preko 90 zemalja iz cijelog
+    svijeta.  Članstvo EACR-a čine individualni članovi i nacionalna društva.
+    Iz  Hrvatske je u tom Društvu registrirano preko 200 članova.
   title: Dio Europskog društva za istraživanje raka
 story:
   cards:
@@ -59,9 +65,9 @@ story:
 textWithImage:
   body: >
     Ove odrednice su u skladu s misijom EACR-a koja ima cilj unaprijediti
-    bazična istraživanja s jasnijim usmjerenjima prema prevenciji te liječenju
-    i njezi oboljelih i čiji su članovi aktivni znanstvenici, studenti, emeriti,
+    bazična istraživanja s jasnijim usmjerenjima prema prevenciji te liječenju i
+    njezi oboljelih i čiji su članovi aktivni znanstvenici, studenti, emeriti,
     ugledne osobe u područjima vezanima na bilo koji način s rakom, različitim
     aspektima istraživanja raka, primjene istraživanja i menadžmentu.
-  image: /img/3389.jpg
+  image: /img/eacr.png
 ---
