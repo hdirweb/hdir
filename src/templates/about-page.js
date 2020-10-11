@@ -1,45 +1,49 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+
+import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import LeftText from '../components/LeftText'
+import Membership from '../components/Membership'
+import RightText from '../components/RightText'
+import Story from '../components/Story'
+import TextWithImage from '../components/TextWithImage'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
+export const AboutPageTemplate = ({ hero, leftText, membership, rightText, story, textWithImage }) => {
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <React.Fragment>
+      <Hero hero={ hero } />
+      <RightText rightText={ rightText } />
+      <Story story={ story } />
+      <TextWithImage textWithImage={ textWithImage } />
+      <LeftText leftText={ leftText } />
+      <Membership membership={ membership } />
+    </React.Fragment>
   )
 }
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  hero: PropTypes.object,
+  leftText: PropTypes.object,
+  membership: PropTypes.object,
+  rightText: PropTypes.object,
+  story: PropTypes.object,
+  textWithImage: PropTypes.object
 }
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
       <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        hero={frontmatter.hero}
+        leftText={frontmatter.leftText}
+        membership={frontmatter.membership}
+        rightText={frontmatter.rightText}
+        story={frontmatter.story}
+        textWithImage={frontmatter.textWithImage}
       />
     </Layout>
   )
@@ -54,9 +58,75 @@ export default AboutPage
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
-        title
+        hero {
+          height
+          image {
+            childImageSharp {
+              fluid(maxWidth: 4096, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          subtitle
+          title
+          top
+          link {
+            title
+            page
+          }
+        }
+        leftText {
+          body
+          isBig
+          link {
+            title
+            page
+          }
+          title
+        }
+        membership {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 4096, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          link {
+            page
+            title
+          }
+          subtitle
+          title
+        }
+        rightText {
+          body
+          title
+        }
+        story {
+          cards {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            text
+          }
+          title
+        }
+        textWithImage {
+          body
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }

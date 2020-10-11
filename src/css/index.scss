@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'buttons';
+
+body {
+  font-family: "Raleway";
+  @apply tracking-wider text-gray-600;
+}
+
+section {
+  @apply bg-gray-200;
+}
+
+.limit {
+  @apply m-auto max-w-7xl px-6;
+}
+
+@screen md {
+  .limit {
+    @apply px-8;
+  }
+}
+
+.content {
+  p {
+    @apply mb-6;
+  }
+}
+
+ul {
+  @apply list-disc;
+}

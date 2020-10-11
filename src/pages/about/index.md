@@ -1,19 +1,67 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: About our values
+hero:
+  height: 40
+  image: /img/278.jpg
+  subtitle: >
+    Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
+    svijeta
+  title: Udruga znanstvenika i stručnih djelatnika
+  top: O društvu
+  link:
+    page: ""
+    title: ""
+leftText:
+  body: >
+    HDIR nam daje veću mogućnost suradnje sa srodnim nacionalnim udrugama za istraživanje raka u drugim zemljama u Europi i svijetu (BACR, ASEICA, MOT, AACR i slično). Osim toga, želja nam je pojačati povezanost među članovima EACR u Hrvatskoj, ali prvenstveno povezati istraživače i steći prepoznatljivost djelatnosti istraživanja raka te veću dostupnost Društva za mlađe istraživače.
+  isBig: true
+  link:
+    page: ""
+    title: ""
+  title: Suradnja
+membership:
+  image: /img/12661.jpg
+  link:
+    page: /membership
+    title: Želim postati član
+  subtitle: Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za godišnju članarinu
+  title: Kako se učlaniti
+rightText:
+  body: >
+    Društvo djeluje kao nacionalno društvo u sklopu Europskog društva za 
+    istraživanje raka (European Association for Cancer Research, EACR). 
+    EACR djeluje preko 50 godina i najjača je europska neprofitna stručna 
+    organizacija koja pokriva kliničke i bazične aspekte istraživanja raka. 
+    Danas ima oko 10.000 članova iz preko 90 zemalja iz cijelog svijeta. 
+    Članstvo EACR-a čine individualni članovi i nacionalna društva. Iz 
+    Hrvatske je u tom Društvu registrirano preko 200 članova.
+  title: Dio Europskog društva za istraživanje raka
+story:
+  cards:
+    - image: /img/18424.jpg
+      text: >
+        poticanje znanstvenog i stručnog rada na području medicine,
+        biologije,  biokemije i srodnih znanstvenih područja vezanih uz
+        istraživanje raka
+    - image: /img/cdc-0n1clyj4uwe-unsplash.jpg
+      text: |
+        povezivanje kliničkih i bazičnih aspekata istraživanja raka
+    - image: /img/3389.jpg
+      text: >
+        unapređivanje i poboljšavanje komunikacije među različitim
+        grupama  poticanjem multidisciplinarnih programa
+    - image: /img/711.jpg
+      text: >
+        poticanje inicijativa za istraživačke programe od posebnog značaja
+        za  područje raka
+  title: Glavni ciljevi društva
+textWithImage:
+  body: >
+    Ove odrednice su u skladu s misijom EACR-a koja ima cilj unaprijediti
+    bazična istraživanja s jasnijim usmjerenjima prema prevenciji te liječenju
+    i njezi oboljelih i čiji su članovi aktivni znanstvenici, studenti, emeriti,
+    ugledne osobe u područjima vezanima na bilo koji način s rakom, različitim
+    aspektima istraživanja raka, primjene istraživanja i menadžmentu.
+  image: /img/3389.jpg
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
-
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
-
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.

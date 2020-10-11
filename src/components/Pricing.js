@@ -1,40 +1,56 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-const Pricing = ({ data }) => (
-  <div className="columns">
-    {data.map((price) => (
-      <div key={price.plan} className="column">
-        <section className="section">
-          <h4 className="has-text-centered has-text-weight-semibold">
-            {price.plan}
-          </h4>
-          <h2 className="is-size-1 has-text-weight-bold has-text-primary has-text-centered">
-            ${price.price}
-          </h2>
-          <p className="has-text-weight-semibold">{price.description}</p>
-          <ul>
-            {price.items.map((item) => (
-              <li key={item} className="is-size-5">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
-    ))}
-  </div>
-)
+import { fetchRate, format } from '../components/Exchange'
+
+const Pricing = class extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      rate: 0
+    }
+  }
+
+  componentDidMount() {
+    const ref = this
+    fetchRate().then(rate => ref.setState({ rate }))
+  }
+
+  render() {
+    const { plans, title } = this.props.pricing;
+    const { rate } = this.state;
+
+    return (
+      <section className="py-24">
+        <div className="limit">
+            <p className="font-extrabold text-2xl md:text-4xl pt-16">{title}</p>
+            <div className="sm:flex pt-16">
+                {plans.map((plan, index) => (
+                    <div key={plan.title} className={`bg-white h-64 p-8 rounded-lg shadow w-64 flex flex-col ${index === 0 ? "" : "sm:ml-12 mt-8 sm:mt-0"}`}>
+                        <p className="font-extrabold text-xl flex-grow">{plan.title}</p>
+                        <p className={`text-center mt-16 ${plan.isValueBig ? "text-5xl font-medium leading-none" : "text-3xl font-semibold"}`}>{plan.value}</p>
+                        <p className="opacity-50 text-sm text-center">{format(plan.value, rate)}{plan.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+      </section>
+    )
+  }
+}
 
 Pricing.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      plan: PropTypes.string,
-      price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      description: PropTypes.string,
-      items: PropTypes.array,
-    })
-  ),
+  pricing: {
+    plans: PropTypes.arrayOf(
+      PropTypes.shape({
+        description: PropTypes.string,
+        isValueBig: PropTypes.bool,
+        title: PropTypes.string,
+        value: PropTypes.string
+      })
+    ),
+    title: PropTypes.string
+  }
 }
 
 export default Pricing

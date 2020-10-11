@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import logo from '../img/logo.png'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -33,64 +32,75 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    const buttonClass = "font-black uppercase tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark";
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+      <div>
+        <nav className="absolute px-6 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full">
+          <div className="flex flex-no-shrink items-stretch h-12">
+            <Link to="/" className="flex-no-grow flex-no-shrink relative py-6" title="HDIR Logo">
+              <img src={logo} alt="HDIR" className="w-24" />
             </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
+          </div>
+          <div className="hidden py-6 lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
+            <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
+              <Link className={buttonClass} to="/about">
+                O društvu
+              </Link>
+              <Link className={buttonClass} to="/membership">
+                Članstvo
+              </Link>
+              <Link className={buttonClass} to="/">
+                Aktivnosti
+              </Link>
+              <Link className={buttonClass} to="/contact">
+                Kontakt
+              </Link>
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+        </nav>
+        <nav
+          className="hidden navbar is-transparent"
+          role="navigation"
+          aria-label="main-navigation"
+        >
+          <div className="container">
+            <div className="navbar-brand">
+              <Link to="/" className="navbar-item" title="Logo">
+                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* Hamburger menu */}
+              <div
+                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                data-target="navMenu"
+                onClick={() => this.toggleHamburger()}
               >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+            <div
+              id="navMenu"
+              className={`navbar-menu ${this.state.navBarActiveClass}`}
+            >
+              <div className="navbar-start has-text-centered">
+                <Link className="navbar-item" to="/about">
+                  O DRUŠTVU
+                </Link>
+                <Link className="navbar-item" to="/products">
+                  ČLANSTVO
+                </Link>
+                <Link className="navbar-item" to="/blog">
+                  AKTIVNOSTI
+                </Link>
+                <Link className="navbar-item" to="/contact">
+                  KONTAKT
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     )
   }
 }

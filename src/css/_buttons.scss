@@ -1,0 +1,9 @@
+.btn {
+    @apply px-8 py-3 text-sm inline-block text-center text-white font-extrabold bg-brown-900 rounded;
+}
+
+@screen sm {
+    .btn {
+        @apply px-10;
+    }
+}
