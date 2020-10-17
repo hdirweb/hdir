@@ -3,7 +3,7 @@ templateKey: contact-page
 path: /contact
 hero:
   height: 26
-  image: /img/278.jpg
+  image: /img/the-climate-reality-project-hb6uwq0i4mi-2.jpg
   subtitle: |
     Za sva pitanja o prijavi, radionicama, konferencijama i ostalo 
     koristite online obrazac
