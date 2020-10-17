@@ -3,7 +3,7 @@ templateKey: membership-application-page
 path: /membership/application
 hero:
   height: 26
-  image: /img/278.jpg
+  image: /img/hans-reniers-lqgjcmy5qcm-unsplash2.jpg
   subtitle: |
     Online obrazac za prijavu u HDIR udrugu
   title: Nova prijava
@@ -23,23 +23,25 @@ form:
         - text: "OiB: 01690550600"
         - text: Bijenička 54
         - text: "Tel: 01/457-1292"
-        - text: "www.hdir.hr"
+        - text: www.hdir.hr
       rightColumn:
         - text: "MB: 2517744"
-        - text: "HR-10000 Zagreb"
-        - text: "www.hdir.hr"
+        - text: HR-10000 Zagreb
+        - text: www.hdir.hr
         - text: "E-mail: info@hdir.hr"
       title: Hrvatsko društvo za istraživanje raka
     mailingDetails:
-      - text: "Molimo da godišnju članarinu uplatite općom uplatnicom ili internet bankarstvom na račun HDIR-a:"
+      - text: "Molimo da godišnju članarinu uplatite općom uplatnicom ili internet
+          bankarstvom na račun HDIR-a:"
       - text: "Iznos: 20€ u kunskoj protuvrijednosti"
       - text: "Opis plaćanja: $fullName – za članarinu"
       - text: "IBAN primatelja: HR5023600001102084564"
     paymentDetails:
-      - text: "Molimo da ispunjenu i potpisanu pristupnicu dostavite na adresu tajnika HDIR-a:"
-      - text: "Dr. sc. Petar Ozretić"
-      - text: "Institut Ruđer Bošković"
-      - text: "Bijenička 54, HR-10000 Zagreb"
+      - text: "Molimo da ispunjenu i potpisanu pristupnicu dostavite na adresu tajnika
+          HDIR-a:"
+      - text: Dr. sc. Petar Ozretić
+      - text: Institut Ruđer Bošković
+      - text: Bijenička 54, HR-10000 Zagreb
     signature: "Potpis:"
     title: PRISTUPNICA ZA ČLANSTVO
   sections:
