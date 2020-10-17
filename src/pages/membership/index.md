@@ -3,7 +3,7 @@ templateKey: membership-page
 path: /membership
 hero:
   height: 40
-  image: /img/278.jpg
+  image: /img/3389.jpg
   subtitle: >
     Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
     svijeta
