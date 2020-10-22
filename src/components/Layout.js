@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = (props) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -47,8 +47,8 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
+      <Navbar background={props.background} />
+      <div>{props.children}</div>
       <Footer />
     </div>
   )

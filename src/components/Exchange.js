@@ -13,6 +13,7 @@ export const format = (value, rate) => {
     if (!value.includes("€"))
         return ""
     const cleanValue = parseFloat(value.split("€")[0]) * rate
-    const formatted = cleanValue.toString().replace(".",",")
+    const rounded = Math.round(cleanValue * 100) / 100
+    const formatted = rounded.toString().replace(".",",")
     return `${formatted} Kn `
 }

@@ -16,7 +16,7 @@ const Footer = class extends React.Component {
               <Link className={linkClass} to="/membership">
                 Članstvo
               </Link>
-              <Link className={linkClass} to="/">
+              <Link className={linkClass} to="/activities">
                 Aktivnosti
               </Link>
               <Link className={linkClass} to="/contact">
@@ -24,16 +24,16 @@ const Footer = class extends React.Component {
               </Link>
             </div>
             <div className="flex flex-col opacity-50">
-              <Link className={linkClass} to="/">
+              <Link className={linkClass} to="/meetings">
                 Sastanci
               </Link>
-              <Link className={linkClass} to="/">
+              <Link className={linkClass} to="/lectures">
                 Predavanja
               </Link>
-              <Link className={linkClass} to="/">
+              <Link className={linkClass} to="/conferences">
                 Konferencije
               </Link>
-              <Link className={linkClass} to="/">
+              <Link className={linkClass} to="/workshops">
                 Radionice
               </Link>
             </div>

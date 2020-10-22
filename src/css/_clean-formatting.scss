@@ -1,0 +1,47 @@
+.clean-formatting {
+    code {
+        font-family: "Raleway";
+    }
+
+    em {
+        font-style: initial;
+    }
+
+    img {
+        @apply rounded-lg mb-8;
+    }
+
+    p, ul, table {
+        @apply mb-8;
+    }
+
+    table {
+        @apply rounded-lg overflow-hidden text-sm;
+    }
+
+    td, th {
+        @apply p-4 text-left;
+    }
+    
+    tbody tr:nth-child(odd) {
+        @apply bg-gray-100;
+    }
+
+    tbody tr:nth-child(even) {
+        @apply bg-white;
+    }
+
+    thead tr {
+        @apply bg-white;
+    }
+
+    th {
+        font-weight: normal;
+    }
+}
+
+@screen md {
+    .clean-formatting table {
+        font-size: 1.125rem !important;
+    }
+}

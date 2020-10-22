@@ -14,7 +14,7 @@ const Hero = class extends React.Component {
                     backgroundImage: `url(${
                     !!image.childImageSharp ? image.childImageSharp.fluid.src : image
                     })`,
-                    filter: "grayscale(100%) brightness(70%)",
+                    filter: "grayscale(100%) brightness(60%)",
                 }}
             >
             </div>

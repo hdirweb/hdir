@@ -20,6 +20,7 @@ module.exports = {
           900: '#E48A57'
         },
         gray: {
+          100: '#F5FAF9',
           200: '#EEF2F1',
           400: '#DCE0DF',
           600: '#696969'
@@ -35,7 +36,8 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ['hover']
+    backgroundColor: ['hover'],
+    visibility: ['group-hover'],
   },
   plugins: [],
 }
