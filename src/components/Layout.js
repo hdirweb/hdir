@@ -10,7 +10,7 @@ const TemplateWrapper = (props) => {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang={props.lang} />
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -47,9 +47,9 @@ const TemplateWrapper = (props) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar background={props.background} />
+      <Navbar background={props.background} lang={props.lang} />
       <div>{props.children}</div>
-      <Footer />
+      <Footer lang={props.lang} />
     </div>
   )
 }

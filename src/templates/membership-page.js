@@ -4,16 +4,16 @@ import { graphql } from 'gatsby'
 
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import LeftText from '../components/LeftText'
+import Membership from '../components/Membership'
 import Payment from '../components/Payment'
 import Pricing from '../components/Pricing'
 
-export const MembershipPageTemplate = ({ hero, leftText, payment, pricing }) => {
+export const MembershipPageTemplate = ({ hero, membership, payment, pricing }) => {
   return (
     <React.Fragment>
         <Hero hero={ hero } />
         <Pricing pricing={ pricing } />
-        <LeftText leftText={ leftText } />
+        <Membership membership={ membership } /> 
         <Payment payment={ payment } />
     </React.Fragment>
   )
@@ -21,7 +21,7 @@ export const MembershipPageTemplate = ({ hero, leftText, payment, pricing }) => 
 
 MembershipPageTemplate.propTypes = {
   hero: PropTypes.object,
-  leftText: PropTypes.object,
+  membership: PropTypes.object,
   payment: PropTypes.object,
   pricing: PropTypes.object,
 }
@@ -30,10 +30,10 @@ const MembershipPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout lang={post.frontmatter.lang}>
       <MembershipPageTemplate
         hero={post.frontmatter.hero}
-        leftText={post.frontmatter.leftText}
+        membership={post.frontmatter.membership}
         payment={post.frontmatter.payment}
         pricing={post.frontmatter.pricing}
       />
@@ -52,6 +52,7 @@ export const membershipPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        lang
         hero {
           height
           image {
@@ -69,13 +70,20 @@ export const membershipPageQuery = graphql`
             page
           }
         }
-        leftText {
-          body
-          isBig
+        membership {
+          height
+          image {
+            childImageSharp {
+              fluid(maxWidth: 4096, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           link {
             title
             page
           }
+          subtitle
           title
         }
         payment {

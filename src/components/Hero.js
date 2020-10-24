@@ -23,7 +23,7 @@ const Hero = class extends React.Component {
                     {top !== '' &&
                         <p className="max-w-4xl text-lg uppercase mb-2">{top}</p>
                     }
-                    <h1 className="max-w-4xl leading-none font-extrabold text-4xl md:text-7xl mb-4">{title}</h1>
+                    <h1 className="max-w-4xl leading-none font-extrabold text-4xl md:text-6xl mb-4">{title}</h1>
                     <p className="max-w-4xl text-lg md:text-2xl">{subtitle}</p>
                     {link.page !== '' && link.title !== '' && 
                         <p className="mt-6"><Link className="btn" to={link.page}>{link.title}</Link></p>

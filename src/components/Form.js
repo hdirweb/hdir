@@ -43,7 +43,7 @@ const Form = class extends React.Component {
         const fieldClass = "leading-normal text-lg bg-white appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:border-gray-600";
 
         return (
-            <section className="py-24">
+            <section className="py-12">
                 <div className="limit">
                     {!this.state.isSubmitted && 
                     <form

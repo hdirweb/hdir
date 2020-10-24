@@ -21,12 +21,12 @@ const Pricing = class extends React.Component {
     const { rate } = this.state;
 
     return (
-      <section className="py-24">
+      <section className="py-12">
         <div className="limit">
             <p className="font-extrabold text-2xl md:text-4xl pt-16">{title}</p>
             <div className="sm:flex pt-16">
                 {plans.map((plan, index) => (
-                    <div key={plan.title} className={`bg-white h-64 p-8 rounded-lg shadow w-64 flex flex-col ${index === 0 ? "" : "sm:ml-12 mt-8 sm:mt-0"}`}>
+                    <div key={plan.title} className={`bg-white h-80 p-8 rounded-lg shadow w-80 flex flex-col ${index === 0 ? "" : "sm:ml-12 mt-8 sm:mt-0"}`}>
                         <p className="font-extrabold text-xl flex-grow">{plan.title}</p>
                         <p className={`text-center mt-16 ${plan.isValueBig ? "text-5xl font-medium leading-none" : "text-3xl font-semibold"}`}>{plan.value}</p>
                         <p className="opacity-50 text-sm text-center">{format(plan.value, rate)}{plan.description}</p>

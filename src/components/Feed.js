@@ -6,7 +6,7 @@ class Feed extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
+    const lang = this.props.lang;
     return (
       <section className="py-24">
         <div className="limit">
@@ -20,7 +20,7 @@ class Feed extends React.Component {
                     {post.frontmatter.title}
                   </span>
                   <span className="sm:pl-4 text-lg sm:self-center">
-                    {post.frontmatter.date}
+                    {new Date(post.frontmatter.date).toLocaleDateString(lang)}
                   </span>
                 </header>
                 <p className="flex flex-col sm:flex-row">
@@ -41,7 +41,8 @@ class Feed extends React.Component {
                       {post.frontmatter.description}
                     </p>
                     <Link to={post.fields.slug} className="pt-4 text-sm font-bold">
-                      Cijela objava →
+                      {lang === 'hr' && <span>Cijela objava →</span>}
+                      {lang === 'en' && <span>Full post →</span>}
                     </Link>
                   </div>
                 </p>

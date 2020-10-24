@@ -28,7 +28,7 @@ const MembershipApplicationPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout lang={post.frontmatter.lang}>
       <MembershipApplicationPageTemplate
         form={post.frontmatter.form} 
         hero={post.frontmatter.hero}
@@ -48,6 +48,7 @@ export const membershipApplicationPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        lang
         form {
           button
           isPdf

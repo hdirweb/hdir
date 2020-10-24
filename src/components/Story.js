@@ -9,9 +9,9 @@ const Story = class extends React.Component {
     const { cards, title } = this.props.story;
 
     return (
-      <section className="py-24">
+      <section className="py-12">
         <div className="limit">
-          <h2 className="max-w-xl font-extrabold text-4xl md:text-6xl leading-none">{title}</h2>
+          <h2 className="max-w-xl font-extrabold text-4xl md:text-5xl leading-none">{title}</h2>
         </div>
         <BigCards cards={cards} className="hidden md:block mt-12 md:mt-24"/>
         <SmallCards cards={cards} className="md:hidden mt-12 md:mt-24"/>

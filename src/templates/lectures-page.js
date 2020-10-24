@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Lectures from '../components/Lectures'
+import LecturesEN from '../components/LecturesEN'
+import LecturesHR from '../components/LecturesHR'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 
-export const LecturesPageTemplate = ({ hero }) => {
+export const LecturesPageTemplate = ({ hero, lang }) => {
   return (
     <React.Fragment>
       <Hero hero={ hero } />
-      <Lectures />
+      {lang === 'en' && <LecturesEN />}
+      {lang === 'hr' && <LecturesHR />}
     </React.Fragment>
   )
 }
@@ -23,9 +25,10 @@ const LecturesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout lang={frontmatter.lang}>
       <LecturesPageTemplate
         hero={frontmatter.hero}
+        lang={frontmatter.lang}
       />
     </Layout>
   )
@@ -41,6 +44,7 @@ export const lecturesPageQuery = graphql`
   query LecturesPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        lang
         hero {
           height
           image {

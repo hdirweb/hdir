@@ -1,5 +1,6 @@
 ---
 templateKey: index-page
+lang: hr
 hero:
   height: 50
   image: /img/8352.jpg
@@ -13,6 +14,7 @@ hero:
     page: /about
     title: O nama
 membership:
+  height: 20
   image: /img/bill-oxford-tr0pplun6pw-unsplash.jpg
   link:
     page: /membership

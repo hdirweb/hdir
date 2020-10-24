@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Activities from '../components/Activities'
+import ActivitiesEN from '../components/ActivitiesEN'
+import ActivitiesHR from '../components/ActivitiesHR'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 
-export const ActivitiesPageTemplate = ({ hero }) => {
+export const ActivitiesPageTemplate = ({ hero, lang }) => {
   return (
     <React.Fragment>
       <Hero hero={ hero } />
-      <Activities />
+      {lang === 'en' && <ActivitiesEN />}
+      {lang === 'hr' && <ActivitiesHR />}
     </React.Fragment>
   )
 }
@@ -23,8 +25,9 @@ const ActivitiesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout lang={frontmatter.lang}>
       <ActivitiesPageTemplate
+        lang={frontmatter.lang}
         hero={frontmatter.hero}
       />
     </Layout>
@@ -41,6 +44,7 @@ export const activitiesPageQuery = graphql`
   query ActivitiesPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        lang
         hero {
           height
           image {

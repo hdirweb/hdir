@@ -1,41 +1,22 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
+
+import { PAGES, ACTIVITY_DROPDOWN } from './Navbar';
 
 const Footer = class extends React.Component {
   render() {
     const linkClass = "mb-2";
     const year = new Date().getFullYear();
+    const lang = this.props.lang;
     return (
-      <footer className="bg-gray-400 py-12 md:py-24">
+      <footer className="bg-gray-400 py-12 md:py-12">
         <div className="limit md:flex">
           <div className="flex font-extrabold md:mr-12 mb-12">
             <div className="flex flex-col mr-12">
-              <Link className={linkClass} to="/about">
-                O društvu
-              </Link>
-              <Link className={linkClass} to="/membership">
-                Članstvo
-              </Link>
-              <Link className={linkClass} to="/activities">
-                Aktivnosti
-              </Link>
-              <Link className={linkClass} to="/contact">
-                Kontakt
-              </Link>
+              {PAGES.filter(page => page.en.url !== '/').map(page => <Link className={linkClass} to={page[lang].url}>{page[lang].title}</Link>)}
             </div>
             <div className="flex flex-col opacity-50">
-              <Link className={linkClass} to="/meetings">
-                Sastanci
-              </Link>
-              <Link className={linkClass} to="/lectures">
-                Predavanja
-              </Link>
-              <Link className={linkClass} to="/conferences">
-                Konferencije
-              </Link>
-              <Link className={linkClass} to="/workshops">
-                Radionice
-              </Link>
+              {ACTIVITY_DROPDOWN.filter(page => page.en.url !== '/en/activities').map(page => <Link className={linkClass} to={page[lang].url}>{page[lang].title}</Link>)}
             </div>
           </div>
           <div className="pb-12 text-sm md:text-md md:mr-12" style={{ maxWidth: '180px' }}>

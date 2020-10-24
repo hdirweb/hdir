@@ -36,7 +36,7 @@ const AboutPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout lang={frontmatter.lang}>
       <AboutPageTemplate
         hero={frontmatter.hero}
         leftText={frontmatter.leftText}
@@ -59,6 +59,7 @@ export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        lang
         hero {
           height
           image {
@@ -86,6 +87,7 @@ export const aboutPageQuery = graphql`
           title
         }
         membership {
+          height
           image {
             childImageSharp {
               fluid(maxWidth: 4096, quality: 100) {

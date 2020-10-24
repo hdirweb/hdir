@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+
+import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -12,21 +14,37 @@ export const ActivityPostTemplate = ({
   description,
   title,
   helmet,
+  lang
 }) => {
   const PostContent = contentComponent || Content
 
+  const hero = {
+    height: 28,
+    image: "/img/278.jpg",
+    link: {
+      page: '',
+      title: ''
+    },
+    title: title, 
+    top: new Date(date).toLocaleDateString(lang),
+    subtitle: ''
+  };
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="max-w-2xl m-auto py-24 px-6">
-        <h1 className="font-extrabold text-4xl md:text-6xl leading-none">
-          {title}
-        </h1>
-        <p className="mt-4 text-lg">Datum održavanja: {date}</p>
-        <p className="py-12 font-light text-2xl md:text-4xl leading-tight">{description}</p>
-        <PostContent className="text-xl clean-formatting" content={content} />
-      </div>
-    </section>
+    <React.Fragment>
+      <Hero hero={ hero } />
+      <section className="section">
+        {helmet || ''}
+        <div className="max-w-2xl m-auto py-12 px-6">
+          <p className="mt-4 text-xl">
+            {lang === 'hr' && <span>Datum održavanja: </span>}
+            {lang === 'en' && <span>Date of the event: </span>}
+            {new Date(date).toLocaleDateString(lang)}
+          </p>
+          <p className="pt-2 pb-12 font-light text-2xl md:text-4xl leading-tight">{description}</p>
+          <PostContent className="text-xl clean-formatting" content={content} />
+        </div>
+      </section>
+    </React.Fragment>
   )
 }
 
@@ -36,13 +54,14 @@ ActivityPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  lang: PropTypes.string
 }
 
 const ActivityPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout background={true}>
+    <Layout lang={post.frontmatter.lang}>
       <ActivityPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -57,6 +76,7 @@ const ActivityPost = ({ data }) => {
             />
           </Helmet>
         }
+        lang={post.frontmatter.lang}
         title={post.frontmatter.title}
       />
     </Layout>
@@ -77,7 +97,8 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "DD. MM. YYYY.")
+        lang
+        date
         title
         description
       }

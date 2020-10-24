@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout lang={frontmatter.lang}>
       <IndexPageTemplate
         hero={frontmatter.hero}
         membership={frontmatter.membership}
@@ -55,10 +55,11 @@ IndexPage.propTypes = {
 
 export default IndexPage
 
-export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+export const indexPageQuery = graphql`
+  query IndexPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
+        lang
         hero {
           height
           image {
@@ -77,6 +78,7 @@ export const pageQuery = graphql`
           }
         }
         membership {
+          height
           image {
             childImageSharp {
               fluid(maxWidth: 4096, quality: 100) {

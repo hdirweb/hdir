@@ -14,14 +14,30 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "activities"
+  - name: "activitiesHR"
     i18n: true
-    label: "Activities"
-    folder: "src/pages/activities"
+    label: "Aktivnosti HR"
+    folder: "src/pages/aktivnosti"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "activity-post"}
+      - {label: "Language", name: "lang", widget: "hidden", default: "hr"}
+      - label: Hero
+        name: hero
+        widget: object
+        fields:
+          - {label: Image, name: image, widget: image}
+          - {label: Top, name: top, widget: string, required: false}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: text}
+          - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+          - label: Link
+            name: link
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Page, name: page, widget: string, required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
@@ -29,8 +45,39 @@ collections:
       - {label: "Featured Post", name: "featuredpost", widget: "boolean", required: false}
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
+  - name: "activitiesEN"
+    i18n: true
+    label: "Activities EN"
+    folder: "src/pages/en/activities"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "activity-post"}
+      - {label: "Language", name: "lang", widget: "hidden", default: "en"}
+      - label: Hero
+        name: hero
+        widget: object
+        fields:
+          - {label: Image, name: image, widget: image}
+          - {label: Top, name: top, widget: string, required: false}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: text}
+          - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+          - label: Link
+            name: link
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Page, name: page, widget: string, required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: Activity, name: activity, widget: select, options: ["meetings", "lectures", "conferences", "workshops"]}
+      - {label: "Featured Post", name: "featuredpost", widget: "boolean", required: false}
+      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pagesHR"
+    label: "Stranice HR"
     files:
       - file: "src/pages/index.md"
         label: "Početna"
@@ -83,6 +130,7 @@ collections:
             name: membership
             widget: object
             fields:
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
               - {label: Image, name: image, widget: image}
               - {label: Title, name: title, widget: string}
               - {label: Subtitle, name: subtitle, widget: text}
@@ -92,7 +140,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Page, name: page, widget: string}
-      - file: "src/pages/about/index.md"
+      - file: "src/pages/o-društvu/index.md"
         label: "O društvu"
         name: "about"
         fields:
@@ -146,6 +194,7 @@ collections:
             name: membership
             widget: object
             fields:
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
               - {label: Image, name: image, widget: image}
               - {label: Title, name: title, widget: string}
               - {label: Subtitle, name: subtitle, widget: text}
@@ -155,7 +204,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Page, name: page, widget: string}
-      - file: "src/pages/membership/index.md"
+      - file: "src/pages/članstvo/index.md"
         label: "Članstvo"
         name: "membership"
         fields:
@@ -188,19 +237,20 @@ collections:
                   - {label: Value, name: value, widget: string}
                   - {label: Description, name: description, widget: string}
                   - {label: "Big Value", name: isValueBig, widget: boolean}
-          - label: "Left Text"
-            name: leftText
+          - label: Membership
+            name: membership
             widget: object
             fields:
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - {label: Image, name: image, widget: image}
               - {label: Title, name: title, widget: string}
-              - {label: Body, name: body, widget: text}
+              - {label: Subtitle, name: subtitle, widget: text}
               - label: Link
                 name: link
                 widget: object
                 fields:
-                  - {label: Title, name: title, widget: string, required: false}
-                  - {label: Page, name: page, widget: string, required: false}
-              - {label: "Big", name: isBig, widget: boolean}
+                  - {label: Title, name: title, widget: string}
+                  - {label: Page, name: page, widget: string}
           - label: Payment
             name: payment
             widget: object
@@ -213,7 +263,7 @@ collections:
                   - {label: Title, name: title, widget: string}
                   - {label: Value, name: value, widget: string}
                   - {label: Number, name: isNumber, widget: boolean}
-      - file: "src/pages/membership/application.md"
+      - file: "src/pages/članstvo/prijava.md"
         label: "Nova prijava"
         name: "membershipApplication"
         fields:
@@ -294,7 +344,7 @@ collections:
                   - {label: Title, name: title, widget: string}
                   - {label: Subtitle, name: subtitle, widget: string}
                   - {label: Button, name: button, widget: string}         
-      - file: "src/pages/contact/index.md"
+      - file: "src/pages/kontakt/index.md"
         label: "Kontakt"
         name: "contact"
         fields:
@@ -342,7 +392,7 @@ collections:
                   - {label: Title, name: title, widget: string}
                   - {label: Subtitle, name: subtitle, widget: string}
                   - {label: Button, name: button, widget: string}
-      - file: "src/pages/activities.md"
+      - file: "src/pages/aktivnosti.md"
         label: "Aktivnosti"
         name: "activities"
         fields:
@@ -362,7 +412,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
-      - file: "src/pages/meetings/index.md"
+      - file: "src/pages/sastanci/index.md"
         label: "Sastanci"
         name: "meetings"
         fields:
@@ -382,7 +432,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
-      - file: "src/pages/lectures/index.md"
+      - file: "src/pages/predavanja/index.md"
         label: "Predavanja"
         name: "lectures"
         fields:
@@ -402,7 +452,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
-      - file: "src/pages/conferences/index.md"
+      - file: "src/pages/konferencije/index.md"
         label: "Konferencije"
         name: "conferences"
         fields:
@@ -422,7 +472,7 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
-      - file: "src/pages/workshops/index.md"
+      - file: "src/pages/radionice/index.md"
         label: "Radionice"
         name: "workshops"
         fields:
@@ -442,5 +492,420 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
-
+  - name: "pagesEN"
+    label: "Pages EN"
+    files:
+      - file: "src/pages/en/index.md"
+        label: "Homepage"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+          - label: Story
+            name: story
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - {label: Image, name: image, widget: image}
+                  - {label: Text, name: text, widget: text}
+          - label: Poster
+            name: poster
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - label: Colors
+                name: colors
+                widget: list
+                fields: 
+                  - {label: Code, name: code, widget: text}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Page, name: page, widget: string}
+          - label: Membership
+            name: membership
+            widget: object
+            fields:
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - {label: Image, name: image, widget: image}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Page, name: page, widget: string}
+      - file: "src/pages/en/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+          - label: "Left Text"
+            name: leftText
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Body, name: body, widget: text}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+              - {label: "Big", name: isBig, widget: boolean}
+          - label: Story
+            name: story
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - {label: Image, name: image, widget: image}
+                  - {label: Text, name: text, widget: text}
+          - label: "Text With Image"
+            name: textWithImage
+            widget: object
+            fields:
+              - {label: Body, name: body, widget: string}
+              - {label: Image, name: image, widget: image}
+          - label: Membership
+            name: membership
+            widget: object
+            fields:
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - {label: Image, name: image, widget: image}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Page, name: page, widget: string}
+      - file: "src/pages/en/membership/index.md"
+        label: "Membership"
+        name: "membership"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "membership-page"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+          - label: Pricing
+            name: pricing
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Plans
+                name: plans
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Value, name: value, widget: string}
+                  - {label: Description, name: description, widget: string}
+                  - {label: "Big Value", name: isValueBig, widget: boolean}
+          - label: Membership
+            name: membership
+            widget: object
+            fields:
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - {label: Image, name: image, widget: image}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Page, name: page, widget: string}
+          - label: Payment
+            name: payment
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Details
+                name: details
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Value, name: value, widget: string}
+                  - {label: Number, name: isNumber, widget: boolean}
+      - file: "src/pages/en/membership/application.md"
+        label: "New application"
+        name: "membershipApplication"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "membership-application-page"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+          - label: Form
+            name: form
+            widget: object
+            fields:
+              - {label: Name, name: name, widget: string}
+              - label: Sections
+                name: sections
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Fields
+                    name: fields
+                    widget: list
+                    fields:
+                      - {label: Title, name: title, widget: string}
+                      - {label: Name, name: name, widget: string}
+                      - {label: Type, name: type, widget: select, options: ["checkbox", "date", "email", "file", "hidden", "image", "number", "password", "radio", "tel", "text", "textarea", "time", "url"]}
+                      - {label: Required, name: isRequired, widget: boolean, required: false}
+                      - {label: "Full Width", name: isFullWidth, widget: boolean, required: false}
+              - {label: Button, name: button, widget: string}
+              - {label: PDF, name: isPdf, widget: boolean}
+              - label: "PDF Document Details"
+                name: pdf
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Header
+                    name: header
+                    widget: object
+                    fields:
+                      - {label: Title, name: title, widget: string}
+                      - label: "Left Column Item"
+                        name: leftColumn
+                        widget: list
+                        fields:
+                          - {label: Text, name: text, widget: string}
+                      - label: "Right Column Item"
+                        name: rightColumn
+                        widget: list
+                        fields:
+                          - {label: Text, name: text, widget: string}
+                  - {label: Day, name: day, widget: string}
+                  - {label: Signature, name: signature, widget: string}
+                  - {label: "Default Full Name", name: defaultFullName, widget: string}
+                  - label: "Payment Details"
+                    name: paymentDetails
+                    widget: list
+                    fields:
+                      - {label: Text, name: text, widget: string}
+                  - label: "Mailing Details"
+                    name: mailingDetails
+                    widget: list
+                    fields:
+                      - {label: Text, name: text, widget: string}
+              - label: Success
+                name: success
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Subtitle, name: subtitle, widget: string}
+                  - {label: Button, name: button, widget: string}         
+      - file: "src/pages/en/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "membership-application-page"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+          - label: Form
+            name: form
+            widget: object
+            fields:
+              - {label: Name, name: name, widget: string}
+              - label: Sections
+                name: sections
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Fields
+                    name: fields
+                    widget: list
+                    fields:
+                      - {label: Title, name: title, widget: string}
+                      - {label: Name, name: name, widget: string}
+                      - {label: Type, name: type, widget: select, options: ["checkbox", "date", "email", "file", "hidden", "image", "number", "password", "radio", "tel", "text", "textarea", "time", "url"]}
+                      - {label: Required, name: isRequired, widget: boolean, required: false}
+                      - {label: "Full Width", name: isFullWidth, widget: boolean, required: false}
+              - {label: Button, name: button, widget: string}
+              - {label: PDF, name: isPdf, widget: boolean}
+              - label: Success
+                name: success
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Subtitle, name: subtitle, widget: string}
+                  - {label: Button, name: button, widget: string}
+      - file: "src/pages/en/activities.md"
+        label: "Activities"
+        name: "activities"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "activities"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+      - file: "src/pages/en/meetings/index.md"
+        label: "Meetings"
+        name: "meetings"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "meetings"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+      - file: "src/pages/en/lectures/index.md"
+        label: "Lectures"
+        name: "lectures"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "lectures"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+      - file: "src/pages/en/conferences/index.md"
+        label: "Conferences"
+        name: "conferences"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "conferences"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
+      - file: "src/pages/en/workshops/index.md"
+        label: "Workshops"
+        name: "workshops"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "workshops"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Top, name: top, widget: string, required: false}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: text}
+              - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
+              - label: Link
+                name: link
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: false}
+                  - {label: Page, name: page, widget: string, required: false}
                           

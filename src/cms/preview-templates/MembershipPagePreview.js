@@ -9,7 +9,7 @@ const MembershipPagePreview = ({ entry }) => {
     return (
       <MembershipPageTemplate
         hero={data.hero || {}}
-        leftText={data.leftText || {}}
+        membership={data.membership || {}}
         payment={data.payment || {}}
         pricing={data.pricing || {}}
       />
