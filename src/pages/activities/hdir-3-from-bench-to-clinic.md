@@ -17,18 +17,18 @@ We are pleased to inform you about the **HDIR-3: From Bench to Clinic - The 3rd 
 
 **Plenary lecturers:**
 
-Esteban Cvitkovic (France)\
-Richard Marais (UK)\
-\
-**Invited speakers:**\
-Lidija Beketić-Orešković (Croatia)\
-Ivan Đikić (Germany)\
-Riccardo Dolcetti (Italy)\
-Gregor Serša (Slovenia)\
-Janoš Terzić (Croatia)\
-Siniša Volarević (Croatia)\
-Jiri Zavadil (France)\
-Robert Zeillinger (Austria)\
-\
-**Posters and short talks:**\
+Esteban Cvitkovic (France)
+Richard Marais (UK)
+
+**Invited speakers:**
+Lidija Beketić-Orešković (Croatia)
+Ivan Đikić (Germany)
+Riccardo Dolcetti (Italy)
+Gregor Serša (Slovenia)
+Janoš Terzić (Croatia)
+Siniša Volarević (Croatia)
+Jiri Zavadil (France)
+Robert Zeillinger (Austria)
+
+**Posters and short talks:**
 Participants will have opportunity to present their research during poster session. Eight abstracts will be selected for short talks.

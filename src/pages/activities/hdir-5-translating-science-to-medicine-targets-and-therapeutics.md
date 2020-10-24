@@ -16,7 +16,7 @@ We are pleased to inform you about the **HDIR-5: Translating Science to Medicine
 
 **Plenary lecturers**
 
-* Anton Berns (Netherlands) \[EACR Past President] (sponsored by EACR)
+* Anton Berns (Netherlands) [EACR Past President] (sponsored by EACR)
 * Ivan Đikić (Germany)
 
 

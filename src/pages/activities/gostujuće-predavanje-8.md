@@ -11,5 +11,5 @@ featuredimage: /img/jcb.jpg
 
 **Gostujući predavač**: Dr. sc. Jean-Christophe Bourdon, Centre for Oncology and Molecular Medicine, College of Medicine, University of Dundee, Dundee, UK
 
-\
+
 **Naziv predavanja**: How to Manipulate p53 Isoform to Restore Tumour Suppressor Activity

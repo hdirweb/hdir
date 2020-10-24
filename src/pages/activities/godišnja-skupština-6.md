@@ -16,8 +16,8 @@ Pozivamo vas na Godišnju skupštinu HDIR-a koja će se održati u srijedu 12.12
 
 Tom prigodom predavanje pod nazivom **"Primjena virusnih vektora u terapiji tumora"** održati će **dr. sc. Dragomira Majhen** iz Laboratorija za staničnu biologiju i prijenos signala Zavoda za molekularnu biologiju Instituta Ruđer Bošković, Zagreb.
 
-Nakon predavanja održat će se Godišnja skupština HDIR-a.\
-\
+Nakon predavanja održat će se Godišnja skupština HDIR-a.
+
 DNEVNI RED:
 
 1. Prihvaćanje dnevnog reda

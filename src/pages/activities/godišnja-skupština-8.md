@@ -14,7 +14,7 @@ Tom prigodom predavanja će održati autori dva postera nagrađena na „HDIR-5:
 * prof. dr. sc. Janoš Terzić , Medicinski fakultet, Split
 
   poster Korać Prlić i sur. "Stat3 signaling is essential for bladder cancer progression"
-* doc. dr. sc. Petar Ozretić, Institut Ruđer Bošković, Zagreb\
+* doc. dr. sc. Petar Ozretić, Institut Ruđer Bošković, Zagreb
   poster Ozretić i sur. "Interaction of microRNA molecules and Hedgehog-GLI signaling pathway genes in high-grade serous ovarian cancer"
 
 Nakon predavanja održat će se Godišnja skupština HDIR-a.
