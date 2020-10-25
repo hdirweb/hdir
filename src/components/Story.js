@@ -11,10 +11,10 @@ const Story = class extends React.Component {
     return (
       <section className="py-12">
         <div className="limit">
-          <h2 className="max-w-xl font-extrabold text-4xl md:text-5xl leading-none">{title}</h2>
+          <h2 className="title">{title}</h2>
         </div>
-        <BigCards cards={cards} className="hidden md:block mt-12 md:mt-24"/>
-        <SmallCards cards={cards} className="md:hidden mt-12 md:mt-24"/>
+        <BigCards cards={cards} className="hidden md:block mt-12"/>
+        <SmallCards cards={cards} className="md:hidden mt-12"/>
       </section>
     )
   }

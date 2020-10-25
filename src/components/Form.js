@@ -63,7 +63,7 @@ const Form = class extends React.Component {
                         </div>
                         {sections.map((section) => (
                             <React.Fragment>
-                                <p className="font-extrabold text-2xl md:text-4xl">{section.title}</p>
+                                <p className="title">{section.title}</p>
                                 <div className="flex flex-wrap my-8 sm:-mx-3">
                                     {section.fields && section.fields.map((field) => (
                                         <div

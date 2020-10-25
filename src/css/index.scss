@@ -7,7 +7,7 @@
 
 body {
   font-family: "Raleway";
-  @apply tracking-wider text-gray-600;
+  @apply tracking-wider text-gray-600 bg-gray-200;
 }
 
 section {
@@ -16,6 +16,16 @@ section {
 
 .limit {
   @apply m-auto max-w-7xl px-6;
+}
+
+.title {
+  @apply font-extrabold text-4xl leading-none max-w-xl;
+}
+
+@screen md {
+  .title {
+    @apply text-5xl;
+  }
 }
 
 @screen md {

@@ -22,9 +22,9 @@ const Payment = class extends React.Component {
         const { rate } = this.state;
 
         return (
-            <section className="py-12">
+            <section className="py-12 mt-6">
                 <div className="limit">
-                    <p className="font-extrabold text-2xl md:text-4xl">{title}</p>
+                    <p className="title">{title}</p>
                     <div className="max-w-lg mt-6">
                         {details.map((detail) => 
                             {

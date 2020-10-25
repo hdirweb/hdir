@@ -20,7 +20,7 @@ leftText:
     title: ""
   title: Cooperation
 membership:
-  height: 20
+  height: 28
   image: /img/12661.jpg
   link:
     page: /membership

@@ -14,7 +14,7 @@ hero:
     page: /about
     title: O nama
 membership:
-  height: 20
+  height: 28
   image: /img/bill-oxford-tr0pplun6pw-unsplash.jpg
   link:
     page: /membership

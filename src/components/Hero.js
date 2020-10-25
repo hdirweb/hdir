@@ -6,7 +6,7 @@ const Hero = class extends React.Component {
     const { height, image, link, title, top, subtitle } = this.props.hero;
 
     return (
-        <section className="relative" style={{height: height ? `${height}rem` : '50rem' }}>
+        <section className="relative mb-6" style={{height: height ? `${height}rem` : '50rem' }}>
             <div
                 className="bg-cover h-full"
                 style={{

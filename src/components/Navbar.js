@@ -88,7 +88,7 @@ const Navbar = class extends React.Component {
       <div>
         <nav className={`${background ? "bg-gray-200" : "absolute"} px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full`}>
           <div className="flex flex-no-shrink items-stretch h-10 lg:h-12">
-            <Link to={`${lang == 'hr' ? '' : '/en'}`} className="flex-no-grow flex-no-shrink relative py-6" title="HDIR Logo">
+            <Link to={`${lang === 'hr' ? '' : '/en'}`} className="flex-no-grow flex-no-shrink relative py-6" title="HDIR Logo">
               <img src={logo} alt="HDIR" className="w-24" />
             </Link>
           </div>
