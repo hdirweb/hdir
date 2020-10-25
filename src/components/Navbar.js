@@ -88,7 +88,7 @@ const Navbar = class extends React.Component {
       <div>
         <nav className={`${background ? "bg-gray-200" : "absolute"} px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full`}>
           <div className="flex flex-no-shrink items-stretch h-10 lg:h-12">
-            <Link to={`${lang === 'hr' ? '' : '/en'}`} className="flex-no-grow flex-no-shrink relative py-6" title="HDIR Logo">
+            <Link to={`${lang === 'hr' ? '/' : '/en'}`} className="flex-no-grow flex-no-shrink relative py-6" title="HDIR Logo">
               <img src={logo} alt="HDIR" className="w-24" />
             </Link>
           </div>
@@ -110,13 +110,13 @@ const Navbar = class extends React.Component {
           </div>
           <div className="lg:hidden">
             <div className="cursor-pointer text-right text-white flex justify-end" onClick={() => this.toggleHamburger()}>
-              <p className={`${background ? "text-gray-600" : ""} w-4 text-xl`} style={{ transform: "rotate(90deg)" }}>|||</p>
+              <p className={`${background ? "text-gray-600" : ""} text-xl`} style={{ transform: "rotate(90deg)" }}>|||</p>
             </div>
             <div
               className={`${this.state.active ? "flex justify-end absolute mt-4" : "hidden"}`}
               style={{ right: "1.5rem" }}
             >
-              <div className="flex flex-col rounded-lg shadow bg-gray-200 p-2 items-stretch text-xl">
+              <div className="flex flex-col rounded-lg shadow text-white bg-gray-600 p-2 items-stretch text-xl">
                 {PAGES.map(page => (
                   <React.Fragment>
                     <Link className={btnSm} to={page[lang].url}>{page[lang].title}</Link>

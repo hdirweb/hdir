@@ -72,7 +72,7 @@ const Form = class extends React.Component {
                                         >
                                             <div>
                                                 <label className={`block ${field.type === 'checkbox' ? "flex cursor-pointer" : "mb-1 pr-4"}`} htmlFor={field.name}>
-                                                    {field.type === 'checkbox' && <input class="mr-2 self-start relative" type="checkbox" required={true} style={{ top: "5px" }} />}
+                                                    {field.type === 'checkbox' && <input class="mr-2 self-start w-32 relative" type="checkbox" id={field.name} required={true} style={{ top: "5px" }} />}
                                                     <span className={`${field.type === 'checkbox' ? "text-md pl-3" : "font-bold"}`}>{field.title}</span>
                                                     {field.isRequired && <span> ❋</span>}
                                                 </label>
@@ -105,7 +105,7 @@ const Form = class extends React.Component {
                                 </div>
                             </React.Fragment>
                         ))}
-                        <button className="btn mt-6" type="submit">
+                        <button className="btn" type="submit">
                             {button}
                         </button>
                     </form>

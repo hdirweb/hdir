@@ -8,7 +8,7 @@ const Hero = class extends React.Component {
     return (
         <section className="relative mb-6" style={{height: height ? `${height}rem` : '50rem' }}>
             <div
-                className="bg-cover h-full"
+                className="bg-cover bg-gray-600 h-full"
                 style={{
                     backgroundPosition: "64% 50%",
                     backgroundImage: `url(${

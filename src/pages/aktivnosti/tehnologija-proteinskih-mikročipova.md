@@ -1,7 +1,7 @@
 ---
 templateKey: activity-post
 lang: hr
-title: Protein Microarray Technology
+title: Tehonologija proteinskih mikročipova
 date: 2013-12-14T14:55:00.000Z
 description: Radionica o novim tehnologijama u istraživanju raka
 activity: workshops

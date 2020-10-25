@@ -1,7 +1,7 @@
 ---
 templateKey: activity-post
 lang: hr
-title: Introduction to Molecular Modeling
+title: Uvod u molekulsko modeliranje
 date: 2018-10-01T12:20:00.000Z
 description: Radionica o in silico metodama molekulskog modeliranja
 activity: workshops

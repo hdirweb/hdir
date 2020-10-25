@@ -1,7 +1,7 @@
 ---
 templateKey: activity-post
 lang: hr
-title: Molecular Modeling
+title: Molekulsko modeliranje
 date: 2014-07-23T13:25:00.000Z
 description: Radionica o in silico metodama molekulskog modeliranja
 activity: workshops
