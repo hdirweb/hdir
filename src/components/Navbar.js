@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.png'
+import { animated, config, Spring, Trail } from 'react-spring/renderprops'
 
 export const ACTIVITY_DROPDOWN = [
   {
@@ -54,8 +55,14 @@ const Navbar = class extends React.Component {
     super(props)
     this.state = {
       active: false,
+      loaded: false,
       navBarActiveClass: '',
+      showDropdown: false
     }
+  }
+
+  componentDidMount() {
+    setTimeout(() => { this.setState({ loaded: true }) }, 300);
   }
 
   toggleHamburger = () => {
@@ -78,32 +85,83 @@ const Navbar = class extends React.Component {
     )
   }
 
+  getDropdown = (dropdown, lang) => {
+    return (
+      <Spring
+        native
+        config={config.gentle}
+        from={{
+          opacity: this.state.showDropdown ? 0 : 1,
+          transform: this.state.showDropdown ? 'translateY(-20%)' : 'translateY(0%)'
+        }}
+        to={{
+          opacity: this.state.showDropdown ? 1 : 0,
+          transform: this.state.showDropdown ? 'translateY(0%)' : 'translateY(-20%)'
+        }}
+      >
+      {props => 
+      <animated.div style={props} class={`${this.state.loaded ? "" : "hidden"} overflow-hidden items-center m-auto text-md text-white absolute rounded-lg shadow bg-gray-600 p-2 ml-1 w-auto`} >
+        <Trail
+          config={{ ...config.gentle, delay: 100 }}
+          items={dropdown}
+          keys={subpage => subpage[lang].title}
+          from={{
+            opacity: this.state.showDropdown ? 0 : 1,
+            transform: this.state.showDropdown ? 'translateY(-20%)' : 'translateY(0%)'
+          }}
+          to={{
+            opacity: this.state.showDropdown ? 1 : 0,
+            transform: this.state.showDropdown ? 'translateY(0%)' : 'translateY(-20%)'
+          }}
+        >
+          {subpage => props => 
+            <Link
+              style={props}
+              className="px-2 py-2 block"
+              to={subpage[lang].url}
+            >
+              {subpage[lang].title}
+            </Link>
+          }
+        </Trail>
+      </animated.div>
+      }
+      </Spring>
+    )
+  }
+
   render() {
     const background = this.props.background;
     const btn = `${background ? "text-gray-600" : "text-white"} text-2xl tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal no-underline flex items-center hover:bg-grey-dark`;
-    const btnDropdown = 'px-2 py-2 block';
     const btnSm = `px-4 py-3`;
     const lang = this.props.lang;
+
     return (
       <div>
         <nav className={`${background ? "bg-gray-200" : "absolute"} px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full`}>
           <div className="flex flex-no-shrink items-stretch h-10 lg:h-12">
-            <Link to={`${lang === 'hr' ? '/' : '/en'}`} className="flex-no-grow flex-no-shrink relative py-6" title="HDIR Logo">
+            <Link 
+              to={`${lang === 'hr' ? '/' : '/en'}`}
+              className="flex-no-grow flex-no-shrink relative py-6"
+              title="HDIR Logo"
+            >
               <img src={logo} alt="HDIR" className="w-24" />
             </Link>
           </div>
           <div className="hidden py-6 lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
             <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
               {PAGES.map(page => (
-                <div className="group">
-                  <Link className={btn} to={page[lang].url}>{page[lang].title}</Link>
-                  {page.dropdown && 
-                    <div class="items-center m-auto text-md text-white absolute rounded-lg shadow bg-gray-600 p-2 ml-1 invisible group-hover:visible w-auto">
-                      {page.dropdown.map(subpage => (
-                        <Link className={btnDropdown} to={subpage[lang].url}>{subpage[lang].title}</Link>
-                      ))}
-                    </div>
-                  }
+                <div
+                  onMouseOver={() => page.dropdown && this.setState({ showDropdown: true })}
+                  onMouseOut={() => page.dropdown && this.setState({ showDropdown: false })}
+                >
+                  <Link
+                    className={btn}
+                    to={page[lang].url}
+                  >
+                    {page[lang].title}
+                  </Link>
+                  {page.dropdown && this.getDropdown(page.dropdown, lang)}
                 </div>
               ))}
             </div>
@@ -123,7 +181,9 @@ const Navbar = class extends React.Component {
                     {page.dropdown && 
                       <React.Fragment>
                         {page.dropdown.map(subpage => (
-                          <Link className={btnSm} to={subpage[lang].url}>{subpage[lang].title}</Link>
+                          <Link className={btnSm} to={subpage[lang].url}>
+                            {subpage[lang].title}
+                          </Link>
                         ))}
                       </React.Fragment>
                     }

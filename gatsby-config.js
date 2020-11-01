@@ -5,6 +5,7 @@ module.exports = {
       'Hrvatsko društvo za istraživanje raka | Croatian Association for Cancer Research',
   },
   plugins: [
+    'gatsby-plugin-scroll-reveal',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-sass`,

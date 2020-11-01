@@ -19,23 +19,34 @@ const Image = ({ image }) => (
             backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
             })`,
-            width: "55vw"
+            width: "55vw",
         }}
+        
     ></div>
 )
 
 const Left = ({ card }) => (
-    <div className="flex">
-        <Image image={card.image || {}} />
-        <Text position="left" text={card.text} />
-    </div>
+  <div
+    className="flex"
+    data-sal="slide-right"
+    data-sal-easing="ease"
+    style={{"--sal-duration": "1.5s"}}
+  >
+      <Image image={card.image || {}} />
+      <Text position="left" text={card.text} />
+  </div>
 )
 
 const Right = ({ card }) => (
-    <div className="flex justify-end">
-        <Text position="right" text={card.text} />
-        <Image image={card.image || {}} />
-    </div>
+  <div
+    className="flex justify-end"
+    data-sal="slide-left"
+    data-sal-easing="ease"
+    style={{"--sal-duration": "1.5s"}}
+  >
+      <Text position="right" text={card.text} />
+      <Image image={card.image || {}} />
+  </div>
 )
 
 const Text = ({ position, text }) => (
