@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
 
 const Hero = class extends React.Component {
   render() {
@@ -7,17 +8,21 @@ const Hero = class extends React.Component {
 
     return (
         <section className="relative mb-6" style={{height: height ? `${height}rem` : '50rem' }}>
-            <div
-                className="bg-cover bg-gray-600 h-full"
-                style={{
-                    backgroundPosition: "64% 50%",
-                    backgroundImage: `url(${
-                    !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-                    })`,
-                    filter: "grayscale(100%) brightness(60%)",
-                }}
-            >
-            </div>
+            <ParallaxProvider>
+                <ParallaxBanner
+                    layers={[
+                        {
+                            image: `${!!image.childImageSharp ? image.childImageSharp.fluid.src : image}`,
+                            amount: 0.16,
+                        },
+                    ]}
+                    style={{
+                        height: height ? `${height}rem` : '50rem',
+                        filter: "grayscale(100%) brightness(60%)",
+                    }}
+                >
+                </ParallaxBanner>
+            </ParallaxProvider>
             <div className="absolute w-full bottom-0 text-white">
                 <div className="limit py-24">
                     {top !== '' &&
