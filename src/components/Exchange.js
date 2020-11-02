@@ -12,8 +12,10 @@ export const fetchRate = async () =>  {
 export const format = (value, rate) => {
     if (!value.includes("€"))
         return ""
-    const cleanValue = parseFloat(value.split("€")[0]) * rate
-    const rounded = Math.round(cleanValue * 100) / 100
-    const formatted = rounded.toString().replace(".",",")
-    return `${formatted} Kn `
+    let formatted = parseFloat(value.split("€")[0]) * rate
+    formatted = Math.round(formatted * 100) / 100
+    formatted = formatted.toString().replace(".",",")
+    formatted = !formatted.includes(",") ? formatted + ",00" : formatted
+    formatted = formatted.split(',')[1] && formatted.split(',')[1].length === 1 ? formatted + "0" : formatted;
+    return `${formatted} Kn`
 }

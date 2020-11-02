@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import Barcode from '../components/Barcode'
 import { fetchRate, format } from '../components/Exchange'
 
 const Payment = class extends React.Component {
@@ -20,6 +21,15 @@ const Payment = class extends React.Component {
     render() {
         const { details, title } = this.props.payment;
         const { rate } = this.state;
+
+        let amount = details.find(detail => detail.value.includes("€")).value;
+        amount = format(amount, rate).split(' ')[0].replace(',' , '')
+
+        const iban = details.find(detail => detail.title.includes("IBAN")).value;
+
+        const description = details.find(detail => detail.title.includes("Opis") || detail.title.includes("Description")).value.replace('$year', new Date().getFullYear()).replace("č", "c");
+
+        const recipient = details.find(detail => detail.title.includes("Recipient") || detail.title.includes("Primatelj")).value.split(',');
 
         return (
             <section className="py-12 mt-6">
@@ -46,6 +56,7 @@ const Payment = class extends React.Component {
                             }
                         )}
                     </div>
+                    <Barcode amount={amount} description={description} iban={iban} recipient={recipient} />
                 </div>
             </section>
         )
