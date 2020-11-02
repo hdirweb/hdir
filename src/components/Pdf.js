@@ -8,9 +8,9 @@ import { logoData } from '../img/logoData'
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const Pdf = class extends React.Component {
-  create(formState, pdf, sections) {
-    const dateInfo = new Date().toLocaleString("hr").split(' ');
-    dateInfo.splice(-1);
+  create(formState, lang, pdf, sections) {
+    const dateInfo = new Date().toLocaleString(lang).replace(',', ' ').split(' ');
+    dateInfo.splice(lang == "en" ? -2 : -1);
 
     let content = [
       {
@@ -98,8 +98,8 @@ const Pdf = class extends React.Component {
     sections.map((section) => section.fields.map((field) => {
       let text = (formState[field.name]) ? formState[field.name] : '';
       if (field.type === 'date'){
-        const dateInput = new Date(formState[field.name]).toLocaleString("hr").split(' ');
-        dateInput.splice(-1);
+        const dateInput = new Date(formState[field.name]).toLocaleString(lang).replace(',', ' ').split(' ');
+        dateInput.splice(lang == "en" ? -2 : -1);
         text = dateInput.join(' ');
       }
 
@@ -176,10 +176,10 @@ const Pdf = class extends React.Component {
   }
 
   render() {
-    const { button, formState, pdf, sections } = this.props;
+    const { button, formState, lang, pdf, sections } = this.props;
 
     return (
-    <button className="btn" onClick={() => this.create(formState, pdf, sections)}>{button}</button>
+    <button className="btn" onClick={() => this.create(formState, lang, pdf, sections)}>{button}</button>
     )
   }
 }
@@ -187,6 +187,7 @@ const Pdf = class extends React.Component {
 Pdf.propTypes = {
   button: PropTypes.string,
   formState: PropTypes.object,
+  lang: PropTypes.string,
   pdf: PropTypes.object,
   sections: PropTypes.array
 }

@@ -8,11 +8,22 @@ import Layout from '../components/Layout'
 
 export class ContactPageTemplate extends React.Component {
     render() {
-        const { form, hero } = this.props;
+        const { form, hero, lang } = this.props;
 
         return (
             <React.Fragment>
                 <Hero hero={ hero } />
+                <section className="py-12">
+                  <div className="limit text-xl">
+                    <p className="title pb-8">{ lang === "en" ? "Address" : "Adresa" }</p>
+                    <p>Ruđer Bošković Institute</p>
+                    <p>Bijenička 54</p>
+                    <p>10000 Zagreb</p>
+                    <p>Croatia</p>
+                    <p>Tel: <a href="tel:+385-1-4571-292" class="font-number font-light">+385-1-4571-292</a></p>
+                    <p>Fax: <a href="tel:+385-1-4561-1010" class="font-number font-light">+385-1-4561-1010</a></p>
+                  </div>
+                </section>
                 <Form form={ form } />
             </React.Fragment>
         )
@@ -21,7 +32,8 @@ export class ContactPageTemplate extends React.Component {
 
 ContactPageTemplate.propTypes = {
   form: PropTypes.object,
-  hero: PropTypes.object
+  hero: PropTypes.object,
+  lang: PropTypes.string
 }
 
 const ContactPage = ({ data }) => {
@@ -32,6 +44,7 @@ const ContactPage = ({ data }) => {
       <ContactPageTemplate
         form={post.frontmatter.form} 
         hero={post.frontmatter.hero}
+        lang={post.frontmatter.lang}
       />
     </Layout>
   )

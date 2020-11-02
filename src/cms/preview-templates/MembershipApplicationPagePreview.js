@@ -10,6 +10,7 @@ const MembershipApplicationPagePreview = ({ entry }) => {
       <MembershipApplicationPageTemplate
         form={data.form || {}}
         hero={data.hero || {}}
+        lang={entry.getIn(['data', 'lang'])}
       />
     )
   }

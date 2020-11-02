@@ -10,6 +10,13 @@ body {
   @apply tracking-wider text-gray-600 bg-gray-200;
 }
 
+::selection {
+  @apply bg-brown-500 text-white;
+}
+::-moz-selection {
+  @apply bg-brown-500 text-white;
+}
+
 section {
   @apply bg-gray-200;
 }

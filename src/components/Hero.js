@@ -10,6 +10,7 @@ const Hero = class extends React.Component {
         <section className="relative mb-6" style={{height: height ? `${height}rem` : '50rem' }}>
             <ParallaxProvider>
                 <ParallaxBanner
+                    className="bg-gray-400"
                     layers={[
                         {
                             image: `${!!image.childImageSharp ? image.childImageSharp.fluid.src : image}`,

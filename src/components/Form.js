@@ -35,6 +35,7 @@ const Form = class extends React.Component {
           }),
         })
           .then(() => this.setState({ isSubmitted: true }))
+          .then(() => window.scrollTo(0, 0))
           .catch((error) => alert(error))
     }
     
@@ -114,7 +115,7 @@ const Form = class extends React.Component {
                         <React.Fragment>
                             <h3 className="text-lg font-bold">{ success.title }</h3>
                             <p className="text-lg mb-6">{ success.subtitle }</p>
-                            {isPdf && pdf && <Pdf button={ success.button } formState={ this.state } pdf={ pdf } sections={ sections } />}
+                            {isPdf && pdf && <Pdf button={ success.button } formState={ this.state } lang={ this.props.lang } pdf={ pdf } sections={ sections } />}
                             {!isPdf && <Link to="/">{ success.button }</Link>}
                         </React.Fragment>
                     }
@@ -145,7 +146,8 @@ Form.propTypes = {
             })
         ),
         success: PropTypes.object
-    }
+    },
+    lang: PropTypes.string
 }
 
 export default Form

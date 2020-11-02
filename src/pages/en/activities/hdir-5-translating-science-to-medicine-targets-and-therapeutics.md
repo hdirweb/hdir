@@ -40,7 +40,7 @@ We are pleased to inform you about the **HDIR-5: Translating Science to Medicine
 
 
 
-**Keynote lecture***:*
+**Keynote lecture**
 
 * Joseph Slessinger (USA)
 

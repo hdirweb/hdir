@@ -55,6 +55,7 @@ const Navbar = class extends React.Component {
     super(props)
     this.state = {
       active: false,
+      currentPath: '',
       loaded: false,
       navBarActiveClass: '',
       showDropdown: false
@@ -63,6 +64,7 @@ const Navbar = class extends React.Component {
 
   componentDidMount() {
     setTimeout(() => { this.setState({ loaded: true }) }, 300);
+    this.setState({ currentPath: window.location.href })
   }
 
   toggleHamburger = () => {
@@ -117,7 +119,7 @@ const Navbar = class extends React.Component {
           {subpage => props => 
             <Link
               style={props}
-              className="px-2 py-2 block"
+              className={`px-2 py-2 block ${this.isLinkHighlighted(subpage[lang]) ? "font-bold" : ""}`}
               to={subpage[lang].url}
             >
               {subpage[lang].title}
@@ -130,9 +132,23 @@ const Navbar = class extends React.Component {
     )
   }
 
+  isLinkHighlighted(page) {
+    const currentPath = this.state.currentPath.split("/").slice(-1)[0];
+    const link = encodeURIComponent(page.url.split("/").slice(-1)[0]);
+
+    if (page.title === "EN" || page.title === "HR") {
+      return false
+    }
+    else if (currentPath === link) {
+      return true
+    }
+    
+    return false
+  }
+
   render() {
     const background = this.props.background;
-    const btn = `${background ? "text-gray-600" : "text-white"} text-2xl tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal no-underline flex items-center hover:bg-grey-dark`;
+    const btn = `${background ? "text-gray-600" : "text-white"} transition duration-300 ease-in-out transform hover:scale-110 text-2xl tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal no-underline flex items-center hover:bg-grey-dark`;
     const btnSm = `px-4 py-3`;
     const lang = this.props.lang;
 
@@ -156,7 +172,7 @@ const Navbar = class extends React.Component {
                   onMouseOut={() => page.dropdown && this.setState({ showDropdown: false })}
                 >
                   <Link
-                    className={btn}
+                    className={`${btn} ${this.isLinkHighlighted(page[lang]) ? "font-semibold" : ""}`}
                     to={page[lang].url}
                   >
                     {page[lang].title}
@@ -177,11 +193,11 @@ const Navbar = class extends React.Component {
               <div className="flex flex-col rounded-lg shadow text-white bg-gray-600 p-2 items-stretch text-xl">
                 {PAGES.map(page => (
                   <React.Fragment>
-                    <Link className={btnSm} to={page[lang].url}>{page[lang].title}</Link>
+                    <Link className={`${btnSm} ${this.isLinkHighlighted(page[lang]) ? "font-bold" : ""}`} to={page[lang].url}>{page[lang].title}</Link>
                     {page.dropdown && 
                       <React.Fragment>
                         {page.dropdown.map(subpage => (
-                          <Link className={btnSm} to={subpage[lang].url}>
+                          <Link className={`${btnSm} ${this.isLinkHighlighted(subpage[lang]) ? "font-bold" : ""}`} to={subpage[lang].url}>
                             {subpage[lang].title}
                           </Link>
                         ))}

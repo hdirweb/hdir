@@ -17,7 +17,8 @@ module.exports = {
       },
       colors: {
         brown: {
-          900: '#E48A57'
+          500: '#E48A57',
+          600: '#d17a49'
         },
         gray: {
           100: '#F5FAF9',
@@ -37,6 +38,7 @@ module.exports = {
   },
   variants: {
     backgroundColor: ['hover'],
+    transitionProperty: ['responsive'],
     visibility: ['group-hover'],
   },
   plugins: [],

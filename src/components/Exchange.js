@@ -17,5 +17,5 @@ export const format = (value, rate) => {
     formatted = formatted.toString().replace(".",",")
     formatted = !formatted.includes(",") ? formatted + ",00" : formatted
     formatted = formatted.split(',')[1] && formatted.split(',')[1].length === 1 ? formatted + "0" : formatted;
-    return `${formatted} Kn`
+    return `${formatted} Kn `
 }

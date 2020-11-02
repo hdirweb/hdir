@@ -8,12 +8,12 @@ import Layout from '../components/Layout'
 
 export class MembershipApplicationPageTemplate extends React.Component {
     render() {
-        const { form, hero } = this.props;
+        const { form, hero, lang } = this.props;
 
         return (
             <React.Fragment>
                 <Hero hero={ hero } />
-                <Form form={ form } />
+                <Form form={ form } lang={ lang } />
             </React.Fragment>
         )
     }
@@ -21,7 +21,8 @@ export class MembershipApplicationPageTemplate extends React.Component {
 
 MembershipApplicationPageTemplate.propTypes = {
   form: PropTypes.object,
-  hero: PropTypes.object
+  hero: PropTypes.object,
+  lang: PropTypes.string
 }
 
 const MembershipApplicationPage = ({ data }) => {
@@ -32,6 +33,7 @@ const MembershipApplicationPage = ({ data }) => {
       <MembershipApplicationPageTemplate
         form={post.frontmatter.form} 
         hero={post.frontmatter.hero}
+        lang={post.frontmatter.lang}
       />
     </Layout>
   )

@@ -18,6 +18,10 @@ const Payment = class extends React.Component {
         fetchRate().then(rate => ref.setState({ rate }))
     }
 
+    handleFocus(event) {
+        event.target.select();
+    }
+
     render() {
         const { details, title } = this.props.payment;
         const { rate } = this.state;
@@ -49,7 +53,13 @@ const Payment = class extends React.Component {
                                             </label>
                                         </div>
                                         <div className="sm:w-2/3">
-                                            <input className={`overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 leading-tight focus:outline-none disabled ${detail.isNumber ? "font-number font-light" : ""}`} type="text" value={value} readOnly />
+                                            <input
+                                                className={`overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 leading-tight focus:outline-none disabled ${detail.isNumber ? "font-number font-light" : ""}`}
+                                                type="text"
+                                                value={value}
+                                                readOnly
+                                                onFocus={this.handleFocus}
+                                            />
                                         </div>
                                     </div>
                                 )

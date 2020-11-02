@@ -15,11 +15,11 @@ class Feed extends React.Component {
             <Link to={post.fields.slug}>
             <div key={post.id} className="max-w-4xl">
               <article className="bg-white p-8 shadow rounded-lg mb-12">
-                <header className="flex mb-4 flex-col sm:flex-row">
+                <header className="flex justify-between mb-4 flex-col sm:flex-row">
                   <span className="text-3xl font-bold leading-tight">
                     {post.frontmatter.title}
                   </span>
-                  <span className="sm:pl-4 text-lg sm:self-center">
+                  <span className="sm:pl-4 text-lg sm:self-start sm:pt-1 w-48 sm:text-right">
                     {new Date(post.frontmatter.date).toLocaleDateString(lang)}
                   </span>
                 </header>
