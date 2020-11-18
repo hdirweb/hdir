@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.png'
-import { animated, config, Spring, Trail } from 'react-spring/renderprops'
+import { animated, config, Spring, Trail, Transition } from 'react-spring/renderprops'
+import _ from "lodash";
 
 export const ACTIVITY_DROPDOWN = [
   {
@@ -56,6 +57,7 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       currentPath: '',
+      isStickyNavbar: false,
       loaded: false,
       navBarActiveClass: '',
       showDropdown: false
@@ -65,6 +67,16 @@ const Navbar = class extends React.Component {
   componentDidMount() {
     setTimeout(() => { this.setState({ loaded: true }) }, 300);
     this.setState({ currentPath: window.location.href })
+    const scrollFunc = _.debounce(this.setSticky, 120)
+    window.addEventListener('scroll', scrollFunc)
+  }
+
+  setSticky = () => {
+    this.setState({ loaded: false })
+    this.setState({ 
+      isStickyNavbar: (window.scrollY > 900) ? true : false,
+    })
+    setTimeout(() => { this.setState({ loaded: (window.scrollY > 900) ? true : false }) }, 1200)
   }
 
   toggleHamburger = () => {
@@ -102,7 +114,7 @@ const Navbar = class extends React.Component {
         }}
       >
       {props => 
-      <animated.div style={props} class={`${this.state.loaded ? "" : "hidden"} overflow-hidden items-center m-auto text-md text-white absolute rounded-lg shadow bg-gray-600 p-2 ml-1 w-auto`} >
+      <animated.div style={props} class={`${this.state.loaded ? "" : "hidden"} overflow-hidden items-center m-auto text-md text-white absolute rounded-lg shadow bg-gray-600 -mt-1 -ml-1 p-4 w-auto`} >
         <Trail
           config={{ ...config.gentle, delay: 100 }}
           items={dropdown}
@@ -132,6 +144,71 @@ const Navbar = class extends React.Component {
     )
   }
 
+  getNav = (btnColor, logoPadding, wrapperPadding) => {
+    const background = this.props.background;
+    const btn = `${btnColor} transition duration-300 ease-in-out transform hover:scale-110 text-2xl tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal no-underline flex items-center hover:bg-grey-dark`;
+    const btnSm = `px-4 py-3`;
+    const lang = this.props.lang;
+
+    return (
+      <React.Fragment>
+        <div className="flex flex-no-shrink items-stretch h-10 lg:h-12">
+          <Link
+            to={`${lang === 'hr' ? '/' : '/en'}`}
+            className={`flex-no-grow flex-no-shrink relative ${logoPadding}`}
+            title="HDIR Logo"
+          >
+            <img src={logo} alt="HDIR" className="w-24" />
+          </Link>
+        </div>
+        <div className={`hidden ${wrapperPadding} lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow`}>
+          <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
+            {PAGES.map(page => (
+              <div
+                onMouseOver={() => page.dropdown && this.setState({ showDropdown: true })}
+                onMouseOut={() => page.dropdown && this.setState({ showDropdown: false })}
+              >
+                <Link
+                  className={`${btn} ${this.isLinkHighlighted(page[lang]) ? "font-semibold" : ""}`}
+                  to={page[lang].url}
+                >
+                  {page[lang].title}
+                </Link>
+                {page.dropdown && this.getDropdown(page.dropdown, lang)}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="lg:hidden">
+          <div className="cursor-pointer text-right text-white flex justify-end" onClick={() => this.toggleHamburger()}>
+            <p className={`${background ? "text-gray-600" : ""} text-xl`} style={{ transform: "rotate(90deg)" }}>|||</p>
+          </div>
+          <div
+            className={`${this.state.active ? "flex justify-end absolute mt-4" : "hidden"}`}
+            style={{ right: "1.5rem" }}
+          >
+            <div className="flex flex-col rounded-lg shadow text-white bg-gray-600 p-2 items-stretch text-xl">
+              {PAGES.map(page => (
+                <React.Fragment>
+                  <Link className={`${btnSm} ${this.isLinkHighlighted(page[lang]) ? "font-bold" : ""}`} to={page[lang].url}>{page[lang].title}</Link>
+                  {page.dropdown && 
+                    <React.Fragment>
+                      {page.dropdown.map(subpage => (
+                        <Link className={`${btnSm} ${this.isLinkHighlighted(subpage[lang]) ? "font-bold" : ""}`} to={subpage[lang].url}>
+                          {subpage[lang].title}
+                        </Link>
+                      ))}
+                    </React.Fragment>
+                  }
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        </div>
+      </React.Fragment>
+    )
+  }
+
   isLinkHighlighted(page) {
     const currentPath = this.state.currentPath.split("/").slice(-1)[0];
     const link = encodeURIComponent(page.url.split("/").slice(-1)[0]);
@@ -147,69 +224,25 @@ const Navbar = class extends React.Component {
   }
 
   render() {
-    const background = this.props.background;
-    const btn = `${background ? "text-gray-600" : "text-white"} transition duration-300 ease-in-out transform hover:scale-110 text-2xl tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal no-underline flex items-center hover:bg-grey-dark`;
-    const btnSm = `px-4 py-3`;
-    const lang = this.props.lang;
-
     return (
-      <div>
-        <nav className={`${background ? "bg-gray-200" : "absolute"} px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full`}>
-          <div className="flex flex-no-shrink items-stretch h-10 lg:h-12">
-            <Link 
-              to={`${lang === 'hr' ? '/' : '/en'}`}
-              className="flex-no-grow flex-no-shrink relative py-6"
-              title="HDIR Logo"
-            >
-              <img src={logo} alt="HDIR" className="w-24" />
-            </Link>
-          </div>
-          <div className="hidden py-6 lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
-            <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
-              {PAGES.map(page => (
-                <div
-                  onMouseOver={() => page.dropdown && this.setState({ showDropdown: true })}
-                  onMouseOut={() => page.dropdown && this.setState({ showDropdown: false })}
-                >
-                  <Link
-                    className={`${btn} ${this.isLinkHighlighted(page[lang]) ? "font-semibold" : ""}`}
-                    to={page[lang].url}
-                  >
-                    {page[lang].title}
-                  </Link>
-                  {page.dropdown && this.getDropdown(page.dropdown, lang)}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="lg:hidden">
-            <div className="cursor-pointer text-right text-white flex justify-end" onClick={() => this.toggleHamburger()}>
-              <p className={`${background ? "text-gray-600" : ""} text-xl`} style={{ transform: "rotate(90deg)" }}>|||</p>
-            </div>
-            <div
-              className={`${this.state.active ? "flex justify-end absolute mt-4" : "hidden"}`}
-              style={{ right: "1.5rem" }}
-            >
-              <div className="flex flex-col rounded-lg shadow text-white bg-gray-600 p-2 items-stretch text-xl">
-                {PAGES.map(page => (
-                  <React.Fragment>
-                    <Link className={`${btnSm} ${this.isLinkHighlighted(page[lang]) ? "font-bold" : ""}`} to={page[lang].url}>{page[lang].title}</Link>
-                    {page.dropdown && 
-                      <React.Fragment>
-                        {page.dropdown.map(subpage => (
-                          <Link className={`${btnSm} ${this.isLinkHighlighted(subpage[lang]) ? "font-bold" : ""}`} to={subpage[lang].url}>
-                            {subpage[lang].title}
-                          </Link>
-                        ))}
-                      </React.Fragment>
-                    }
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-            </div>
+      <React.Fragment>
+        <nav className="absolute px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full">
+          {this.getNav("text-white", "py-6", "py-6")}
         </nav>
-      </div>
+
+        <Transition
+          config={config.gentle}
+          items={this.state.isStickyNavbar}
+          from={{ opacity: 0, transform: 'translateY(-100%)' }}
+          enter={{ opacity: 1, transform: 'translateY(0%)' }}
+          leave={{ opacity: 0, transform: 'translateY(-100%)' }}>
+            {show => show && (props => 
+          <nav style={props} className="lg:fixed lg:shadow bg-white text-gray-600 px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full">
+            {this.getNav("text-gray-600", "py-3", "py-2")}
+          </nav>
+        )}
+        </Transition>
+      </React.Fragment>
     )
   }
 }

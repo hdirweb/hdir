@@ -10,7 +10,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 const Pdf = class extends React.Component {
   create(formState, lang, pdf, sections) {
     const dateInfo = new Date().toLocaleString(lang).replace(',', ' ').split(' ');
-    dateInfo.splice(lang == "en" ? -2 : -1);
+    dateInfo.splice(lang === "en" ? -2 : -1);
 
     let content = [
       {
@@ -94,12 +94,12 @@ const Pdf = class extends React.Component {
 
     let firstName = ''
     let lastName = ''
-  
+
     sections.map((section) => section.fields.map((field) => {
       let text = (formState[field.name]) ? formState[field.name] : '';
       if (field.type === 'date'){
         const dateInput = new Date(formState[field.name]).toLocaleString(lang).replace(',', ' ').split(' ');
-        dateInput.splice(lang == "en" ? -2 : -1);
+        dateInput.splice(lang === "en" ? -2 : -1);
         text = dateInput.join(' ');
       }
 
@@ -121,6 +121,8 @@ const Pdf = class extends React.Component {
           }
         ]
       })
+
+      return null;
     }))
 
     content.push({
