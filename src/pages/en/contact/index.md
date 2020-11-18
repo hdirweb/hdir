@@ -1,6 +1,15 @@
 ---
 templateKey: contact-page
 lang: en
+contact:
+  fax: +385-1-4561-1010
+  lines:
+    - text: Bijenička 54
+    - text: (Ruđer Bošković Institute)
+    - text: 10000 Zagreb
+    - text: Croatia
+  tel: +385-1-4571-292
+  title: Address
 hero:
   height: 28
   image: /img/the-climate-reality-project-hb6uwq0i4mi-2.jpg

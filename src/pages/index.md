@@ -11,13 +11,13 @@ hero:
   title: Hrvatsko društvo za istraživanje raka (HDIR)
   top: ""
   link:
-    page: /about
+    page: /o-društvu
     title: O nama
 membership:
   height: 28
   image: /img/bill-oxford-tr0pplun6pw-unsplash.jpg
   link:
-    page: /membership
+    page: /članstvo  
     title: Postani član
   subtitle: > 
     Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za 

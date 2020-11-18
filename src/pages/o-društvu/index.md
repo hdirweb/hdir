@@ -29,7 +29,7 @@ membership:
   height: 28
   image: /img/12661.jpg
   link:
-    page: /membership
+    page: /članstvo
     title: Želim postati član
   subtitle: Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za
     godišnju članarinu

@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const isCmsApp = typeof NetlifyCmsApp !== "undefined";
+
 const BigCards = ({ cards, className }) => (
   <div className={className || ''} >
     {cards.map((card, index, array) => (
@@ -28,7 +30,7 @@ const Image = ({ image }) => (
 const Left = ({ card }) => (
   <div
     className="flex"
-    data-sal="slide-right"
+    data-sal={`${isCmsApp ? "" : "slide-right"}`}
     data-sal-easing="ease"
     style={{"--sal-duration": "1.5s"}}
   >
@@ -40,7 +42,7 @@ const Left = ({ card }) => (
 const Right = ({ card }) => (
   <div
     className="flex justify-end"
-    data-sal="slide-left"
+    data-sal={`${isCmsApp ? "" : "slide-left"}`}
     data-sal-easing="ease"
     style={{"--sal-duration": "1.5s"}}
   >

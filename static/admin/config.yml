@@ -8,7 +8,7 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-# local_backend: true
+local_backend: true
 
 media_folder: static/img
 public_folder: /img
@@ -364,6 +364,18 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Lines
+                name: lines
+                widget: list
+                fields:
+                  - {label: Text, name: text, widget: string}
+              - {label: Tel, name: tel, widget: string}
+              - {label: Fax, name: fax, widget: string}
           - label: Form
             name: form
             widget: object
@@ -780,6 +792,18 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Lines
+                name: lines
+                widget: list
+                fields:
+                  - {label: Text, name: text, widget: string}
+              - {label: Tel, name: tel, widget: string}
+              - {label: Fax, name: fax, widget: string}
           - label: Form
             name: form
             widget: object

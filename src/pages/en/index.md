@@ -10,7 +10,7 @@ hero:
   top: ""
   link:
     page: /about
-    title: O nama
+    title: About us
 membership:
   height: 28
   image: /img/12661.jpg

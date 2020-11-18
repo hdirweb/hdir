@@ -8,9 +8,9 @@ const ContactPagePreview = ({ entry }) => {
   if (data) {
     return (
       <ContactPageTemplate
+        contact={data.contact || {}}
         form={data.form || {}}
         hero={data.hero || {}}
-        lang={entry.getIn(['data', 'lang'])}
       />
     )
   }
