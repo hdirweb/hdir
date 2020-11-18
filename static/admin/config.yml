@@ -932,4 +932,23 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
-                          
+  - name: "footer"
+    label: "Footer"
+    folder: "src/pages"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "footer"}
+      - {label: "Name EN", name: "nameEN", widget: "string"}
+      - {label: "Name HR", name: "nameHR", widget: "string"}
+      - label: "Address Lines"
+        name: addressLines
+        widget: list
+        fields:
+          - {label: Text, name: text, widget: text}
+      - {label: "Tel", name: "tel", widget: "string"}
+      - {label: "Fax", name: "fax", widget: "string"}
+      - {label: "IBAN", name: "iban", widget: "string"}
+      - {label: "Bank", name: "bank", widget: "string"}
+      - {label: "OiB", name: "oib", widget: "string"}
+      - {label: "MB", name: "mb", widget: "string"}

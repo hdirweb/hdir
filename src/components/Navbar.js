@@ -114,7 +114,7 @@ const Navbar = class extends React.Component {
         }}
       >
       {props => 
-      <animated.div style={props} class={`${this.state.loaded ? "" : "hidden"} overflow-hidden items-center m-auto text-md text-white absolute rounded-lg shadow bg-gray-600 -mt-1 -ml-1 p-4 w-auto`} >
+      <animated.div style={props} className={`${this.state.loaded ? "" : "hidden"} overflow-hidden items-center m-auto text-md text-white absolute rounded-lg shadow bg-gray-600 -mt-1 -ml-1 p-4 w-auto`} >
         <Trail
           config={{ ...config.gentle, delay: 100 }}
           items={dropdown}
@@ -237,7 +237,7 @@ const Navbar = class extends React.Component {
           enter={{ opacity: 1, transform: 'translateY(0%)' }}
           leave={{ opacity: 0, transform: 'translateY(-100%)' }}>
             {show => show && (props => 
-          <nav style={props} className="lg:fixed lg:shadow bg-white text-gray-600 px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full">
+          <nav style={props} className="hidden lg:fixed lg:shadow bg-white text-gray-600 px-6 pb-10 lg:pb-0 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full">
             {this.getNav("text-gray-600", "py-3", "py-2")}
           </nav>
         )}

@@ -11,8 +11,8 @@ const Contact = class extends React.Component {
                 {lines.map((line) => (
                     <p>{line.text}</p>
                 ))}
-                <p>Tel: <a href={`tel:${tel}`} class="font-number font-light">{tel}</a></p>
-                <p>Fax: <a href={`fax:${fax}`} class="font-number font-light">{fax}</a></p>
+                <p>Tel: <a href={`tel:${tel}`} className="font-number font-light">{tel}</a></p>
+                <p>Fax: <a href={`tel:${fax}`} className="font-number font-light">{fax}</a></p>
             </div>
         </section>
     )

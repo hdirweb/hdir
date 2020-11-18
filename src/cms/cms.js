@@ -7,6 +7,7 @@ import ActivitiesPagePreview from './preview-templates/ActivitiesPagePreview'
 import ActivityPostPreview from './preview-templates/ActivityPostPreview'
 import ConferencesPagePreview from './preview-templates/ConferencesPagePreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
+import FooterPreview from './preview-templates/FooterPreview'
 import MeetingsPagePreview from './preview-templates/MeetingsPagePreview'
 import MembershipPagePreview from './preview-templates/MembershipPagePreview'
 import MembershipApplicationPagePreview from './preview-templates/MembershipApplicationPagePreview'
@@ -23,6 +24,7 @@ CMS.registerPreviewTemplate('activitiesHR', ActivityPostPreview)
 CMS.registerPreviewTemplate('activitiesEN', ActivityPostPreview)
 CMS.registerPreviewTemplate('conferences', ConferencesPagePreview)
 CMS.registerPreviewTemplate('contact', ContactPagePreview)
+CMS.registerPreviewTemplate('footer', FooterPreview)
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('meetings', MeetingsPagePreview)
 CMS.registerPreviewTemplate('membership', MembershipPagePreview)

@@ -1,13 +1,51 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 
 import { PAGES, ACTIVITY_DROPDOWN } from './Navbar';
 
-const Footer = class extends React.Component {
+class FooterQuery extends React.Component {
   render() {
+    const lang = this.props.lang;
+    return (
+      <StaticQuery
+        query={graphql`
+          query Footer {
+            allMarkdownRemark(
+              filter: { frontmatter: { templateKey: { eq: "footer" } } }
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    addressLines {
+                      text
+                    }
+                    bank
+                    iban
+                    nameEN
+                    nameHR
+                    mb
+                    oib
+                    tel
+                    fax
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={(data) => <FooterComponent data={data.allMarkdownRemark.edges[0].node.frontmatter} lang={lang} />}
+      />
+    )
+  }
+}
+
+export class FooterComponent extends React.Component {
+  render() {
+    const { lang } = this.props
+    const { addressLines, bank, fax, iban, mb, nameEN, nameHR, oib, tel } = this.props.data
+
     const linkClass = "mb-2";
     const year = new Date().getFullYear();
-    const lang = this.props.lang;
     return (
       <footer className="bg-gray-400 py-12 md:py-12">
         <div className="limit md:flex justify-between">
@@ -20,21 +58,20 @@ const Footer = class extends React.Component {
             </div>
           </div>
           <div className="pb-12 text-sm md:text-md md:mr-12" style={{ maxWidth: '180px' }}>
-            <p><Link to="/">Hrvatsko društvo za istraživanje raka</Link></p>
-            <p className="mt-6"><Link to="/en">Croatian Association for Cancer Research</Link></p>
+            <p><Link to="/">{nameHR}</Link></p>
+            <p className="mt-6"><Link to="/en">{nameEN}</Link></p>
           </div>
           <div className="text-sm md:mr-12">
-            <p>Ruđer Bošković Institute</p>
-            <p>Bijenička 54</p>
-            <p>10000 Zagreb</p>
-            <p>Croatia</p>
-            <p className="mt-6">Tel: <a href="tel:+385-1-4571-292" className="font-number font-light">+385-1-4571-292</a></p>
-            <p>Fax: <a href="tel:+385-1-4561-1010" className="font-number font-light">+385-1-4561-1010</a></p>
+            {addressLines.map((line) => (
+                <p>{line.text}</p>
+            ))}
+            <p className="mt-6">Tel: <a href={`tel:${tel}`} className="font-number font-light">{tel}</a></p>
+            <p>Fax: <a href={`tel:${fax}`} className="font-number font-light">{fax}</a></p>
           </div>
           <div className="text-sm md:mr-12">
-            <p>IBAN: <span className="font-number font-light">HR5023600001102084564</span><br/>(Zagrebačka banka)</p>
-            <p className="mt-6">OIB: <span className="font-number font-light">01690550600</span></p>
-            <p>MB: <span className="font-number font-light">2517744</span></p>
+            <p>IBAN: <span className="font-number font-light">{iban}</span><br/>{bank}</p>
+            <p className="mt-6">OIB: <span className="font-number font-light">{oib}</span></p>
+            <p>MB: <span className="font-number font-light">{mb}</span></p>
           </div>
         </div>
         <div className="limit pt-6">
@@ -45,4 +82,4 @@ const Footer = class extends React.Component {
   }
 }
 
-export default Footer
+export default FooterQuery
