@@ -8,74 +8,32 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-# local_backend: true
+local_backend: true
 
 media_folder: static/img
 public_folder: /img
 
+i18n:
+  structure: single_file
+  locales: [hr, en]
+
+default_locale: hr
+
 collections:
   - name: "activitiesHR"
     i18n: true
-    label: "Aktivnosti HR"
+    label: "Aktivnosti HR/EN"
     folder: "src/pages/aktivnosti"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "activity-post"}
-      - {label: "Language", name: "lang", widget: "hidden", default: "hr"}
-      - label: Hero
-        name: hero
-        widget: object
-        fields:
-          - {label: Image, name: image, widget: image}
-          - {label: Top, name: top, widget: string, required: false}
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: text}
-          - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
-          - label: Link
-            name: link
-            widget: object
-            fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Page, name: page, widget: string, required: false}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: Activity, name: activity, widget: select, options: ["meetings", "lectures", "conferences", "workshops"]}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean", required: false}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "activity-post", i18n: duplicate}
+      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Date", name: "date", widget: "datetime", i18n: duplicate}
+      - {label: "Description", name: "description", widget: "text", required: false, i18n: true}
+      - {label: Activity, name: activity, widget: select, options: ["meetings", "lectures", "conferences", "workshops"], i18n: duplicate}
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "activitiesEN"
-    i18n: true
-    label: "Activities EN"
-    folder: "src/pages/en/activities"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "activity-post"}
-      - {label: "Language", name: "lang", widget: "hidden", default: "en"}
-      - label: Hero
-        name: hero
-        widget: object
-        fields:
-          - {label: Image, name: image, widget: image}
-          - {label: Top, name: top, widget: string, required: false}
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: text}
-          - {label: "Height (rem)", name: height, widget: number, value_type: "int", min: 10, max: 100, step: 1, required: false}
-          - label: Link
-            name: link
-            widget: object
-            fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Page, name: page, widget: string, required: false}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: Activity, name: activity, widget: select, options: ["meetings", "lectures", "conferences", "workshops"]}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean", required: false}
-      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", required: false, i18n: true}
   - name: "pagesHR"
     label: "Stranice HR"
     files:

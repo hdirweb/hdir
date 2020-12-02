@@ -8,8 +8,8 @@ export default () => (
     query={graphql`
       query LecturesENQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "activity-post" } activity: { eq: "lectures" } lang: { eq: "en" } } }
+          sort: { order: DESC, fields: [frontmatter___hr___date] }
+          filter: { frontmatter: { hr: { templateKey: { eq: "activity-post" } activity: { eq: "lectures" } } } }
         ) {
           edges {
             node {
@@ -19,15 +19,29 @@ export default () => (
                 slug
               }
               frontmatter {
-                title
-                templateKey
-                date
-                description
-                featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 180, quality: 100) {
-                      ...GatsbyImageSharpFluid
+                hr {
+                  title
+                  templateKey
+                  date
+                  description
+                  featuredimage {
+                    childImageSharp {
+                      fluid(maxWidth: 180, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+                en {
+                  title
+                  templateKey
+                  date
+                  description
+                  featuredimage {
+                    childImageSharp {
+                      fluid(maxWidth: 180, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
                     }
                   }
                 }

@@ -2,22 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+import ReactMarkdownWithHtml from "react-markdown/with-html";
+import gfm from 'remark-gfm'
 
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
 
-export const ActivityPostTemplate = ({
+export const ActivityPostHRTemplate = ({
   content,
-  contentComponent,
   date,
   description,
   title,
   helmet,
   lang
 }) => {
-  const PostContent = contentComponent || Content
-
   const hero = {
     height: 28,
     image: "/img/278.jpg",
@@ -36,68 +34,77 @@ export const ActivityPostTemplate = ({
         {helmet || ''}
         <div className="max-w-2xl m-auto py-12 px-6">
           <p className="mt-4 text-xl">
-            {lang === 'hr' && <span>Datum održavanja: </span>}
-            {lang === 'en' && <span>Date of the event: </span>}
+            <span>Datum održavanja: </span>
             {new Date(date).toLocaleDateString(lang)}
           </p>
           <p className="pt-2 pb-12 font-light text-2xl md:text-4xl leading-tight">{description}</p>
-          <PostContent className="text-xl clean-formatting" content={content} />
+          <ReactMarkdownWithHtml plugins={[gfm]} className="text-xl clean-formatting" children={content} allowDangerousHtml />
         </div>
       </section>
     </React.Fragment>
   )
 }
 
-ActivityPostTemplate.propTypes = {
+ActivityPostHRTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
   lang: PropTypes.string
 }
 
-const ActivityPost = ({ data }) => {
+function getNonEmpty(frontmatter, field) {
+  const lang = "hr";
+  return frontmatter[lang][field] || frontmatter["hr"][field] || frontmatter["en"][field];
+}
+
+const ActivityHRPost = ({ data }) => {
   const { markdownRemark: post } = data
+  const frontmatter = post.frontmatter;
 
   return (
-    <Layout lang={post.frontmatter.lang}>
-      <ActivityPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        date={post.frontmatter.date}
-        description={post.frontmatter.description}
+    <Layout lang="hr">
+      <ActivityPostHRTemplate
+        content={getNonEmpty(frontmatter, "body")}
+        date={post.frontmatter.en.date}
+        description={getNonEmpty(frontmatter, "description")}
         helmet={
           <Helmet titleTemplate="%s">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{getNonEmpty(frontmatter, "title")}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={getNonEmpty(frontmatter, "description")}
             />
           </Helmet>
         }
-        lang={post.frontmatter.lang}
-        title={post.frontmatter.title}
+        lang="hr"
+        title={getNonEmpty(frontmatter, "title")}
       />
     </Layout>
   )
 }
 
-ActivityPost.propTypes = {
+ActivityHRPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default ActivityPost
+export default ActivityHRPost
 
 export const pageQuery = graphql`
-  query ActivityPostByID($id: String!) {
+  query ActivityHRPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      html
       frontmatter {
         hr {
+          body
+          date
+          title
+          description
+        }
+        en {
+          body
           date
           title
           description

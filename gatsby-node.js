@@ -8,7 +8,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 10000
+        ) {
         edges {
           node {
             id
@@ -17,6 +19,12 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               templateKey
+              en {
+                templateKey
+              }
+              hr {
+                templateKey
+              }
             }
           }
         }
@@ -30,8 +38,11 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges
 
-    posts.forEach((edge) => {
+    // console.log(posts.filter(edge => edge.node.frontmatter.en !== null).map(post => post.node.frontmatter.en.templateKey))
+
+    posts.filter(post => post.node.frontmatter.templateKey !== null).forEach((edge) => {
       const id = edge.node.id
+      
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
@@ -43,6 +54,37 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+
+    posts.filter(post => post.node.frontmatter.en !== null).forEach((edge) => {
+      const id = edge.node.id
+      
+      createPage({
+        path: '/en' + edge.node.fields.slug,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.en.templateKey)}.en.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id,
+        },
+      })
+    })
+
+    posts.filter(post => post.node.frontmatter.hr !== null).forEach((edge) => {
+      const id = edge.node.id
+      
+      createPage({
+        path: '/hr' + edge.node.fields.slug,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.hr.templateKey)}.hr.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id,
+        },
+      })
+    })
+
   })
 }
 

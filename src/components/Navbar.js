@@ -29,10 +29,6 @@ export const ACTIVITY_DROPDOWN = [
 
 export const PAGES = [
   {
-    "en": { "title": "HR", "url": "/" },
-    "hr": { "title": "EN", "url": "/en/" }
-  },
-  {
     "en": { "title": "About", "url": "/en/about" },
     "hr": { "title": "O društvu", "url": "/o-društvu" }
   },
@@ -66,17 +62,15 @@ const Navbar = class extends React.Component {
 
   componentDidMount() {
     setTimeout(() => { this.setState({ loaded: true }) }, 300);
-    this.setState({ currentPath: window.location.href })
+    this.setState({ currentPath: window.location.pathname })
     const scrollFunc = _.debounce(this.setSticky, 120)
     window.addEventListener('scroll', scrollFunc)
   }
 
   setSticky = () => {
-    this.setState({ loaded: false })
     this.setState({ 
       isStickyNavbar: (window.scrollY > 900) ? true : false,
     })
-    setTimeout(() => { this.setState({ loaded: (window.scrollY > 900) ? true : false }) }, 1200)
   }
 
   toggleHamburger = () => {
@@ -144,6 +138,22 @@ const Navbar = class extends React.Component {
     )
   }
 
+  getLangLink = (btn) => {
+    const currentLang = this.state.currentPath.includes("/en/") ? "en" : "hr";
+    const otherLang = currentLang === "en" ? "hr" : "en";
+    const matchPage = PAGES.concat(ACTIVITY_DROPDOWN).filter(page => encodeURIComponent(page[currentLang]["url"]).replaceAll("%2F","/") === this.state.currentPath);
+    const link = matchPage.length > 0 ? matchPage[0][otherLang]["url"] : this.state.currentPath.replace(`/${currentLang}/`, `/${otherLang}/`);
+
+    return (
+      <Link
+          className={btn}
+          to={link}
+        >
+          {otherLang.toUpperCase()}
+      </Link>
+    )
+  }
+
   getNav = (btnColor, logoPadding, wrapperPadding) => {
     const background = this.props.background;
     const btn = `${btnColor} transition duration-300 ease-in-out transform hover:scale-110 text-2xl tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal no-underline flex items-center hover:bg-grey-dark`;
@@ -163,6 +173,7 @@ const Navbar = class extends React.Component {
         </div>
         <div className={`hidden ${wrapperPadding} lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow`}>
           <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
+            {this.getLangLink(btn)}
             {PAGES.map(page => (
               <div
                 onMouseOver={() => page.dropdown && this.setState({ showDropdown: true })}
@@ -188,6 +199,7 @@ const Navbar = class extends React.Component {
             style={{ right: "1.5rem" }}
           >
             <div className="flex flex-col rounded-lg shadow text-white bg-gray-600 p-2 items-stretch text-xl">
+              {this.getLangLink(btnSm)}
               {PAGES.map(page => (
                 <React.Fragment>
                   <Link className={`${btnSm} ${this.isLinkHighlighted(page[lang]) ? "font-bold" : ""}`} to={page[lang].url}>{page[lang].title}</Link>
