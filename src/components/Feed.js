@@ -9,14 +9,14 @@ class Feed extends React.Component {
   }
 
   render() {
-    const { data } = this.props
+    const { activity, data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     const lang = this.props.lang;
     return (
       <section className="py-24">
         <div className="limit">
         {posts &&
-          posts.map(({ node: post }) => (
+          posts.filter(post => activity !== "" ? post.node.frontmatter[lang].activity === activity : true).map(({ node: post }) => (
             <Link to={`/${lang}${post.fields.slug}`}>
             <div key={post.id} className="max-w-4xl">
               <article className="bg-white p-8 shadow rounded-lg mb-12">
@@ -62,6 +62,7 @@ class Feed extends React.Component {
 }
 
 Feed.propTypes = {
+  activity: PropTypes.string,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,

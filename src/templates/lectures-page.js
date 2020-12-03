@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import LecturesEN from '../components/LecturesEN'
-import LecturesHR from '../components/LecturesHR'
+import Activities from '../components/Activities'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 
@@ -11,8 +10,7 @@ export const LecturesPageTemplate = ({ hero, lang }) => {
   return (
     <React.Fragment>
       <Hero hero={ hero } />
-      {lang === 'en' && <LecturesEN />}
-      {lang === 'hr' && <LecturesHR />}
+      <Activities activity="lectures" lang={lang} />
     </React.Fragment>
   )
 }

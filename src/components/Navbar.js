@@ -109,29 +109,14 @@ const Navbar = class extends React.Component {
       >
       {props => 
       <animated.div style={props} className={`${this.state.loaded ? "" : "hidden"} overflow-hidden items-center m-auto text-md text-white absolute rounded-lg shadow bg-gray-600 -mt-1 -ml-1 p-4 w-auto`} >
-        <Trail
-          config={{ ...config.gentle, delay: 100 }}
-          items={dropdown}
-          keys={subpage => subpage[lang].title}
-          from={{
-            opacity: this.state.showDropdown ? 0 : 1,
-            transform: this.state.showDropdown ? 'translateY(-20%)' : 'translateY(0%)'
-          }}
-          to={{
-            opacity: this.state.showDropdown ? 1 : 0,
-            transform: this.state.showDropdown ? 'translateY(0%)' : 'translateY(-20%)'
-          }}
-        >
-          {subpage => props => 
-            <Link
-              style={props}
-              className={`px-2 py-2 block ${this.isLinkHighlighted(subpage[lang]) ? "font-bold" : ""}`}
-              to={subpage[lang].url}
-            >
-              {subpage[lang].title}
-            </Link>
-          }
-        </Trail>
+        {dropdown.map(subpage => (
+          <Link
+            className={`px-2 py-2 block ${this.isLinkHighlighted(subpage[lang]) ? "font-bold" : ""}`}
+            to={subpage[lang].url}
+          >
+            {subpage[lang].title}
+          </Link>
+        ))}
       </animated.div>
       }
       </Spring>
