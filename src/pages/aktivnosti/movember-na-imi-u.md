@@ -7,14 +7,13 @@ hr:
     istraživanja i medicinu rada.
   activity: lectures
   featuredimage: /img/movember_2019.jpg
-  body: |-
-    ![](/img/movember_2019.jpg)
+  body: "![](/img/movember_2019.jpg)"
 en:
   templateKey: activity-post
   date: 2019-11-08T14:59:00.000Z
   activity: lectures
   featuredimage: /img/movember_2019.jpg
-  title: ""
+  title: Movember on IMI
   description: ""
   body: ""
 ---
