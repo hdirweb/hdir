@@ -6,7 +6,7 @@ contact:
   fax: +385-1-4561-1010
   lines:
     - text: Bijenička 54
-    - text: (Ruđer Bošković Institute)
+    - text: (Institut Ruđer Bošković)
     - text: 10000 Zagreb
     - text: Hrvatska
   tel: +385-1-4571-292
