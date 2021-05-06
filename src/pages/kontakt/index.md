@@ -37,7 +37,7 @@ form:
           name: lastName
           title: Prezime
           type: text
-        - title: E-mail
+        - title: Vaš e-mail
           name: email
           type: email
           isRequired: true

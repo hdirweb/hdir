@@ -37,7 +37,7 @@ form:
           name: lastName
           title: Last name
           type: text
-        - title: E-mail
+        - title: Your e-mail
           name: email
           type: email
           isRequired: true
