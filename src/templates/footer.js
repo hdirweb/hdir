@@ -23,6 +23,7 @@ FooterTemplate.propTypes = {
     })
   ),
   bank: PropTypes.string,
+  email: PropTypes.string,
   fax: PropTypes.string,
   iban: PropTypes.string,
   mb: PropTypes.string,
@@ -40,6 +41,7 @@ const Footer = ({ data }) => {
       <FooterTemplate
         addressLines={post.frontmatter.addressLines}
         bank={post.frontmatter.bank}
+        email={post.frontmatter.email}
         fax={post.frontmatter.fax}
         iban={post.frontmatter.iban}
         mb={post.frontmatter.mb}
@@ -70,6 +72,7 @@ export const pageQuery = graphql`
             text
         }
         bank
+        email
         fax
         iban
         mb

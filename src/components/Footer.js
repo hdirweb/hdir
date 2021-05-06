@@ -20,6 +20,7 @@ class FooterQuery extends React.Component {
                       text
                     }
                     bank
+                    email
                     iban
                     nameEN
                     nameHR
@@ -42,7 +43,7 @@ class FooterQuery extends React.Component {
 export class FooterComponent extends React.Component {
   render() {
     const { lang } = this.props
-    const { addressLines, bank, fax, iban, mb, nameEN, nameHR, oib, tel } = this.props.data
+    const { addressLines, bank, email, fax, iban, mb, nameEN, nameHR, oib, tel } = this.props.data
 
     const linkClass = "mb-2";
     const year = new Date().getFullYear();
@@ -67,6 +68,7 @@ export class FooterComponent extends React.Component {
             ))}
             <p className="mt-6">Tel: <a href={`tel:${tel}`} className="font-number font-light">{tel}</a></p>
             <p>Fax: <a href={`tel:${fax}`} className="font-number font-light">{fax}</a></p>
+            <p>E-mail: <a href={`mailto:${email}`}>{email}</a></p>
           </div>
           <div className="text-sm md:mr-12">
             <p>IBAN: <span className="font-number font-light">{iban}</span><br/>{bank}</p>

@@ -9,6 +9,7 @@ const FooterPreview = ({ entry }) => {
       <FooterTemplate
         addressLines={entry.getIn(['data']).toJS().addressLines}
         bank={entry.getIn(['data', 'bank'])}
+        email={entry.getIn(['data', 'email'])}
         fax={entry.getIn(['data', 'fax'])}
         iban={entry.getIn(['data', 'iban'])}
         mb={entry.getIn(['data', 'mb'])}
