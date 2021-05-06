@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = class extends React.Component {
   render() {
-    const { fax, lines, tel, title } = this.props.contact;
+    const { email, fax, lines, tel, title } = this.props.contact;
 
     return (
         <section className="py-12">
@@ -13,6 +13,7 @@ const Contact = class extends React.Component {
                 ))}
                 <p>Tel: <a href={`tel:${tel}`} className="font-number font-light">{tel}</a></p>
                 <p>Fax: <a href={`tel:${fax}`} className="font-number font-light">{fax}</a></p>
+                <p>E-mail: <a href={`mailto:${email}`}>{email}</a></p>
             </div>
         </section>
     )

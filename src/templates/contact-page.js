@@ -54,6 +54,7 @@ export const contactPageQuery = graphql`
       frontmatter {
         lang
         contact {
+          email
           fax
           lines {
             text

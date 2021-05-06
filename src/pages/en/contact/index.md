@@ -2,6 +2,7 @@
 templateKey: contact-page
 lang: en
 contact:
+  email: info@hdir.hr
   fax: +385-1-4561-1010
   lines:
     - text: Bijenička 54
