@@ -47,6 +47,13 @@ export const PAGES = [
   }
 ]
 
+const OTHER_PAGES = [
+  {
+    "en": { "title": "Membership", "url": "/en/membership/application" },
+    "hr": { "title": "Članstvo", "url": "/članstvo/prijava" }
+  },
+]
+
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -126,7 +133,7 @@ const Navbar = class extends React.Component {
   getLangLink = (btn) => {
     const currentLang = this.state.currentPath.includes("/en") ? "en" : "hr";
     const otherLang = currentLang === "en" ? "hr" : "en";
-    const matchPage = PAGES.concat(ACTIVITY_DROPDOWN).filter(page => encodeURIComponent(page[currentLang]["url"]).replace(/%2F/g, '/') === this.state.currentPath);
+    const matchPage = PAGES.concat(ACTIVITY_DROPDOWN).concat(OTHER_PAGES).filter(page => encodeURIComponent(page[currentLang]["url"]).replace(/%2F/g, '/') === this.state.currentPath);
     let link = matchPage.length > 0 ? matchPage[0][otherLang]["url"] : this.state.currentPath.replace(`/${currentLang}/`, `/${otherLang}/`);
     if (this.state.currentPath === "/")
       link = "/en"
