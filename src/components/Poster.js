@@ -6,7 +6,7 @@ const Poster = class extends React.Component {
     const { colors, image, link } = this.props.poster;
 
     return (
-        <section className="pb-12">
+        <section className="hidden pb-12">
           <div className="relative">
             <div 
               className="limit"
