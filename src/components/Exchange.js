@@ -1,6 +1,6 @@
 export const fetchRate = async () =>  {
     try {
-        const response = await fetch('https://api.ratesapi.io/api/latest?symbols=HRK');
+        const response = await fetch('https://api.exchangerate.host/latest?base=EUR&symbols=HRK');
         const json = await response.json();
         return json.rates.HRK;
     }
