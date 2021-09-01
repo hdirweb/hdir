@@ -4,16 +4,15 @@ hr:
   date: 2017-03-30T16:31:00.000Z
   activity: conferences
   featuredimage: /img/syposium.jpg
-  title: ""
+  title: New Advances in Radio and Immuno Therapy of Cancer
   description: ""
   body: ""
 en:
   templateKey: activity-post
-  title: New advances in radio and immuno therapy of cancer
+  title: New Advances in Radio and Immuno Therapy of Cancer
   date: 2017-03-30T16:31:00.000Z
   description: Symposium at Ruđer Bošković Institute
   activity: conferences
   featuredimage: /img/syposium.jpg
-  body: |-
-    ![](/img/syposium.jpg)
+  body: "![](/img/syposium.jpg)"
 ---
