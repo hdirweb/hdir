@@ -118,6 +118,12 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
+          - label: "Right Text"
+            name: rightText
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Body, name: body, widget: text}
           - label: "Left Text"
             name: leftText
             widget: object
@@ -547,6 +553,12 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string, required: false}
                   - {label: Page, name: page, widget: string, required: false}
+          - label: "Right Text"
+            name: rightText
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Body, name: body, widget: text}
           - label: "Left Text"
             name: leftText
             widget: object
