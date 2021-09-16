@@ -13,6 +13,7 @@ const AboutPagePreview = ({ entry }) => {
         membership={data.membership || {}}
         rightText={data.rightText || {}}
         story={data.story || {}}
+        structure={data.structure || {}}
         textWithImage={data.textWithImage || {}}
       />
     )

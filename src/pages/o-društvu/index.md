@@ -57,6 +57,54 @@ story:
         poticanje inicijativa za istraživačke programe od posebnog značaja
         za  područje raka
   title: Glavni ciljevi društva
+structure:
+  roles:
+    - personList:
+      - name: Sonja Levanat
+        title: Institut Ruđer Bošković, Zagreb
+      title: Predsjednik
+    - personList:
+      - name: Biserka Nagy
+        title: ""
+      title: Dopredsjednik
+    - personList:
+      - name: Petar Ozretić
+        title: Institut Ruđer Bošković, Zagreb
+      title: Tajnik
+    - personList:
+      - name: Maja Sabol
+        title: ""
+      title: Rizničar
+    - personList:
+      - name: Maja Osmak
+        title: ""
+      - name: Damir Eljuga
+        title: ""
+      - name: Neda Slade
+        title: ""
+      - name: Vesna Musani
+        title: ""
+      - name: Mirela Levačić Cvok
+        title: ""
+      title: Članovi Izvršnog odbora
+    - personList:
+      - name: Maja Herak Bosnar
+        title: ""
+      - name: Goran Gajski
+        title: ""
+      - name: Mihaela Matovina
+        title: ""
+      title: Nadzorni odbor
+    - personList:
+      - name: Marko Marjanović
+        title: ""
+      - name: Marijeta Kralj
+        title: ""
+      - name: Dragomira Majhen
+        title: ""
+      title: Sud časti
+  show: False
+  title: Ustrojstvo
 textWithImage:
   body: >
     Ove odrednice su u skladu s misijom EACR-a koja ima cilj unaprijediti

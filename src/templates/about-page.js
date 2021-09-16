@@ -8,17 +8,19 @@ import LeftText from '../components/LeftText'
 import Membership from '../components/Membership'
 import RightText from '../components/RightText'
 import Story from '../components/Story'
+import Structure from '../components/Structure'
 import TextWithImage from '../components/TextWithImage'
 
-export const AboutPageTemplate = ({ hero, leftText, membership, rightText, story, textWithImage }) => {
+export const AboutPageTemplate = ({ hero, leftText, membership, rightText, story, structure, textWithImage }) => {
   return (
     <React.Fragment>
-      <Hero hero={ hero } />
-      <RightText rightText={ rightText } />
-      <Story story={ story } />
-      <TextWithImage textWithImage={ textWithImage } />
-      <LeftText leftText={ leftText } />
-      <Membership membership={ membership } />
+      <Hero hero={hero} />
+      <RightText rightText={rightText} />
+      <Story story={story} />
+      <TextWithImage textWithImage={textWithImage} />
+      <LeftText leftText={leftText} />
+      <Membership membership={membership} />
+      <Structure structure={structure} />
     </React.Fragment>
   )
 }
@@ -29,6 +31,7 @@ AboutPageTemplate.propTypes = {
   membership: PropTypes.object,
   rightText: PropTypes.object,
   story: PropTypes.object,
+  structure: PropTypes.object,
   textWithImage: PropTypes.object
 }
 
@@ -43,6 +46,7 @@ const AboutPage = ({ data }) => {
         membership={frontmatter.membership}
         rightText={frontmatter.rightText}
         story={frontmatter.story}
+        structure={frontmatter.structure}
         textWithImage={frontmatter.textWithImage}
       />
     </Layout>
@@ -117,6 +121,17 @@ export const aboutPageQuery = graphql`
             }
             text
           }
+          title
+        }
+        structure {
+          roles {
+            personList {
+              name
+              title
+            }
+            title
+          }
+          show
           title
         }
         textWithImage {

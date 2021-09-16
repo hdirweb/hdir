@@ -57,6 +57,54 @@ story:
         encouraging initiatives for research programs of special importance to
         the area of cancer
   title: The main objectives
+structure:
+  roles:
+    - personList:
+      - name: Sonja Levanat
+        title: Institut Ruđer Bošković, Zagreb
+      title: President
+    - personList:
+      - name: Biserka Nagy
+        title: ""
+      title: Vice-president
+    - personList:
+      - name: Petar Ozretić
+        title: Institut Ruđer Bošković, Zagreb
+      title: Secretary
+    - personList:
+      - name: Maja Sabol
+        title: ""
+      title: Treasurer
+    - personList:
+      - name: Maja Osmak
+        title: ""
+      - name: Damir Eljuga
+        title: ""
+      - name: Neda Slade
+        title: ""
+      - name: Vesna Musani
+        title: ""
+      - name: Mirela Levačić Cvok
+        title: ""
+      title: Members of the Executive Committee
+    - personList:
+      - name: Maja Herak Bosnar
+        title: ""
+      - name: Goran Gajski
+        title: ""
+      - name: Mihaela Matovina
+        title: ""
+      title: Supervisory Committee
+    - personList:
+      - name: Marko Marjanović
+        title: ""
+      - name: Marijeta Kralj
+        title: ""
+      - name: Dragomira Majhen
+        title: ""
+      title: Court of Honour
+  show: false
+  title: Organisational Structure
 textWithImage:
   body: >
     These guidelines are consistent with the mission of EACR, which aims to

@@ -168,6 +168,23 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Page, name: page, widget: string}
+          - label: Structure
+            name: structure
+            widget: object
+            fields:
+              - {label: "Show this section", name: show, widget: boolean}
+              - {label: Title, name: title, widget: string}
+              - label: Role
+                name: roles
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Person
+                    name: personList
+                    widget: list
+                    fields:
+                      - {label: Name, name: name, widget: string}
+                      - {label: Title, name: title, widget: string}
       - file: "src/pages/članstvo/index.md"
         label: "Članstvo"
         name: "membership"
@@ -603,6 +620,23 @@ collections:
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Page, name: page, widget: string}
+          - label: Structure
+            name: structure
+            widget: object
+            fields:
+              - {label: "Show this section", name: show, widget: boolean}
+              - {label: Title, name: title, widget: string}
+              - label: Role
+                name: roles
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Person
+                    name: personList
+                    widget: list
+                    fields:
+                      - {label: Name, name: name, widget: string}
+                      - {label: Title, name: title, widget: string}
       - file: "src/pages/en/membership/index.md"
         label: "Membership"
         name: "membership"
