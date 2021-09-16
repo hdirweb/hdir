@@ -12,6 +12,19 @@ hero:
   link:
     page: ""
     title: ""
+rightText:
+  body: Članstvo u HDIR-u omogućuje vam besplatno i punopravno članstvo u European
+    Association for Cancer Research (EACR). EACR nudi širok spektar usluga za
+    podršku svojoj zajednici članova, uključujući smanjene kotizacije za
+    kongrese i konferencije (osobne ili virtualne), besplatnu registraciju za
+    webinare 'Meet the Expert’ i ‘How to…, olakšava komunikaciju i suradnju
+    unutar zajednice istraživača raka, daje mogućnost prijavljivanja za
+    stipendije te učlanjenje u EACR-ov Book Club. Posjetite
+    https://www.eacr.org/membership kako biste saznali više. Kontaktirat ćemo
+    EACR kako bismo bili sigurni da ćete primiti informacije o svojem članstvu u
+    EACR-u. Danas EACR ima više od 10,000 članova iz preko 100 zemalja Svijeta.
+    U EACR-u je registrirano preko 200 članova iz Hrvatske.
+  title: Dio Europskog društva za istraživanje raka
 leftText:
   body: >
     HDIR nam daje veću mogućnost suradnje sa srodnim nacionalnim udrugama za
@@ -25,25 +38,6 @@ leftText:
     page: ""
     title: ""
   title: Suradnja
-membership:
-  height: 28
-  image: /img/12661.jpg
-  link:
-    page: /članstvo
-    title: Želim postati član
-  subtitle: Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za
-    godišnju članarinu
-  title: Kako se učlaniti
-rightText:
-  body: >
-    Društvo djeluje kao nacionalno društvo u sklopu Europskog društva
-    za  istraživanje raka (European Association for Cancer Research,
-    EACR).  EACR djeluje preko 50 godina i najjača je europska neprofitna
-    stručna  organizacija koja pokriva kliničke i bazične aspekte istraživanja
-    raka.  Danas ima oko 10.000 članova iz preko 90 zemalja iz cijelog
-    svijeta.  Članstvo EACR-a čine individualni članovi i nacionalna društva.
-    Iz  Hrvatske je u tom Društvu registrirano preko 200 članova.
-  title: Dio Europskog društva za istraživanje raka
 story:
   cards:
     - image: /img/18424.jpg
@@ -71,4 +65,13 @@ textWithImage:
     ugledne osobe u područjima vezanima na bilo koji način s rakom, različitim
     aspektima istraživanja raka, primjene istraživanja i menadžmentu.
   image: /img/eacr.png
+membership:
+  height: 28
+  image: /img/12661.jpg
+  link:
+    page: /članstvo
+    title: Želim postati član
+  subtitle: Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za
+    godišnju članarinu
+  title: Kako se učlaniti
 ---
