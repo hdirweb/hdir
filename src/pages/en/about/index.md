@@ -127,6 +127,6 @@ docs:
   files:
     - name: HDIR By-Laws
       path: /img/hdir_statut.pdf
-  show: true
+  show: false
   title: Documents
 ---
