@@ -1,23 +1,5 @@
 ---
 templateKey: about-page
-lang: hr
-docs:
-  files:
-    - name: ""
-      path: ""
-  show: False
-  title: Dokumenti
-hero:
-  height: 40
-  image: /img/278.jpg
-  subtitle: >
-    Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
-    svijeta
-  title: Udruga znanstvenika i stručnih djelatnika
-  top: O društvu
-  link:
-    page: ""
-    title: ""
 rightText:
   body: Članstvo u HDIR-u omogućuje vam besplatno i punopravno članstvo u European
     Association for Cancer Research (EACR). EACR nudi širok spektar usluga za
@@ -31,6 +13,26 @@ rightText:
     EACR-u. Danas EACR ima više od 10,000 članova iz preko 100 zemalja Svijeta.
     U EACR-u je registrirano preko 200 članova iz Hrvatske.
   title: Dio Europskog društva za istraživanje raka
+textWithImage:
+  body: >
+    Ove odrednice su u skladu s misijom EACR-a koja ima cilj unaprijediti
+    bazična istraživanja s jasnijim usmjerenjima prema prevenciji te liječenju i
+    njezi oboljelih i čiji su članovi aktivni znanstvenici, studenti, emeriti,
+    ugledne osobe u područjima vezanima na bilo koji način s rakom, različitim
+    aspektima istraživanja raka, primjene istraživanja i menadžmentu.
+  image: /img/eacr.png
+lang: hr
+hero:
+  height: 40
+  image: /img/278.jpg
+  subtitle: >
+    Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
+    svijeta
+  title: Udruga znanstvenika i stručnih djelatnika
+  top: O društvu
+  link:
+    page: ""
+    title: ""
 leftText:
   body: >
     HDIR nam daje veću mogućnost suradnje sa srodnim nacionalnim udrugama za
@@ -63,62 +65,6 @@ story:
         poticanje inicijativa za istraživačke programe od posebnog značaja
         za  područje raka
   title: Glavni ciljevi društva
-structure:
-  roles:
-    - personList:
-      - name: Sonja Levanat
-        title: Institut Ruđer Bošković, Zagreb
-      title: Predsjednik
-    - personList:
-      - name: Biserka Nagy
-        title: ""
-      title: Dopredsjednik
-    - personList:
-      - name: Petar Ozretić
-        title: Institut Ruđer Bošković, Zagreb
-      title: Tajnik
-    - personList:
-      - name: Maja Sabol
-        title: ""
-      title: Rizničar
-    - personList:
-      - name: Maja Osmak
-        title: ""
-      - name: Damir Eljuga
-        title: ""
-      - name: Neda Slade
-        title: ""
-      - name: Vesna Musani
-        title: ""
-      - name: Mirela Levačić Cvok
-        title: ""
-      title: Članovi Izvršnog odbora
-    - personList:
-      - name: Maja Herak Bosnar
-        title: ""
-      - name: Goran Gajski
-        title: ""
-      - name: Mihaela Matovina
-        title: ""
-      title: Nadzorni odbor
-    - personList:
-      - name: Marko Marjanović
-        title: ""
-      - name: Marijeta Kralj
-        title: ""
-      - name: Dragomira Majhen
-        title: ""
-      title: Sud časti
-  show: False
-  title: Ustrojstvo
-textWithImage:
-  body: >
-    Ove odrednice su u skladu s misijom EACR-a koja ima cilj unaprijediti
-    bazična istraživanja s jasnijim usmjerenjima prema prevenciji te liječenju i
-    njezi oboljelih i čiji su članovi aktivni znanstvenici, studenti, emeriti,
-    ugledne osobe u područjima vezanima na bilo koji način s rakom, različitim
-    aspektima istraživanja raka, primjene istraživanja i menadžmentu.
-  image: /img/eacr.png
 membership:
   height: 28
   image: /img/12661.jpg
@@ -128,4 +74,58 @@ membership:
   subtitle: Za članstvo je potrebno ispuniti prijavnicu i poslati dokaz uplate za
     godišnju članarinu
   title: Kako se učlaniti
+structure:
+  roles:
+    - personList:
+        - name: Sonja Levanat
+          title: Institut Ruđer Bošković, Zagreb
+      title: Predsjednik
+    - personList:
+        - name: Biserka Nagy
+          title: " "
+      title: Dopredsjednik
+    - personList:
+        - name: Petar Ozretić
+          title: Institut Ruđer Bošković, Zagreb
+      title: Tajnik
+    - personList:
+        - name: Maja Sabol
+          title: " "
+      title: Rizničar
+    - personList:
+        - name: Maja Osmak
+          title: "  "
+        - name: Damir Eljuga
+          title: " "
+        - name: Neda Slade
+          title: " "
+        - name: Vesna Musani
+          title: " "
+        - name: Mirela Levačić Cvok
+          title: " "
+      title: Članovi Izvršnog odbora
+    - personList:
+        - name: Maja Herak Bosnar
+          title: " "
+        - name: Goran Gajski
+          title: " "
+        - name: Mihaela Matovina
+          title: " "
+      title: Nadzorni odbor
+    - personList:
+        - name: Marko Marjanović
+          title: " "
+        - name: Marijeta Kralj
+          title: " "
+        - name: Dragomira Majhen
+          title: " "
+      title: Sud časti
+  show: false
+  title: Ustrojstvo
+docs:
+  files:
+    - name: Statut Društva
+      path: /img/hdir_statut.pdf
+  show: false
+  title: Dokumenti
 ---
