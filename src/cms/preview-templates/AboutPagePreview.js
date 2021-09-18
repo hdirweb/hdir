@@ -8,6 +8,7 @@ const AboutPagePreview = ({ entry }) => {
   if (data) {
     return (
       <AboutPageTemplate
+        docs={data.docs || {}}
         hero={data.hero || {}}
         leftText={data.leftText || {}}
         membership={data.membership || {}}

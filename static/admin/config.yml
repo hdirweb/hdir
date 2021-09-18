@@ -8,7 +8,7 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-# local_backend: true
+local_backend: true
 
 media_folder: static/img
 public_folder: /img
@@ -185,6 +185,24 @@ collections:
                     fields:
                       - {label: Name, name: name, widget: string}
                       - {label: Title, name: title, widget: string}
+          - label: Docs
+            name: docs
+            widget: object
+            fields:
+              - {label: "Show this section", name: show, widget: boolean}
+              - {label: Title, name: title, widget: string}
+              - label: File
+                name: files
+                widget: list
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - label: File
+                    name: path
+                    widget: "file"
+                    default: null
+                    media_library:
+                      config:
+                        multiple: false
       - file: "src/pages/članstvo/index.md"
         label: "Članstvo"
         name: "membership"
@@ -637,6 +655,24 @@ collections:
                     fields:
                       - {label: Name, name: name, widget: string}
                       - {label: Title, name: title, widget: string}
+          - label: Docs
+            name: docs
+            widget: object
+            fields:
+              - {label: "Show this section", name: show, widget: boolean}
+              - {label: Title, name: title, widget: string}
+              - label: File
+                name: files
+                widget: list
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - label: File
+                    name: path
+                    widget: "file"
+                    default: null
+                    media_library:
+                      config:
+                        multiple: false
       - file: "src/pages/en/membership/index.md"
         label: "Membership"
         name: "membership"

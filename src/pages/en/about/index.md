@@ -1,6 +1,12 @@
 ---
 templateKey: about-page
 lang: en
+docs:
+  files:
+    - name: ""
+      path: ""
+  show: False
+  title: Documents
 hero:
   height: 40
   image: /img/278.jpg

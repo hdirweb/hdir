@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
+import Docs from '../components/Docs'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import LeftText from '../components/LeftText'
@@ -11,7 +12,7 @@ import Story from '../components/Story'
 import Structure from '../components/Structure'
 import TextWithImage from '../components/TextWithImage'
 
-export const AboutPageTemplate = ({ hero, leftText, membership, rightText, story, structure, textWithImage }) => {
+export const AboutPageTemplate = ({ docs, hero, leftText, membership, rightText, story, structure, textWithImage }) => {
   return (
     <React.Fragment>
       <Hero hero={hero} />
@@ -21,11 +22,13 @@ export const AboutPageTemplate = ({ hero, leftText, membership, rightText, story
       <LeftText leftText={leftText} />
       <Membership membership={membership} />
       <Structure structure={structure} />
+      <Docs docs={docs} />
     </React.Fragment>
   )
 }
 
 AboutPageTemplate.propTypes = {
+  docs: PropTypes.object,
   hero: PropTypes.object,
   leftText: PropTypes.object,
   membership: PropTypes.object,
@@ -41,6 +44,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout lang={frontmatter.lang}>
       <AboutPageTemplate
+        docs={frontmatter.docs}
         hero={frontmatter.hero}
         leftText={frontmatter.leftText}
         membership={frontmatter.membership}
@@ -63,6 +67,14 @@ export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        docs {
+          files {
+            name
+            path
+          }
+          show
+          title
+        }
         lang
         hero {
           height

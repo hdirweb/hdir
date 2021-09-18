@@ -1,6 +1,12 @@
 ---
 templateKey: about-page
 lang: hr
+docs:
+  files:
+    - name: ""
+      path: ""
+  show: False
+  title: Dokumenti
 hero:
   height: 40
   image: /img/278.jpg
