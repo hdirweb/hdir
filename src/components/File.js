@@ -17,7 +17,8 @@ const File = class extends React.Component {
         <Document className="w-8 fill-current text-brown-500 mr-4"/>
         <a 
           className="text-xl font-bold underline"
-          href={file.path}
+          href={file.path.publicURL}
+          target="_blank"
         >
           {file.name ? file.name : ""}
         </a>

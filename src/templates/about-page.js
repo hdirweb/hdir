@@ -70,7 +70,9 @@ export const aboutPageQuery = graphql`
         docs {
           files {
             name
-            path
+            path {
+              publicURL
+            }
           }
           show
           title

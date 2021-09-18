@@ -90,35 +90,35 @@ structure:
       title: Tajnik
     - personList:
         - name: Maja Sabol
-          title: " "
+          title: ""
       title: Rizničar
     - personList:
         - name: Maja Osmak
-          title: "  "
+          title: ""
         - name: Damir Eljuga
-          title: " "
+          title: ""
         - name: Neda Slade
-          title: " "
+          title: ""
         - name: Vesna Musani
-          title: " "
+          title: ""
         - name: Mirela Levačić Cvok
-          title: " "
+          title: ""
       title: Članovi Izvršnog odbora
     - personList:
         - name: Maja Herak Bosnar
-          title: " "
+          title: ""
         - name: Goran Gajski
-          title: " "
+          title: ""
         - name: Mihaela Matovina
-          title: " "
+          title: ""
       title: Nadzorni odbor
     - personList:
         - name: Marko Marjanović
-          title: " "
+          title: ""
         - name: Marijeta Kralj
-          title: " "
+          title: ""
         - name: Dragomira Majhen
-          title: " "
+          title: ""
       title: Sud časti
   show: false
   title: Ustrojstvo

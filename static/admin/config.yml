@@ -184,7 +184,7 @@ collections:
                     widget: list
                     fields:
                       - {label: Name, name: name, widget: string}
-                      - {label: Title, name: title, widget: string}
+                      - {label: Title, name: title, widget: string, required: false}
           - label: Docs
             name: docs
             widget: object
@@ -654,7 +654,7 @@ collections:
                     widget: list
                     fields:
                       - {label: Name, name: name, widget: string}
-                      - {label: Title, name: title, widget: string}
+                      - {label: Title, name: title, widget: string, required: false}
           - label: Docs
             name: docs
             widget: object

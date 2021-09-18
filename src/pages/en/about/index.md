@@ -3,9 +3,9 @@ templateKey: about-page
 lang: en
 docs:
   files:
-    - name: ""
-      path: ""
-  show: False
+    - name: HDIR By-Laws
+      path: /img/hdir_statut.pdf
+  show: false
   title: Documents
 hero:
   height: 40
