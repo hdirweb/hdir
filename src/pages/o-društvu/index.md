@@ -120,7 +120,7 @@ structure:
         - name: Dragomira Majhen
           title: ""
       title: Sud časti
-  show: false
+  show: true
   title: Ustrojstvo
 docs:
   files:
