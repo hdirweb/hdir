@@ -109,7 +109,7 @@ structure:
         - name: Doc. dr. sc. Maja Herak Bosnar
           title: Institut Ruđer Bošković, Zagreb
         - name: Dr. sc. Goran Gajski
-          title: Institut za medicinska istraživanja, Zagreb
+          title: Institut za medicinska istraživanja i medicinu rada, Zagreb
         - name: Doc. dr. sc. Mihaela Matovina
           title: Institut Ruđer Bošković, Zagreb
       title: Nadzorni odbor
