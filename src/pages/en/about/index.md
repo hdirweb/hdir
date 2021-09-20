@@ -82,19 +82,19 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: President
     - personList:
-        - name: Assist. Prof. Neda Slade, PhD
+        - name: Asst. Prof. Neda Slade, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Vice-president
     - personList:
-        - name: Assist. Prof. Petar Ozretić, PhD
+        - name: Asst. Prof. Petar Ozretić, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Secretary
     - personList:
-        - name: Assist. Prof. Maja Sabol, PhD
+        - name: Asst. Prof. Maja Sabol, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Treasurer
     - personList:
-        - name: Assist. Prof. Vesna Musani, PhD
+        - name: Asst. Prof. Vesna Musani, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Prof. Maja Sirotković-Skerlev, MD, PhD
           title: University Hospital Center Zagreb, Zagreb, Croatia; University of Zagreb,
@@ -107,17 +107,17 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Members of the Executive Committee
     - personList:
-        - name: Assist. Prof. Maja Herak Bosnar, PhD
+        - name: Asst. Prof. Maja Herak Bosnar, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Goran Gajski, PhD
           title: Institute for Medical Research and Occupational Health, Zagreb, Croatia
-        - name: Assist. Prof. Mihaela Matovina, PhD
+        - name: Asst. Prof. Mihaela Matovina, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Supervisory Committee
     - personList:
         - name: Prof. Biserka Nagy, PhD
           title: University of Zagreb, Faculty of Science, Zagreb, Croatia
-        - name: Assist. Prof. Marijeta Kralj, PhD
+        - name: Asst. Prof. Marijeta Kralj, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Dragomira Majhen, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
