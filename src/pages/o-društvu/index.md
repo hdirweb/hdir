@@ -77,50 +77,51 @@ membership:
 structure:
   roles:
     - personList:
-        - name: Sonja Levanat
+        - name: Prof. dr. sc. Sonja Levanat
           title: Institut Ruđer Bošković, Zagreb
       title: Predsjednik
     - personList:
-        - name: Biserka Nagy
-          title: " "
+        - name: Doc. dr. sc. Neda Slade
+          title: "Institut Ruđer Bošković, Zagreb "
       title: Dopredsjednik
     - personList:
-        - name: Petar Ozretić
+        - name: Doc. dr. sc. Petar Ozretić
           title: Institut Ruđer Bošković, Zagreb
       title: Tajnik
     - personList:
-        - name: Maja Sabol
-          title: ""
+        - name: Doc. dr. sc. Maja Sabol
+          title: Institut Ruđer Bošković, Zagreb
       title: Rizničar
     - personList:
-        - name: Maja Osmak
-          title: ""
-        - name: Damir Eljuga
-          title: ""
-        - name: Neda Slade
-          title: ""
-        - name: Vesna Musani
-          title: ""
-        - name: Mirela Levačić Cvok
-          title: ""
+        - name: Doc. dr. sc. Vesna Musani
+          title: Institut Ruđer Bošković, Zagreb
+        - name: Prof. dr. sc. Maja Sirotković-Skerlev
+          title: Klinički bolnički centar Zagreb, Zagreb; Medicinski fakultet Sveučilišta
+            u Zagrebu, Zagreb
+        - name: Dr. sc. Ivan Šamija
+          title: Klinički bolnički centar Sestre milosrdnice, Zagreb
+        - name: Dr. sc. Sandra Sobočanec
+          title: Institut Ruđer Bošković, Zagreb
+        - name: Dr. sc. Katja Ester
+          title: Institut Ruđer Bošković, Zagreb
       title: Članovi Izvršnog odbora
     - personList:
-        - name: Maja Herak Bosnar
-          title: ""
-        - name: Goran Gajski
-          title: ""
-        - name: Mihaela Matovina
-          title: ""
+        - name: Doc. dr. sc. Maja Herak Bosnar
+          title: Institut Ruđer Bošković, Zagreb
+        - name: Dr. sc. Goran Gajski
+          title: Institut za medicinska istraživanja, Zagreb
+        - name: Doc. dr. sc. Mihaela Matovina
+          title: Institut Ruđer Bošković, Zagreb
       title: Nadzorni odbor
     - personList:
-        - name: Marko Marjanović
-          title: ""
-        - name: Marijeta Kralj
-          title: ""
-        - name: Dragomira Majhen
-          title: ""
+        - name: Prof. dr. sc. Biserka Nagy
+          title: Sveučilište u Zagrebu, Prirodoslovno-matematički fakultet, Zagreb
+        - name: Doc. dr. sc. Marijeta KraljMarijeta Kralj
+          title: Institut Ruđer Bošković, Zagreb
+        - name: Dr. sc. Dragomira Majhen
+          title: Institut Ruđer Bošković, Zagreb
       title: Sud časti
-  show: true
+  show: false
   title: Ustrojstvo
 docs:
   files:
