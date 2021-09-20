@@ -79,11 +79,11 @@ structure:
     - personList:
         - name: Prof. dr. sc. Sonja Levanat
           title: Institut Ruđer Bošković, Zagreb
-      title: Predsjednik
+      title: Predsjednica
     - personList:
         - name: Doc. dr. sc. Neda Slade
           title: "Institut Ruđer Bošković, Zagreb "
-      title: Dopredsjednik
+      title: Dopredsjednica
     - personList:
         - name: Doc. dr. sc. Petar Ozretić
           title: Institut Ruđer Bošković, Zagreb
@@ -91,7 +91,7 @@ structure:
     - personList:
         - name: Doc. dr. sc. Maja Sabol
           title: Institut Ruđer Bošković, Zagreb
-      title: Rizničar
+      title: Rizničarka
     - personList:
         - name: Doc. dr. sc. Vesna Musani
           title: Institut Ruđer Bošković, Zagreb
@@ -116,7 +116,7 @@ structure:
     - personList:
         - name: Prof. dr. sc. Biserka Nagy
           title: Sveučilište u Zagrebu, Prirodoslovno-matematički fakultet, Zagreb
-        - name: Doc. dr. sc. Marijeta KraljMarijeta Kralj
+        - name: Doc. dr. sc. Marijeta Kralj
           title: Institut Ruđer Bošković, Zagreb
         - name: Dr. sc. Dragomira Majhen
           title: Institut Ruđer Bošković, Zagreb
