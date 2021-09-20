@@ -96,8 +96,8 @@ structure:
         - name: Doc. dr. sc. Vesna Musani
           title: Institut Ruđer Bošković, Zagreb
         - name: Prof. dr. sc. Maja Sirotković-Skerlev
-          title: Klinički bolnički centar Zagreb, Zagreb; Medicinski fakultet Sveučilišta
-            u Zagrebu, Zagreb
+          title: Klinički bolnički centar Zagreb, Zagreb; Sveučilište u Zagrebu,
+            Medicinski fakultet, Zagreb
         - name: Dr. sc. Ivan Šamija
           title: Klinički bolnički centar Sestre milosrdnice, Zagreb
         - name: Dr. sc. Sandra Sobočanec
