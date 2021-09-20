@@ -121,7 +121,7 @@ structure:
         - name: Dr. sc. Dragomira Majhen
           title: Institut Ruđer Bošković, Zagreb
       title: Sud časti
-  show: false
+  show: true
   title: Ustrojstvo
 docs:
   files:
