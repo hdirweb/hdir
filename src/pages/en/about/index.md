@@ -78,50 +78,51 @@ membership:
 structure:
   roles:
     - personList:
-        - name: Sonja Levanat
-          title: Institut Ruđer Bošković, Zagreb
+        - name: Prof. Sonja Levanat, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
       title: President
     - personList:
-        - name: Biserka Nagy
-          title: ""
+        - name: Assist. Prof. Neda Slade, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Vice-president
     - personList:
-        - name: Petar Ozretić
-          title: Institut Ruđer Bošković, Zagreb
+        - name: Assist. Prof. Petar Ozretić, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Secretary
     - personList:
-        - name: Maja Sabol
-          title: ""
+        - name: Assist. Prof. Maja Sabol, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Treasurer
     - personList:
-        - name: Maja Osmak
-          title: ""
-        - name: Damir Eljuga
-          title: ""
-        - name: Neda Slade
-          title: ""
-        - name: Vesna Musani
-          title: ""
-        - name: Mirela Levačić Cvok
-          title: ""
+        - name: Assist. Prof. Vesna Musani, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
+        - name: Prof. Maja Sirotković-Skerlev, MD, PhD
+          title: University Hospital Center Zagreb, Zagreb, Croatia; University of Zagreb,
+            School of Medicine, Zagreb, Croatia
+        - name: Ivan Šamija, PhD
+          title: Sestre milosrdnice University Hospital Center, Zagreb, Croatia
+        - name: Sandra Sobočanec, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
+        - name: Katja Ester, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Members of the Executive Committee
     - personList:
-        - name: Maja Herak Bosnar
-          title: ""
-        - name: Goran Gajski
-          title: ""
-        - name: Mihaela Matovina
-          title: ""
+        - name: Assist. Prof. Maja Herak Bosnar, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
+        - name: Goran Gajski, PhD
+          title: Institute for Medical Research and Occupational Health, Zagreb, Croatia
+        - name: Assist. Prof. Mihaela Matovina, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Supervisory Committee
     - personList:
-        - name: Marko Marjanović
-          title: ""
-        - name: Marijeta Kralj
-          title: ""
-        - name: Dragomira Majhen
-          title: ""
+        - name: Prof. Biserka Nagy, PhD
+          title: University of Zagreb, Faculty of Science, Zagreb, Croatia
+        - name: Assist. Prof. Marijeta Kralj, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
+        - name: Dragomira Majhen, PhD
+          title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Court of Honour
-  show: false
+  show: true
   title: Organisational Structure
 docs:
   files:
