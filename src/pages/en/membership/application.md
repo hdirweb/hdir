@@ -112,7 +112,7 @@ form:
         - title: Phone number
           name: phone
           type: text
-          isRequired: true
+          isRequired: false
         - title: E-mail
           isRequired: true
           type: email
