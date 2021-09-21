@@ -113,7 +113,7 @@ const Pdf = class extends React.Component {
           {
             text: field.title,
             style: (field.title.length > 60) ? 'lengthyLabel' : 'label',
-            width: (field.title.length > 60) ? 500 : 120,
+            width: (field.title.length > 60) ? 500 : 160,
           },
           {
             text: text,
