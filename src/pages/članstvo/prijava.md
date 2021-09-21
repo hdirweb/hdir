@@ -88,21 +88,26 @@ form:
         - title: Odjel/odsjek/zavod
           name: department
           type: text
-        - title: Ulica
+        - title: Ulica (zaposlenja ili stanovanja)
           name: street
           type: text
-        - title: Kućni broj
+          isRequired: true
+        - title: Kućni broj (zaposlenja ili stanovanja)
           name: streetNumber
           type: number
-        - title: Grad
+          isRequired: true
+        - title: Grad (zaposlenja ili stanovanja)
           name: city
           type: text
-        - title: Poštanski broj
+          isRequired: true
+        - title: Poštanski broj (zaposlenja ili stanovanja)
           name: postalCode
           type: number
-        - title: Država
+          isRequired: true
+        - title: Država (zaposlenja ili stanovanja)
           name: country
           type: text
+          isRequired: true
         - title: Broj mobitela
           name: phone
           type: text
@@ -127,6 +132,7 @@ form:
       title: Kontakt podaci
   success:
     button: Preuzmi PDF datoteku
-    subtitle: Molimo Vas da preuzmete PDF datoteku i potpišete dokument.
+    subtitle: Molimo Vas da preuzmete i ispišete PDF datoteku te potpisani dokument
+      dostavite tajniku HDIR-a.
     title: Hvala na ispunjavanju obrasca
 ---
