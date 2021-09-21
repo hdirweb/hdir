@@ -82,7 +82,7 @@ form:
           type: number
       title: Osnovni podaci
     - fields:
-        - title: Ustanova u kojoj radite
+        - title: Ustanova zaposlenja
           name: workplace
           type: text
         - title: Odjel/odsjek/zavod
