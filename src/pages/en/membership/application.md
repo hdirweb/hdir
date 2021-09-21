@@ -76,7 +76,7 @@ form:
           type: text
           isRequired: false
           isFullWidth: false
-        - title: PIN
+        - title: OIB
           name: pin
           type: number
           isRequired: true
@@ -117,7 +117,7 @@ form:
           isRequired: true
           type: email
           name: email
-        - title: Scientific interest
+        - title: Scientific interests
           name: interest
           type: textarea
           isFullWidth: true
