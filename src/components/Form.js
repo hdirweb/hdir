@@ -111,7 +111,7 @@ const Form = class extends React.Component {
                         </button>
                     </form>
                     }
-                    {this.state.isSubmitted && 
+                    {(this.state.isSubmitted || window.location.search.includes("test")) && 
                         <React.Fragment>
                             <h3 className="text-lg font-bold">{ success.title }</h3>
                             <p className="text-lg mb-6">{ success.subtitle }</p>
