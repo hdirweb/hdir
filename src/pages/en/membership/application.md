@@ -89,21 +89,26 @@ form:
         - title: Department
           name: department
           type: text
-        - title: Street
+        - title: Street (work or home)
           name: street
           type: text
-        - title: Street number
+          isRequired: true
+        - title: Street number (work or home)
           name: streetNumber
           type: number
-        - title: City
+          isRequired: true
+        - title: City (work or home)
           name: city
           type: text
-        - title: Postal code
+          isRequired: true
+        - title: Postal code (work or home)
           name: postalCode
           type: number
-        - title: Country
+          isRequired: true
+        - title: Country (work or home)
           name: country
           type: text
+          isRequired: true
         - title: Phone number
           name: phone
           type: text
@@ -128,6 +133,7 @@ form:
       title: Contact information
   success:
     button: Download PDF file
-    subtitle: Please download the PDF file and sign the document.
+    subtitle: Please download and print the PDF file and signed document send to
+      HDIR Secretary.
     title: Thank you for filling out the form
 ---
