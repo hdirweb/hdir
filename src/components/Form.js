@@ -14,12 +14,13 @@ const Form = class extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            isSubmitted: false
+            isPdfTesting: false,
+            isSubmitted: false,
         }
       }
 
     componentDidMount() {
-        this.setState({ isSubmitted: window.location.search.includes("test") });
+        this.setState({ isPdfTesting: window.location.search.includes("test") });
     }
 
 
@@ -115,7 +116,7 @@ const Form = class extends React.Component {
                         </button>
                     </form>
                     }
-                    {this.state.isSubmitted && 
+                    {(this.state.isSubmitted || this.state.isPdfTesting) &&
                         <React.Fragment>
                             <h3 className="text-lg font-bold">{ success.title }</h3>
                             <p className="text-lg mb-6">{ success.subtitle }</p>
