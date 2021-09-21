@@ -31,13 +31,14 @@ form:
         - text: "E-mail: info@hdir.hr"
       title: Croatian Association for Cancer Research
     mailingDetails:
-      - text: "Please pay the annual membership fee with a general payment slip or online banking at the expense of CACR:"
+      - text: "Please pay the annual membership fee with a general payment slip or
+          online banking at the expense of CACR:"
       - text: "Amount: 20 € in Croatian kuna (HRK) equivalent"
       - text: "Description of payment: $fullName – for membership"
       - text: "Recipient's IBAN: HR5023600001102084564"
     paymentDetails:
-      - text: "Please send the completed and signed application form to the Secretary's address
-          of CACR:"
+      - text: "Please send the completed and signed application form to the Secretary's
+          address of CACR:"
       - text: Dr. sc. Petar Ozretić
       - text: Institut Ruđer Bošković
       - text: Bijenička 54, HR-10000 Zagreb
@@ -75,18 +76,19 @@ form:
           type: text
           isRequired: false
           isFullWidth: false
-        - title: The institution where you work
-          name: workplace
-          type: text
-          isRequired: false
-          isFullWidth: false
-        - title: Department
-          name: department
-          type: text
-          isRequired: false
+        - title: PIN
+          name: pin
+          type: number
+          isRequired: true
           isFullWidth: false
       title: Basic information
     - fields:
+        - title: Institution where you work
+          name: workplace
+          type: text
+        - title: Department
+          name: department
+          type: text
         - title: Street
           name: street
           type: text
@@ -117,9 +119,9 @@ form:
         - isRequired: true
           isFullWidth: true
           type: checkbox
-          title: I agree that my information provided in this application will be forwarded to
-            European Association for Cancer Research (EACR) for the purpose of opening
-            the free user account required to join the above
+          title: I agree that my information provided in this application will be
+            forwarded to European Association for Cancer Research (EACR) for the
+            purpose of opening the free user account required to join the above
             association and to receive their mail in electronic and paper form
             format.
           name: agreement
