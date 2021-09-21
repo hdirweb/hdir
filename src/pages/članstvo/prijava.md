@@ -116,7 +116,7 @@ form:
           isRequired: true
           type: email
           name: email
-        - title: Znanstevni interes
+        - title: Znanstevni interesi
           name: interest
           type: textarea
           isFullWidth: true
