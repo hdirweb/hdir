@@ -76,18 +76,18 @@ form:
           type: text
           isRequired: false
           isFullWidth: false
+        - title: OIB
+          name: PIN
+          isRequired: true
+          type: number
+      title: Osnovni podaci
+    - fields:
         - title: Ustanova u kojoj radite
           name: workplace
           type: text
-          isRequired: false
-          isFullWidth: false
-        - title: Odjel
+        - title: Odjel/odsjek/zavod
           name: department
           type: text
-          isRequired: false
-          isFullWidth: false
-      title: Osnovni podaci
-    - fields:
         - title: Ulica
           name: street
           type: text
