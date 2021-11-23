@@ -28,7 +28,7 @@ hero:
   height: 40
   image: /img/278.jpg
   subtitle: National organization with over 200 members cancer researchers
-  title: Organization of scientists and professionals
+  title: Organization of scientists and physicians
   top: About organization
   link:
     page: ""
