@@ -6,7 +6,7 @@ hero:
   image: /img/3389.jpg
   subtitle: |
     Učlanjenjem u HDIR automatski postajete član EACR-a
-  title: Čanstvo u HDIR-u
+  title: Postanite član HDIR-a
   top: Članstvo
   link:
     page: ""
