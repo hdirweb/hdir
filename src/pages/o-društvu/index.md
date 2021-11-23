@@ -25,7 +25,7 @@ lang: hr
 hero:
   height: 40
   image: /img/278.jpg
-  subtitle: Nacionalno društvo istraživača raka s preko 200 članova
+  subtitle: Nacionalna udruga istraživača raka s preko 200 članova
   title: Udruga znanstvenika i stručnih djelatnika
   top: O društvu
   link:
