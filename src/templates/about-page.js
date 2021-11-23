@@ -16,9 +16,9 @@ export const AboutPageTemplate = ({ docs, hero, leftText, membership, rightText,
   return (
     <React.Fragment>
       <Hero hero={hero} />
-      <RightText rightText={rightText} />
       <Story story={story} />
       <TextWithImage textWithImage={textWithImage} />
+      <RightText rightText={rightText} />
       <LeftText leftText={leftText} />
       <Membership membership={membership} />
       <Structure structure={structure} />
