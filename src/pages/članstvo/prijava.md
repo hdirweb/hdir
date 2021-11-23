@@ -4,8 +4,7 @@ lang: hr
 hero:
   height: 26
   image: /img/hans-reniers-lqgjcmy5qcm-unsplash2.jpg
-  subtitle: |
-    Online obrazac za prijavu u HDIR udrugu
+  subtitle: Online pristupni obrazac za članstvo u HDIR-u
   title: Nova prijava
   top: Prijava za članstvo
   link:
