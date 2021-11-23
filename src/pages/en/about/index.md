@@ -27,7 +27,7 @@ lang: en
 hero:
   height: 40
   image: /img/278.jpg
-  subtitle: National organization with over 200 members cancer researchers
+  subtitle: National association of cancer researchers with over 200 members
   title: Organization of scientists and physicians
   top: About organization
   link:
