@@ -4,8 +4,7 @@ lang: en
 hero:
   height: 40
   image: /img/3389.jpg
-  subtitle: |
-    National association of cancer researchers with over 200 members
+  subtitle: By joining HDIR you automatically become a member of EACR
   title: HDIR membership
   top: Membership
   link:
