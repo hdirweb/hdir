@@ -5,7 +5,7 @@ hero:
   height: 26
   image: /img/hans-reniers-lqgjcmy5qcm-unsplash2.jpg
   subtitle: |
-    Online application form for HDIR association
+    Online application form for HDIR membership
   title: New application
   top: Application for membership
   link:
