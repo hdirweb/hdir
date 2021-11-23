@@ -4,9 +4,8 @@ lang: hr
 hero:
   height: 40
   image: /img/3389.jpg
-  subtitle: >
-    Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
-    svijeta
+  subtitle: |
+    Nacionalna udruga istraživača raka s preko 200 članova
   title: HDIR članstvo
   top: Članstvo
   link:
