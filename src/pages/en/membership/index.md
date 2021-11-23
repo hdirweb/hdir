@@ -5,7 +5,7 @@ hero:
   height: 40
   image: /img/3389.jpg
   subtitle: By joining HDIR you automatically become a member of EACR
-  title: HDIR Membership
+  title: Become HDIR member
   top: Membership
   link:
     page: ""
