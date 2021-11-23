@@ -5,8 +5,8 @@ hero:
   height: 40
   image: /img/3389.jpg
   subtitle: |
-    Nacionalna udruga istraživača raka s preko 200 članova
-  title: HDIR članstvo
+    Učlanjenjem u HDIR automatski postajete član EACR-a
+  title: Čanstvo u HDIR-u
   top: Članstvo
   link:
     page: ""
