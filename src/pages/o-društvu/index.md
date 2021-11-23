@@ -25,9 +25,7 @@ lang: hr
 hero:
   height: 40
   image: /img/278.jpg
-  subtitle: >
-    Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
-    svijeta
+  subtitle: Nacionalno društvo istraživača raka s preko 200 članova
   title: Udruga znanstvenika i stručnih djelatnika
   top: O društvu
   link:
