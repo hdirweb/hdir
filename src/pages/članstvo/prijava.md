@@ -76,7 +76,7 @@ form:
           isRequired: false
           isFullWidth: false
         - title: OIB
-          name: PIN
+          name: pin
           isRequired: true
           type: number
       title: Osnovni podaci
