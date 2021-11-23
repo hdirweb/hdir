@@ -5,8 +5,8 @@ hero:
   height: 40
   image: /img/3389.jpg
   subtitle: |
-    National organization with 10,000 members from about 90 countries worldwide
-  title: CACR membership
+    National association of cancer researchers with over 200 members
+  title: HDIR membership
   top: Membership
   link:
     page: ""
