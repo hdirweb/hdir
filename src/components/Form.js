@@ -14,6 +14,7 @@ const Form = class extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            currentLocation: '',
             date: new Date(),
             isPdfTesting: false,
             isSubmitted: false,
@@ -22,6 +23,7 @@ const Form = class extends React.Component {
 
     componentDidMount() {
         this.setState({ isPdfTesting: window.location.search.includes("test") });
+        this.setState({ currentLocation: window.location })
 
         if (window.location.search.includes("state")) {
             const searchParams = new URLSearchParams(window.location.search);
@@ -119,7 +121,7 @@ const Form = class extends React.Component {
                                 </div>
                             </React.Fragment>
                         ))}
-                        <input type="hidden" id="pdf-link" name="pdf-link" value={`${window.location}?state=${JSON.stringify(this.state)}`} />
+                        <input type="hidden" id="pdf-link" name="pdf-link" value={`${this.state.currentLocation}?state=${JSON.stringify(this.state)}`} />
                         <button className="btn" type="submit">
                             {button}
                         </button>
