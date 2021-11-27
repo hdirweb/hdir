@@ -73,6 +73,8 @@ const Form = class extends React.Component {
                     >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                         <input type="hidden" name="form-name" value={name} />
+                        <input type="hidden" name="date" value="" />
+                        <input type="hidden" name="pdf-link" value="" />
                         <div hidden>
                             <label>
                                 <input name="bot-field" onChange={this.handleChange} />
