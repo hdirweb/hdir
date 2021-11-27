@@ -14,6 +14,7 @@ const Form = class extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            date: new Date(),
             isPdfTesting: false,
             isSubmitted: false,
         }
@@ -21,6 +22,12 @@ const Form = class extends React.Component {
 
     componentDidMount() {
         this.setState({ isPdfTesting: window.location.search.includes("test") });
+
+        if (window.location.search.includes("state")) {
+            const searchParams = new URLSearchParams(window.location.search);
+            const stateObject = JSON.parse(searchParams.get("state"));
+            this.setState({...stateObject, autoOpen: true, date: new Date(stateObject.date), birthday: new Date(stateObject.birthday) });
+        }
     }
 
 
@@ -62,7 +69,7 @@ const Form = class extends React.Component {
                     >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                         <input type="hidden" name="form-name" value={name} />
-                        <input type="hidden" name="date" value={new Date().toISOString().split("T")[0]} />
+                        <input type="hidden" id="submission-date" name="submission-date" value={this.state.date.toISOString().split("T")[0]} />
                         <div hidden>
                             <label>
                                 <input name="bot-field" onChange={this.handleChange} />
@@ -112,16 +119,17 @@ const Form = class extends React.Component {
                                 </div>
                             </React.Fragment>
                         ))}
+                        <input type="hidden" id="pdf-link" name="pdf-link" value={`${window.location}?state=${JSON.stringify(this.state)}`} />
                         <button className="btn" type="submit">
                             {button}
                         </button>
                     </form>
                     }
-                    {(this.state.isSubmitted || this.state.isPdfTesting) &&
+                    {(this.state.isSubmitted || this.state.isPdfTesting || this.state.autoOpen) &&
                         <React.Fragment>
                             <h3 className="text-lg font-bold">{ success.title }</h3>
                             <p className="text-lg mb-6">{ success.subtitle }</p>
-                            {isPdf && pdf && <Pdf button={ success.button } formState={ this.state } lang={ this.props.lang } pdf={ pdf } sections={ sections } />}
+                            {isPdf && pdf && <Pdf autoOpen={ this.state.autoOpen } button={ success.button } formState={ this.state } lang={ this.props.lang } pdf={ pdf } sections={ sections } />}
                             {!isPdf && <Link to="/">{ success.button }</Link>}
                         </React.Fragment>
                     }

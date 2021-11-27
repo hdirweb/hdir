@@ -9,7 +9,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const Pdf = class extends React.Component {
   create(formState, lang, pdf, sections) {
-    const dateInfo = new Date().toLocaleString(lang).replace(',', ' ').split(' ');
+    const dateInfo = formState.date.toLocaleString(lang).replace(',', ' ').split(' ');
     dateInfo.splice(lang === "en" ? -2 : -1);
 
     let content = [
@@ -178,15 +178,19 @@ const Pdf = class extends React.Component {
   }
 
   render() {
-    const { button, formState, lang, pdf, sections } = this.props;
+    const { autoOpen, button, formState, lang, pdf, sections } = this.props;
+
+    if (autoOpen)
+      this.create(formState, lang, pdf, sections);
 
     return (
-    <button className="btn" onClick={() => this.create(formState, lang, pdf, sections)}>{button}</button>
+      <button className="btn" onClick={() => this.create(formState, lang, pdf, sections)}>{button}</button>
     )
   }
 }
 
 Pdf.propTypes = {
+  autoOpen: PropTypes.bool,
   button: PropTypes.string,
   formState: PropTypes.object,
   lang: PropTypes.string,
