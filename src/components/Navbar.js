@@ -133,8 +133,9 @@ const Navbar = class extends React.Component {
   getLangLink = (btn) => {
     const currentLang = this.state.currentPath.includes("/en") ? "en" : "hr";
     const otherLang = currentLang === "en" ? "hr" : "en";
-    const matchPage = PAGES.concat(ACTIVITY_DROPDOWN).concat(OTHER_PAGES).filter(page => encodeURIComponent(page[currentLang]["url"]).replace(/%2F/g, '/') === this.state.currentPath);
-    let link = matchPage.length > 0 ? matchPage[0][otherLang]["url"] : this.state.currentPath.replace(`/${currentLang}/`, `/${otherLang}/`);
+    const currentPage = this.state.currentPath.length > 1 && this.state.currentPath.slice(-1) === "/" ? this.state.currentPath.slice(0, -1) : this.state.currentPath;
+    const matchPage = PAGES.concat(ACTIVITY_DROPDOWN).concat(OTHER_PAGES).filter(page => encodeURIComponent(page[currentLang]["url"]).replace(/%2F/g, '/') === currentPage);
+    let link = matchPage.length > 0 ? matchPage[0][otherLang]["url"] : currentPage.replace(`/${currentLang}/`, `/${otherLang}/`);
     if (this.state.currentPath === "/")
       link = "/en"
     else if (this.state.currentPath === "/en")
