@@ -46,6 +46,8 @@ const Form = class extends React.Component {
           body: encode({
             'form-name': form.getAttribute('name'),
             ...this.state,
+            'date': this.state.date.toISOString().split("T")[0],
+            'pdf-link': `${this.state.currentLocation}?state=${JSON.stringify(this.state)}`
           }),
         })
           .then(() => this.setState({ isSubmitted: true }))
@@ -71,7 +73,6 @@ const Form = class extends React.Component {
                     >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                         <input type="hidden" name="form-name" value={name} />
-                        <input type="hidden" id="submission-date" name="submission-date" value={this.state.date.toISOString().split("T")[0]} />
                         <div hidden>
                             <label>
                                 <input name="bot-field" onChange={this.handleChange} />
@@ -121,7 +122,6 @@ const Form = class extends React.Component {
                                 </div>
                             </React.Fragment>
                         ))}
-                        <input type="hidden" id="pdf-link" name="pdf-link" value={`${this.state.currentLocation}?state=${JSON.stringify(this.state)}`} />
                         <button className="btn" type="submit">
                             {button}
                         </button>
