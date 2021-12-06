@@ -104,7 +104,7 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Katja Ester, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
-      title: Members of the Executive Committee
+      title: Other members of the Executive Committee
     - personList:
         - name: Asst. Prof. Maja Herak Bosnar, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
