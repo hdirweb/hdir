@@ -102,7 +102,7 @@ structure:
           title: Institut Ruđer Bošković, Zagreb
         - name: Dr. sc. Katja Ester
           title: Institut Ruđer Bošković, Zagreb
-      title: Članovi Izvršnog odbora
+      title: Ostali članovi Izvršnog odbora
     - personList:
         - name: Doc. dr. sc. Maja Herak Bosnar
           title: Institut Ruđer Bošković, Zagreb
