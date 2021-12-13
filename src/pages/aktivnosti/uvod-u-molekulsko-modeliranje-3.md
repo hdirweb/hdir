@@ -1,7 +1,7 @@
 ---
 hr:
   templateKey: activity-post
-  date: 2020-12-01T23:00:00.000Z
+  date: 2020-12-02T23:00:00.000Z
   body: >-
     I ove je godine HDIR za širu znanstvenu zajednicu organizirao praktičnu
     radionicu na temu molekulskog modeliranja. Cilj radionice bio je upoznati
@@ -68,6 +68,6 @@ hr:
   title: Uvod u molekulsko modeliranje
 en:
   templateKey: activity-post
-  date: 2020-12-01T23:00:00.000Z
+  date: 2020-12-02T23:00:00.000Z
   activity: workshops
 ---
