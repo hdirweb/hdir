@@ -2,7 +2,7 @@
 hr:
   templateKey: activity-post
   title: Godišnja i Izborna skupština
-  date: 2021-12-13T13:00:40.404Z
+  date: 2021-07-09T12:00:40.404Z
   description: Godišnja i Izborna skupština na kojoj su izabrani članovi Izvršnog odbora.
   activity: meetings
   body: >-
@@ -73,5 +73,5 @@ hr:
 
     tajništvo HDIR-a
 en:
-  date: 2021-12-13T13:00:40.404Z
+  date: 2021-07-09T12:00:40.404Z
 ---
