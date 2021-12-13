@@ -28,17 +28,17 @@ hr:
 
     | ----------- | ---------------------------------------------------------------------------------------------------- |
 
-    | 10:15-10:45 | Pauza                                                                                                |
+    | 10:15-11:00 | Molekulsko uklapanje. Modeliranje farmakofora. Virtualni probir aktivnih molekula. *Višnja Stepanić* |
 
-    | 10:45-11:30 | Molekulsko uklapanje. Modeliranje farmakofora. Virtualni probir aktivnih molekula. *Višnja Stepanić* |
+    | 11:00-11:15 | Pauza za kavu                                                                                        |
 
-    | 11:30-12:30 | Molekulska dinamika. Komparativno modeliranje proteina. *Luka Bilić*                                 |
+    | 11:15-12:15 | Molekulska dinamika. Komparativno modeliranje proteina. *Sara Matić*                                 |
 
-    | 12:30-13:30 | Pauza                                                                                                |
+    | 12:15-13:15 | Pauza za ručak                                                                                       |
 
-    | 13:30–14:30 | Modeliranje odnosa strukture i aktivnosti / svojstava. Kvantitativni modeli. 1D-4D. *Sanja Tomić*    |
+    | 13:15–14:15 | Modeliranje odnosa strukture i aktivnosti / svojstava. Kvantitativni modeli. 1D-4D. *Sanja Tomić*    |
 
-    | 14:30-15:30 | Klasifikacijski modeli. ADME. Molekularna sličnost. *Višnja Stepanić*                                |
+    | 14:15-15:15 | Klasifikacijski modeli. ADME. Molekularna sličnost. *Višnja Stepanić*                                |
 
 
     **3.12.2021.**
@@ -48,21 +48,21 @@ hr:
 
     | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 
-    | 11:00-11:30 | Pauza                                                                                                                                |
+    | 11:00-11:15 | Pauza za kavu                                                                                                                        |
 
-    | 11:30-13:00 | Dohvat eksperimentalno određenih 3D struktura proteina / DNA preko interneta. Vizualizacija makromolekula. *Sanja Tomić, Sara Matić* |
+    | 11:15-13:00 | Dohvat eksperimentalno određenih 3D struktura proteina / DNA preko interneta. Vizualizacija makromolekula. *Sanja Tomić, Sara Matić* |
 
-    | 13:00-14:00 | Pauza                                                                                                                                |
+    | 13:00-14:00 | Pauza za ručak                                                                                                                       |
 
-    | 14:00-15:30 | Vizualizacija i analiza kompleksa. Molekulsko uklapanje. *Luka Bilić*                                                                |
+    | 14:00-15:30 | Vizualizacija i analiza kompleksa. Molekulsko uklapanje. *Sara Matić*                                                                |
 
 
     **6.12.2021.**
 
 
-    | 09:30-11:00 | Zajedničko prolaženje kroz zadatke dobivene za rješavanje. *svi predavači*                                          |
+    | 09:30-11:00 | Zajedničko prolaženje kroz zadatke dobivene za rješavanje. *svi predavači* |
 
-    | ----------- | ------------------------------------------------------------------------------------------------------------------- |
+    | ----------- | -------------------------------------------------------------------------- |
   activity: workshops
   description: Radionica o komplementarnim in silico metodama molekulskog modeliranja
   title: Uvod u molekulsko modeliranje
