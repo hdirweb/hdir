@@ -126,3 +126,16 @@ Contributions are always welcome, no matter how large or small. Before contribut
 please read the [code of conduct](CODE_OF_CONDUCT.md).
 
 https://www.digitalocean.com/community/tutorials/gatsbyjs-custom-fonts-in-gatsby
+
+
+## Using local files for Netlify CMS
+
+Run this in a separate CLI:
+```
+npx netlify-cms-proxy-server
+```
+
+Uncomment this line in `static/admin/config.yml`:
+```
+local_backend: true
+```

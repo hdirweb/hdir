@@ -38,7 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges
 
-    // console.log(posts.filter(edge => edge.node.frontmatter.en !== null).map(post => post.node.frontmatter.en.templateKey))
+    // console.log(JSON.stringify(posts))
 
     posts.filter(post => post.node.frontmatter.templateKey !== null).forEach((edge) => {
       const id = edge.node.id
@@ -61,7 +61,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: '/en' + edge.node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.en.templateKey)}.en.js`
+          `src/templates/${String(edge.node.frontmatter.en.templateKey || edge.node.frontmatter.hr.templateKey )}.en.js`
         ),
         // additional data can be passed via context
         context: {
