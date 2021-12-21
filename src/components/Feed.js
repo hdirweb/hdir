@@ -29,7 +29,7 @@ class Feed extends React.Component {
                   </span>
                 </header>
                 <p className="flex flex-col sm:flex-row">
-                  {post.frontmatter[lang].featuredimage ? (
+                  {post.frontmatter[lang].featuredimage && this.getNonEmpty(post.frontmatter, "activity") === "lectures" ? (
                     <div className="pr-6 pb-6">
                       <img 
                         className="z-40 relative rounded-lg"
