@@ -11,6 +11,7 @@ const IndexPagePreview = ({ entry }) => {
         hero={data.hero || {}}
         membership={data.membership || {}}
         poster={data.poster || {}}
+        recent={data.recent || {}}
         story={data.story || {}}
       />
     )

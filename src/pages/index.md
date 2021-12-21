@@ -32,6 +32,17 @@ poster:
   link:
     page: /
     title: Prijavi se
+recent:
+  images:
+    - name: lectures
+      image: /img/lectures.jpg
+    - name: meetings
+      image: /img/meetings.jpg
+    - name: conferences
+      image: /img/conferences.jpg
+    - name: workshops
+      image: /img/workshops.jpg
+  title: Novosti
 story:
   cards:
     - image: /img/18424.jpg

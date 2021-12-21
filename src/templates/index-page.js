@@ -6,17 +6,21 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import Membership from '../components/Membership'
 import Poster from '../components/Poster'
+import RecentActivities from '../components/RecentActivities'
 import Story from '../components/Story'
 
 export const IndexPageTemplate = ({
   hero,
+  lang,
   membership,
   poster,
+  recent,
   story
 }) => {
   return (
   <React.Fragment>
     <Hero hero={ hero } />
+    <RecentActivities recent={ recent } activity="" lang={lang} />
     <Story story={ story } />
     <Poster poster={ poster } />
     <Membership membership={ membership } />
@@ -24,6 +28,7 @@ export const IndexPageTemplate = ({
 )}
 
 IndexPageTemplate.propTypes = {
+  recent: PropTypes.object,
   story: PropTypes.object,
   hero: PropTypes.object,
   membership: PropTypes.object,
@@ -36,9 +41,11 @@ const IndexPage = ({ data }) => {
   return (
     <Layout lang={frontmatter.lang}>
       <IndexPageTemplate
+        lang={frontmatter.lang}
         hero={frontmatter.hero}
         membership={frontmatter.membership}
         poster={frontmatter.poster}
+        recent={frontmatter.recent}
         story={frontmatter.story}
       />
     </Layout>
@@ -108,6 +115,19 @@ export const indexPageQuery = graphql`
             title
             page
           }
+        }
+        recent {
+          images {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            name
+          }
+          title
         }
         story {
           cards {
