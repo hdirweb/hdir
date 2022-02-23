@@ -3,7 +3,7 @@ hr:
   templateKey: activity-post
   date: 2022-11-09T23:00:00.000Z
   activity: conferences
-  featuredimage: /img/hdir-6-banner-updated-2022.jpg
+  featuredimage: /img/hdir-6-banner-896x153-updat.jpg
   title: HDIR-6 odgođen za studeni 2022.
   description: ""
   body: ""
