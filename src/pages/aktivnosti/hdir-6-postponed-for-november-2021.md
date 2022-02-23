@@ -14,5 +14,5 @@ en:
   description: "HDIR-6: Targeting Cancer - The 6th meeting with international participation"
   activity: conferences
   featuredimage: /img/hdir6.png
-  body: "![](/img/hdir6.png)"
+  body: "![](/img/hdir-6-banner-896x153-updat.jpg)"
 ---
