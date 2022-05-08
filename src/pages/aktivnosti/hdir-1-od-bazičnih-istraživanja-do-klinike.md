@@ -7,7 +7,7 @@ hr:
   activity: conferences
   featuredimage: /img/img_00_637_906_100.jpg
   body: >-
-    [<img src="/img/hdir1.jpg">](https://hdir-6.hdir.hr/)
+    [<img src="/img/hdir1.jpg">](https://hdir-1.hdir.hr/)
 
 
     [Vidi više](https://hdir-1.hdir.hr/)
@@ -28,7 +28,7 @@ en:
   title: ""
   description: ""
   body: |-
-    [<img src="/img/hdir1.jpg">](https://hdir-6.hdir.hr/)
+    [<img src="/img/hdir1.jpg">](https://hdir-1.hdir.hr/)
 
     [More information](https://hdir-1.hdir.hr/)
 
