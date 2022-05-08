@@ -4,7 +4,7 @@ hr:
   date: 2014-11-06T10:23:00.000Z
   activity: conferences
   featuredimage: /img/hdir-3_banner.jpg
-  title: HDIR-3
+  title: "HDIR-3: From Bench to Clinic"
   description: ""
   body: ""
 en:
