@@ -1,7 +1,7 @@
 ---
 hr:
   templateKey: activity-post
-  date: 2022-11-09T23:00:00.000Z
+  date: 2022-11-10T14:00:00.000Z
   activity: conferences
   featuredimage: /img/hdir-6-banner-896x153-updat.jpg
   title: "HDIR-6: Targeting Cancer"
@@ -14,7 +14,7 @@ hr:
 en:
   templateKey: activity-post
   title: "HDIR-6: Targeting Cancer"
-  date: 2022-11-09T23:00:00.000Z
+  date: 2022-11-10T14:00:00.000Z
   description: The 6th Meeting with International Participation, November 10-12,
     2022 in Hotel International, Zagreb, Croatia
   activity: conferences
