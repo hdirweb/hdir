@@ -1,7 +1,7 @@
 ---
 hr:
   templateKey: activity-post
-  date: 2022-12-08T08:00:19.529Z
+  date: 2022-12-08T08:30:19.529Z
   body: >-
     Cilj radionice je upoznati istraživače koji u svom radu koriste
     eksperimentalne metode, kao i zainteresirane studente, s *in silico*
@@ -85,5 +85,5 @@ hr:
   description: Radionica o komplementarnim in silico metodama molekulskog modeliranja
   title: Uvod u molekulsko modeliranje
 en:
-  date: 2022-12-08T08:00:19.529Z
+  date: 2022-12-08T08:30:19.529Z
 ---
