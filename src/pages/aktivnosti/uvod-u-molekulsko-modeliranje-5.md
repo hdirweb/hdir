@@ -24,6 +24,12 @@ hr:
     Radionica će se održati tijekom tri dana s početkom u **četvrtak 8. prosinca u 9:30 h.** Prva dva dana održat će se uživo u dvorani Ivana Supeka (I. krilo) na Institutu Ruđer Bošković, a u ponedjeljak 12. prosinca on-line preko aplikacije Microsoft Teams. Ukoliko se epidemiološka situacija pogorša, radionica će se u cijelosti održati on-line.
 
 
+    Za sudjelovanje na radionici potrebno je na račun HDIR-a (IBAN HR5023600001102084564) uplatiti kotizaciju u iznosu od 100 kn. Polaznici će dobiti potvrdu o sudjelovanju na radionici.
+
+
+    **Sva mjesta na radionici su popunjena.**
+
+
     **Program**
 
 
@@ -72,9 +78,9 @@ hr:
     **12.12.2022.**
 
 
-    | 09:30-11:00 | Prolaženje kroz zadatke dobivene za rješavanje. *Antonija i Višnja*                                                       |
+    | 09:30-11:00 | Prolaženje kroz zadatke dobivene za rješavanje. *Antonija i Višnja* |
 
-    | ----------- | ------------------------------------------------------------------------------------------------------------------------- |
+    | ----------- | ------------------------------------------------------------------- |
   activity: workshops
   description: Radionica o komplementarnim in silico metodama molekulskog modeliranja
   title: Uvod u molekulsko modeliranje
