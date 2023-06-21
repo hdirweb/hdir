@@ -75,28 +75,28 @@ membership:
 structure:
   roles:
     - personList:
-        - name: Prof. dr. sc. Sonja Levanat
+        - name: Dr. sc. Sonja Levanat
           title: Institut Ruđer Bošković, Zagreb
       title: Predsjednica
     - personList:
-        - name: Doc. dr. sc. Neda Slade
+        - name: Dr. sc. Neda Slade
           title: "Institut Ruđer Bošković, Zagreb "
       title: Dopredsjednica
     - personList:
-        - name: Doc. dr. sc. Petar Ozretić
+        - name: Dr. sc. Petar Ozretić
           title: Institut Ruđer Bošković, Zagreb
       title: Tajnik
     - personList:
-        - name: Doc. dr. sc. Maja Sabol
+        - name: Dr. sc. Maja Sabol
           title: Institut Ruđer Bošković, Zagreb
       title: Rizničarka
     - personList:
-        - name: Doc. dr. sc. Vesna Musani
+        - name: Dr. sc. Vesna Musani
           title: Institut Ruđer Bošković, Zagreb
         - name: Prof. dr. sc. Maja Sirotković-Skerlev
           title: Klinički bolnički centar Zagreb, Zagreb; Sveučilište u Zagrebu,
             Medicinski fakultet, Zagreb
-        - name: Dr. sc. Ivan Šamija
+        - name: Izv. prof. dr. sc. Ivan Šamija
           title: Klinički bolnički centar Sestre milosrdnice, Zagreb
         - name: Dr. sc. Sandra Sobočanec
           title: Institut Ruđer Bošković, Zagreb
@@ -104,11 +104,11 @@ structure:
           title: Institut Ruđer Bošković, Zagreb
       title: Ostali članovi Izvršnog odbora
     - personList:
-        - name: Doc. dr. sc. Maja Herak Bosnar
+        - name: Dr. sc. Maja Herak Bosnar
           title: Institut Ruđer Bošković, Zagreb
         - name: Dr. sc. Goran Gajski
           title: Institut za medicinska istraživanja i medicinu rada, Zagreb
-        - name: Doc. dr. sc. Mihaela Matovina
+        - name: Dr. sc. Mihaela Matovina
           title: Institut Ruđer Bošković, Zagreb
       title: Nadzorni odbor
     - personList:
