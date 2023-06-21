@@ -89,7 +89,7 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Secretary
     - personList:
-        - name: Prof. Maja Sabol, PhD
+        - name: Maja Sabol, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Treasurer
     - personList:
