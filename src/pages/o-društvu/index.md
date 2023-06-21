@@ -114,7 +114,7 @@ structure:
     - personList:
         - name: Prof. dr. sc. Biserka Nagy
           title: Sveučilište u Zagrebu, Prirodoslovno-matematički fakultet, Zagreb
-        - name: Doc. dr. sc. Marijeta Kralj
+        - name: Dr. sc. Marijeta Kralj
           title: Institut Ruđer Bošković, Zagreb
         - name: Dr. sc. Dragomira Majhen
           title: Institut Ruđer Bošković, Zagreb
