@@ -93,7 +93,7 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Treasurer
     - personList:
-        - name: Prof. Vesna Musani, PhD
+        - name: Vesna Musani, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Prof. Maja Sirotković-Skerlev, MD, PhD
           title: University Hospital Center Zagreb, Zagreb, Croatia; University of Zagreb,
