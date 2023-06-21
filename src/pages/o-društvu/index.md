@@ -93,7 +93,7 @@ structure:
     - personList:
         - name: Dr. sc. Vesna Musani
           title: Institut Ruđer Bošković, Zagreb
-        - name: Prof. dr. sc. Maja Sirotković-Skerlev
+        - name: Prof. dr. sc. Maja Sirotković-Skerlev, dr. med.
           title: Klinički bolnički centar Zagreb, Zagreb; Sveučilište u Zagrebu,
             Medicinski fakultet, Zagreb
         - name: Izv. prof. dr. sc. Ivan Šamija
