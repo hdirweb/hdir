@@ -77,28 +77,28 @@ membership:
 structure:
   roles:
     - personList:
-        - name: Prof. Sonja Levanat, PhD
+        - name: Sonja Levanat, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: President
     - personList:
-        - name: Asst. Prof. Neda Slade, PhD
+        - name: Neda Slade, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Vice-president
     - personList:
-        - name: Asst. Prof. Petar Ozretić, PhD
+        - name: Petar Ozretić, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Secretary
     - personList:
-        - name: Asst. Prof. Maja Sabol, PhD
+        - name: Prof. Maja Sabol, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Treasurer
     - personList:
-        - name: Asst. Prof. Vesna Musani, PhD
+        - name: Prof. Vesna Musani, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Prof. Maja Sirotković-Skerlev, MD, PhD
           title: University Hospital Center Zagreb, Zagreb, Croatia; University of Zagreb,
             School of Medicine, Zagreb, Croatia
-        - name: Ivan Šamija, PhD
+        - name: Assoc. Prof. Ivan Šamija, PhD
           title: Sestre milosrdnice University Hospital Center, Zagreb, Croatia
         - name: Sandra Sobočanec, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
@@ -106,17 +106,17 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Other members of the Executive Committee
     - personList:
-        - name: Asst. Prof. Maja Herak Bosnar, PhD
+        - name: Maja Herak Bosnar, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Goran Gajski, PhD
           title: Institute for Medical Research and Occupational Health, Zagreb, Croatia
-        - name: Asst. Prof. Mihaela Matovina, PhD
+        - name: Mihaela Matovina, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Supervisory Committee
     - personList:
         - name: Prof. Biserka Nagy, PhD
           title: University of Zagreb, Faculty of Science, Zagreb, Croatia
-        - name: Asst. Prof. Marijeta Kralj, PhD
+        - name: Marijeta Kralj, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Dragomira Majhen, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
