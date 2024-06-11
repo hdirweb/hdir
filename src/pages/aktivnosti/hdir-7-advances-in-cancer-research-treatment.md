@@ -8,7 +8,7 @@ hr:
   activity: conferences
   featuredimage: /img/banner.jpg
   body: |-
-    [<img src="/img/banner.jpg">](https://hdir-7.hdir.hr/)
+    [<img src="/banner.jpg">](https://hdir-7.hdir.hr/)
 
     [Webpage](https://hdir-7.hdir.hr/)
 en:
