@@ -12,7 +12,7 @@ hr:
 
     [Webpage](https://hdir-7.hdir.hr/)
 
-    ![](/img/banner.jpg)
+    ![(https://hdir-7.hdir.hr/)](/img/banner.jpg)
 en:
   templateKey: activity-post
   date: 2024-06-11T11:50:24.155Z
