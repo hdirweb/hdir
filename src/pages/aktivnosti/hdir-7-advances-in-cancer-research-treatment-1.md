@@ -10,7 +10,7 @@ hr:
   body: |-
     [<img src="/img/banner.jpg">](https://hdir-7.hdir.hr/)
 
-    [Webpage](https://hdir-7.hdir.hr/)
+    [HDIR-7 Webpage](https://hdir-7.hdir.hr/)
 en:
   date: 2024-11-07T08:30:55.662Z
   title: "HDIR-7: Advances in Cancer Research & Treatment"
