@@ -19,5 +19,5 @@ en:
   body: |-
     [<img src="/img/banner.jpg">](https://hdir-7.hdir.hr/)
 
-    [Webpage](https://hdir-7.hdir.hr/)
+    [HDIR-7 Webpage](https://hdir-7.hdir.hr/)
 ---
