@@ -16,6 +16,7 @@ hr:
 
 
     🔗 Read the full statement here: <https://eacr.org/statement-on-threats-to-research>
+  description: EACR Statement on Threats to United States Cancer Research
 en:
   templateKey: activity-post
   date: 2025-03-12T15:37:41.913Z
@@ -33,4 +34,5 @@ en:
 
 
     🔗 Read the full statement here: <https://eacr.org/statement-on-threats-to-research>
+  description: EACR Statement on Threats to United States Cancer Research
 ---
