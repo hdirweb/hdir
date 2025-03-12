@@ -2,7 +2,7 @@
 hr:
   templateKey: activity-post
   date: 2025-03-12T15:36:25.497Z
-  activity: meetings
+  activity: conferences
   title: EACR Statement on Threats to United States Cancer Research
   body: >-
     **Croatian Association for Cancer Research supports the EACR’s statement on
@@ -18,4 +18,5 @@ hr:
     🔗 Read the full statement here: <https://eacr.org/statement-on-threats-to-research>
 en:
   date: 2025-03-12T15:36:25.497Z
+  activity: conferences
 ---
