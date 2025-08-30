@@ -3,7 +3,7 @@ backend:
   branch: master
   repo: hdirweb/hdir
   auth_type: implicit
-  app_id: ${GATSBY_DECAPCMS_APP_ID}
+  app_id: Ov23liO3xWOWGCNZeDt7
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
