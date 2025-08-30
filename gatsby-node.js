@@ -38,8 +38,6 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges
 
-    // console.log(JSON.stringify(posts))
-
     posts.filter(post => post.node.frontmatter.templateKey !== null).forEach((edge) => {
       const id = edge.node.id
       

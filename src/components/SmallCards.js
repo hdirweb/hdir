@@ -17,9 +17,7 @@ const Image = ({ image }) => (
         className={`bg-cover h-48 shadow rounded-t-lg`}
         style={{
             filter: "grayscale(100%)",
-            backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
+            backgroundImage: `url(${image?.childImageSharp?.gatsbyImageData?.images?.fallback?.src || (typeof image === "string" ? image : image?.publicURL)})`,
         }}
     ></div>
 )

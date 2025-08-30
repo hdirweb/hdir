@@ -33,9 +33,7 @@ const RecentActivities = class extends React.Component {
                     description
                     featuredimage {
                       childImageSharp {
-                        fluid(maxWidth: 1000, quality: 100) {
-                          ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData(width: 1000, quality: 100)
                       }
                     }
                   }
@@ -47,9 +45,7 @@ const RecentActivities = class extends React.Component {
                     description
                     featuredimage {
                       childImageSharp {
-                        fluid(maxWidth: 1000, quality: 100) {
-                          ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData(width: 1000, quality: 100)
                       }
                     }
                   }

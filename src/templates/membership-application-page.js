@@ -96,9 +96,7 @@ export const membershipApplicationPageQuery = graphql`
           height
           image {
             childImageSharp {
-              fluid(maxWidth: 4096, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 4096, quality: 100)
             }
           }
           subtitle

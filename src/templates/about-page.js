@@ -82,9 +82,7 @@ export const aboutPageQuery = graphql`
           height
           image {
             childImageSharp {
-              fluid(maxWidth: 4096, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 4096, quality: 100)
             }
           }
           subtitle
@@ -108,9 +106,7 @@ export const aboutPageQuery = graphql`
           height
           image {
             childImageSharp {
-              fluid(maxWidth: 4096, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 4096, quality: 100)
             }
           }
           link {
@@ -128,9 +124,7 @@ export const aboutPageQuery = graphql`
           cards {
             image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 2048, quality: 100)
               }
             }
             text
@@ -152,9 +146,7 @@ export const aboutPageQuery = graphql`
           body
           image {
             childImageSharp {
-              fluid(maxWidth: 1000, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 1000, quality: 100)
             }
           }
         }

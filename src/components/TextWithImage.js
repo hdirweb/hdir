@@ -8,7 +8,7 @@ const TextWithImage = class extends React.Component {
         <section className="py-12">
             <div className="limit md:flex">
                 <p className="text-xl md:w-1/2">{body}</p>
-                <img className="h-48 mt-12 md:m-auto justify-self-center" alt="" src={`${!!image.childImageSharp ? image.childImageSharp.fluid.src : image}`}/>
+                <img className="h-48 mt-12 md:m-auto justify-self-center" alt="" src={`${image?.childImageSharp?.gatsbyImageData?.images.fallback.src || image}`}/>
             </div>
         </section>
     )

@@ -12,7 +12,7 @@ const Membership = class extends React.Component {
                 <ParallaxBanner
                     layers={[
                         {
-                            image: `${!!image.childImageSharp ? image.childImageSharp.fluid.src : image}`,
+                            image: `${image?.childImageSharp?.fluid?.src || image}`,
                             amount: 0.16,
                         },
                     ]}

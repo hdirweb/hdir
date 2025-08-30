@@ -61,7 +61,6 @@ function getNonEmpty(frontmatter, field) {
 const ActivityENPost = ({ data }) => {
   const { markdownRemark: post } = data
   const frontmatter = post.frontmatter;
-
   return (
     <Layout lang="en">
       <ActivityPostENTemplate

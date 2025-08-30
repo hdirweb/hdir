@@ -29,7 +29,7 @@ const Pricing = class extends React.Component {
                     <div key={plan.title} className={`bg-white h-80 p-8 rounded-lg shadow w-80 flex flex-col ${index === 0 ? "" : "sm:ml-12 mt-8 sm:mt-0"}`}>
                         <p className="font-extrabold text-xl flex-grow">{plan.title}</p>
                         <p className={`text-center mt-16 ${plan.isValueBig ? "text-5xl font-medium leading-none" : "text-3xl font-semibold"}`}>{plan.value}</p>
-                        <p className="opacity-50 text-sm text-center">{format(plan.value, rate)}{plan.description}</p>
+                        <p className="opacity-50 text-sm text-center">{plan.description}</p>
                     </div>
                 ))}
             </div>

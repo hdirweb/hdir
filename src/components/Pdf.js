@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import { logoData } from '../img/logoData'
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+pdfMake.vfs = pdfFonts.vfs;
 
 const Pdf = class extends React.Component {
   create(formState, lang, pdf, sections) {

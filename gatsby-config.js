@@ -7,12 +7,13 @@ module.exports = {
   plugins: [
     'gatsby-plugin-scroll-reveal',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-postcss`,  // For PostCSS and Tailwind CSS
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-plugin-sass`,  // For SCSS
       options: {
         postCssPlugins: [
-          require("tailwindcss"),
-          require("./tailwind.config.js"),
+          require('tailwindcss'),
+          require('autoprefixer'),
         ],
       },
     },
@@ -46,6 +47,7 @@ module.exports = {
         }
       }
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

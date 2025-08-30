@@ -14,7 +14,7 @@ const Hero = class extends React.Component {
                     className="bg-gray-400"
                     layers={[
                         {
-                            image: `${!!image.childImageSharp ? image.childImageSharp.fluid.src : image}`,
+                            image: image?.childImageSharp?.gatsbyImageData?.images.fallback.src || image,
                             amount: 0.16,
                         },
                     ]}

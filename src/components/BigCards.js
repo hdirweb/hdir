@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const isCmsApp = typeof NetlifyCmsApp !== "undefined";
 
@@ -13,19 +13,18 @@ const BigCards = ({ cards, className }) => (
   </div>
 )
 
-const Image = ({ image }) => (
+const Image = ({ image }) => {
+  return (
     <div 
-        className={`bg-cover h-80 shadow`}
-        style={{
-            filter: "grayscale(100%)",
-            backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-            width: "55vw",
-        }}
-        
-    ></div>
-)
+      className="bg-cover h-80 shadow"
+      style={{
+        filter: "grayscale(100%)",
+        backgroundImage: `url(${image?.childImageSharp?.gatsbyImageData?.images?.fallback?.src || (typeof image === "string" ? image : image?.publicURL)})`,
+        width: "55vw",
+      }}
+    />
+  );
+};
 
 const Left = ({ card }) => (
   <div

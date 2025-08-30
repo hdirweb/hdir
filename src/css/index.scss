@@ -1,9 +1,9 @@
+@use 'buttons';
+@use 'clean-formatting';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'buttons';
-@import 'clean-formatting';
 
 body {
   font-family: "Raleway";

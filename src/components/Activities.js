@@ -32,9 +32,7 @@ const Activities = class extends React.Component {
                     description
                     featuredimage {
                       childImageSharp {
-                        fluid(maxWidth: 180, quality: 100) {
-                          ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData(width: 180, quality: 100)
                       }
                     }
                   }
@@ -46,9 +44,7 @@ const Activities = class extends React.Component {
                     description
                     featuredimage {
                       childImageSharp {
-                        fluid(maxWidth: 180, quality: 100) {
-                          ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData(width: 180, quality: 100)
                       }
                     }
                   }

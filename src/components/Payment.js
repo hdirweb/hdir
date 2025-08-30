@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import Barcode from '../components/Barcode'
-import { fetchRate, format } from '../components/Exchange'
+import { fetchRate } from '../components/Exchange'
 
 const Payment = class extends React.Component {
 
@@ -27,7 +27,6 @@ const Payment = class extends React.Component {
         const { rate } = this.state;
 
         let amount = details.find(detail => detail.value.includes("€")).value;
-        amount = format(amount, rate).split(' ')[0].replace(',' , '')
 
         const iban = details.find(detail => detail.title.includes("IBAN")).value;
 
@@ -42,9 +41,6 @@ const Payment = class extends React.Component {
                     <div className="max-w-lg mt-6">
                         {details.map((detail) => 
                             {
-                                const exchangedValue = format(detail.value, rate);
-                                let value = (exchangedValue !== "") ? exchangedValue : detail.value;
-                                value = value.replace('$year', new Date().getFullYear())
                                 return (
                                     <div key={detail.title} className="sm:flex sm:items-center mb-6">
                                         <div className="sm:w-1/3">
@@ -56,7 +52,7 @@ const Payment = class extends React.Component {
                                             <input
                                                 className={`overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 leading-tight focus:outline-none disabled ${detail.isNumber ? "font-number font-light" : ""}`}
                                                 type="text"
-                                                value={value}
+                                                value={detail.value.replace('$year', new Date().getFullYear())}
                                                 readOnly
                                                 onFocus={this.handleFocus}
                                             />

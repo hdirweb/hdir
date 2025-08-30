@@ -16,13 +16,9 @@ const Barcode = class extends React.Component {
         PDF417.draw(this.getEncodedText(), canvas, devicePixelRatio = 8)
     }
 
-    convertAmount(amount) {
-        return this.padLeft(amount.toString().replace('.', ''), 15, '0');
-    }
-
     getEncodedText() {
         const CODE = '';
-        const CURRENCY = 'HRK';
+        const CURRENCY = 'EUR';
         const DELIMITER = String.fromCharCode(0x0A);
         const HEADER = 'HRVHUB30';
         const MODEL = '';
@@ -46,7 +42,7 @@ const Barcode = class extends React.Component {
         return [
             HEADER,
             CURRENCY,
-            this.convertAmount(amount),
+            amount.replace("€", "") + "00",
             sender.fullName,
             sender.address,
             sender.postcode,

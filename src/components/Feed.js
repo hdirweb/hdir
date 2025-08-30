@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 class Feed extends React.Component {
   getNonEmpty(frontmatter, field) {
@@ -31,13 +32,10 @@ class Feed extends React.Component {
                 <p className="flex flex-col sm:flex-row">
                   {post.frontmatter[lang].featuredimage && this.getNonEmpty(post.frontmatter, "activity") === "lectures" ? (
                     <div className="pr-6 pb-6">
-                      <img 
-                        className="z-40 relative rounded-lg"
+                      <GatsbyImage
+                        image={post.frontmatter[lang]?.featuredimage.childImageSharp.gatsbyImageData}
                         alt=""
-                        src={`${!!post.frontmatter[lang].featuredimage.childImageSharp ? post.frontmatter[lang].featuredimage.childImageSharp.fluid.src : post.frontmatter[lang].featuredimage}`}
-                        style={{
-                          filter: "grayscale(100%)",
-                        }}
+                        className="z-40 relative rounded-lg grayscale"
                       />
                     </div>
                   ) : null}

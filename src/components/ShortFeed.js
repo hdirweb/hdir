@@ -8,7 +8,8 @@ class ShortFeed extends React.Component {
   getImageByActivity(activity) {
     try {
       const image = this.props.recent.images.find(imageObject => imageObject.name === activity).image;
-      return !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
+      
+      return image?.childImageSharp?.gatsbyImageData?.images.fallback.src || image;
     }
     catch {
       return "";

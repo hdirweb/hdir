@@ -15,7 +15,7 @@ const Poster = class extends React.Component {
               }}
             >
               <Link to={link.page}>
-                <img className="z-40 relative" alt="" src={`${!!image.childImageSharp ? image.childImageSharp.fluid.src : image}`}/>
+                <img className="z-40 relative" alt="" src={`${image?.childImageSharp?.fluid?.src || image}`}/>
               </Link>
               <div className="text-right mt-6 px-4 xl:px-0">
                 <Link className="btn relative z-40" to={link.page}>{link.title}</Link>
