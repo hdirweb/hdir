@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master
+  repo: hdirweb/hdir
+  auth_type: implicit
+  app_id: ${GATSBY_DECAPCMS_APP_ID}
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'

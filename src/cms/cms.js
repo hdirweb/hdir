@@ -1,6 +1,6 @@
-import CMS from 'netlify-cms-app'
-import cloudinary from 'netlify-cms-media-library-cloudinary'
-import uploadcare from 'netlify-cms-media-library-uploadcare'
+import CMS from 'decap-cms-app'
+import cloudinary from 'decap-cms-media-library-cloudinary'
+import uploadcare from 'decap-cms-media-library-uploadcare'
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import ActivitiesPagePreview from './preview-templates/ActivitiesPagePreview'
