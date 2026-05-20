@@ -111,7 +111,7 @@ structure:
           title: Stomatološka poliklinika Zagreb, Zagreb
       title: Nadzorni odbor
     - personList:
-        - name: Prof. dr. sc. Maja Sirotković Skerlev
+        - name: Izv. prof. dr. sc. Maja Sirotković Skerlev
           title: Sveučilište u Zagrebu, Medicinski fakultet, Zagreb
         - name: Dr. sc. Andreja Ambriović Ristov
           title: Institut Ruđer Bošković, Zagreb
