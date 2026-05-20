@@ -110,16 +110,16 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
         - name: Goran Gajski, PhD
           title: Institute for Medical Research and Occupational Health, Zagreb, Croatia
-        - name: Mihaela Matovina, PhD
-          title: Ruđer Bošković Institute, Zagreb, Croatia
+        - name: Prim. Siniša Varga, DMD
+          title: Dental Clinic Zagreb, Zagreb, Croatia
       title: Supervisory Committee
     - personList:
-        - name: Prof. Biserka Nagy, PhD
-          title: University of Zagreb, Faculty of Science, Zagreb, Croatia
-        - name: Marijeta Kralj, PhD
+        - name: Assoc. Prof. Maja Sirotković-Skerlev, MD, PhD
+          title: University of Zagreb, School od Medicine, Zagreb, Croatia
+        - name: Andreja Ambriović Ristov, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
-        - name: Dragomira Majhen, PhD
-          title: Ruđer Bošković Institute, Zagreb, Croatia
+        - name: Mr. Ivica Belina
+          title: Coalition of Associations in Healthcare, Zagreb, Croatia
       title: Court of Honour
   show: true
   title: Organisational Structure
