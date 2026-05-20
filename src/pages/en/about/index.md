@@ -1,5 +1,14 @@
 ---
 templateKey: about-page
+hero:
+  height: 40
+  image: /img/278.jpg
+  subtitle: National association of cancer researchers with over 200 members
+  title: Organization of scientists and physicians
+  top: About organization
+  link:
+    page: ""
+    title: ""
 rightText:
   body: >
     Membership of the CACR entitles you to free and full membership of the
@@ -24,15 +33,6 @@ textWithImage:
     management.
   image: /img/eacr.png
 lang: en
-hero:
-  height: 40
-  image: /img/278.jpg
-  subtitle: National association of cancer researchers with over 200 members
-  title: Organization of scientists and physicians
-  top: About organization
-  link:
-    page: ""
-    title: ""
 leftText:
   body: >
     CACR gives us a greater possibility of cooperation with related national
@@ -77,7 +77,7 @@ membership:
 structure:
   roles:
     - personList:
-        - name: Sonja Levanat, PhD
+        - name: Petar Ozretić, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: President
     - personList:
@@ -85,11 +85,11 @@ structure:
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Vice-president
     - personList:
-        - name: Petar Ozretić, PhD
+        - name: Tanja Matijević Glavan, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Secretary
     - personList:
-        - name: Maja Sabol, PhD
+        - name: Anđela Horvat, PhD
           title: Ruđer Bošković Institute, Zagreb, Croatia
       title: Treasurer
     - personList:
