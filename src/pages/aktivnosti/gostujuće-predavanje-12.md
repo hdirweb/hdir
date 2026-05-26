@@ -6,21 +6,11 @@ hr:
   activity: lectures
   description: ""
   body: >-
-    
-
-    Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača
-
-
-     
+    Mario Poljak, Institut za mikrobiologiju i imunologiju, Medicinski fakultet
+    Sveučilišta u Ljubljani, Slovenija:
 
 
-    Mario Poljak
-
-
-    Institut za mikrobiologiju i imunologiju, 
-
-
-    Medicinski fakultet Sveučilišta u Ljubljani, Slovenija
+    "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača"
 en:
   templateKey: activity-post
   title: Gostujuće predavanje
