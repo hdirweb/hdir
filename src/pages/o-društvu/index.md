@@ -122,10 +122,8 @@ structure:
   title: Ustrojstvo
 docs:
   files:
-    - name: Statut Društva
+    - name: Statut HDIR-a
       path: /img/hdir_statut.pdf
-    - path: /img/hdir_statut_2025.pdf
-      name: Statut HDIR-a
   show: true
   title: Dokumenti
 ---
