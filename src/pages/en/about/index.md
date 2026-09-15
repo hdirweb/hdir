@@ -125,7 +125,7 @@ structure:
   title: Organisational Structure
 docs:
   files:
-    - name: HDIR Bylaw
+    - name: HDIR's Bylaw
       path: /img/hdir_statut.pdf
   show: true
   title: Documents
