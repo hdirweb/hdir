@@ -26,10 +26,10 @@ en:
     Faculty of Medicine, University of Ljubljana, Slovenia
 
 
-    **Title**: "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača"
+    **Title**: "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača" (lecture in Croatian)
 
 
-    **Term** Wednesday, 01/07/2026, 14 o'clock, 3rd Wing lecture hall, Ruđer Bošković Institute, Bijenička 54, Zagreb
+    **Term** Wednesday, 01/07/2026, 14 o'clock, 3rd Wing Lecture Hall, Ruđer Bošković Institute, Bijenička 54, Zagreb
   description: "Guest lecture from Prof. Marija Poljaka, MD, PhD: Na putu ka
     iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih
     istraživača (in Croatian)"
