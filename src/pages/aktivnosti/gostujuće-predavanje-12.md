@@ -4,22 +4,33 @@ hr:
   title: Gostujuće predavanje
   date: 2026-07-01T14:00:00.000+02:00
   activity: lectures
-  description: ""
+  description: "Predavanje prof. dr. sc. Marija Poljaka, dr. med.: Na putu ka
+    iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih
+    istraživača"
   body: >-
-    Mario Poljak, Institut za mikrobiologiju i imunologiju, Medicinski fakultet
-    Sveučilišta u Ljubljani, Slovenija:
+    **Gostujući predavač**: Mario Poljak, Institut za mikrobiologiju i
+    imunologiju, Medicinski fakultet Sveučilišta u Ljubljani, Slovenija
 
 
-    "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača"
+    **Naziv predavanja**: "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača"
+
+
+    **Termin**: Srijeda 1. 7. 2026. u 14:00 sati u predavaonici III. krila, Institut Ruđer Bošković, Bijenička 54, Zagreb
 en:
   templateKey: activity-post
-  title: Gostujuće predavanje
+  title: Guest Lecture
   date: 2026-07-01T14:00:00.000+02:00
   activity: lectures
   body: >-
-    Mario Poljak, Institut za mikrobiologiju i imunologiju, Medicinski fakultet
-    Sveučilišta u Ljubljani, Slovenija:
+    **Guest lecturer**: Mario Poljak, Institute for Microbiology and Immunology,
+    Faculty of Medicine, University of Ljubljana, Slovenia:
 
 
-    "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača"
+    **Title**: "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača"
+
+
+    **Term** Wednesday, 01/07/2026, 14 o'clock, 3rd Wing lecture hall, Ruđer Bošković Institute, Bijenička 54, Zagreb
+  description: "Guest lecture from Prof. Marija Poljaka, MD, PhD: Na putu ka
+    iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih
+    istraživača (in Croatian)"
 ---
