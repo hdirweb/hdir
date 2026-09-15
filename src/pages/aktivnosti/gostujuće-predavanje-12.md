@@ -23,7 +23,7 @@ en:
   activity: lectures
   body: >-
     **Guest lecturer**: Mario Poljak, Institute for Microbiology and Immunology,
-    Faculty of Medicine, University of Ljubljana, Slovenia:
+    Faculty of Medicine, University of Ljubljana, Slovenia
 
 
     **Title**: "Na putu ka iskorjenjivanjuprvog raka u povijesti: pregled doprinosa slovenskih istraživača"
