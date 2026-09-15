@@ -124,6 +124,8 @@ docs:
   files:
     - name: Statut Društva
       path: /img/hdir_statut.pdf
-  show: false
+    - path: /img/hdir_statut_2025.pdf
+      name: Statut HDIR-a
+  show: true
   title: Dokumenti
 ---
