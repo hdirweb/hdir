@@ -22,7 +22,7 @@ rightText:
     liaise with the EACR to ensure you receive your EACR membership. Today there
     are over 10,000 members from over 100 countries worldwide. There are over
     200 members from Croatia registered to the EACR.
-  title: Part of EACR
+  title: Part of the EACR
 textWithImage:
   body: >
     These guidelines are consistent with the mission of EACR, which aims to
@@ -125,8 +125,8 @@ structure:
   title: Organisational Structure
 docs:
   files:
-    - name: HDIR By-Laws
+    - name: HDIR Bylaw
       path: /img/hdir_statut.pdf
-  show: false
+  show: true
   title: Documents
 ---
