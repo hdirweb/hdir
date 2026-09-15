@@ -22,7 +22,7 @@ en:
     meeting of the Croatian Association for Cancer Research (HDIR-8) will be
     held in Zagreb, Croatia, at the Hotel International (Miramarska 24, Zagreb)
     on November 4 and 5, 2026.
-  body: |-
+  body: |
     [<img src="/img/banner_hms2rc.jpg">](https://hms2rc.hdir.hr/)
 
     [HMS2RC Webpage](https://hms2rc.hdir.hr/)
